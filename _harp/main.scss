@@ -1,19 +1,44 @@
-body{
-  font-family: "Helvetica";
-  text-align: center;
-  padding: 50px 20px 0;
-  background: #f4f4f7;
-  color: #444;
-  margin: 0;
-}
+// VARIABLES
+@import 'styles/variables';
 
-h1{
-  font-size: 65px;
-  line-height: 1.2em;
-  border-bottom: #CCC solid 1px;
-  padding: 20px 0;
-}
+// MIXINS
+@import "styles/mixins/buttons";
+@import "styles/mixins/border-radius";
+@import "styles/mixins/bg-variant";
+@import "styles/mixins/center-block";
+@import "styles/mixins/clearfix";
+@import "styles/mixins/forms";
+@import "styles/mixins/gradients";
+@import 'styles/mixins/grid-framework';
+@import 'styles/mixins/grid';
+@import 'styles/mixins/image';
+@import 'styles/mixins/nav-divider';
+@import 'styles/mixins/responsive-visibility';
+@import 'styles/mixins/tab-focus';
+@import 'styles/mixins/text-emphasis';
+@import 'styles/mixins/text-overflow';
+@import 'styles/mixins/vendor-prefixes';
 
-h3{
-  font-weight: 300;
-}
+//RESET
+@import 'styles/normalize';
+
+// CORE
+@import "styles/buttons";
+@import "styles/code";
+@import "styles/grid";
+@import "styles/forms";
+@import "styles/navs";
+@import "styles/responsive-utilities";
+@import 'styles/scaffolding';
+@import "styles/type";
+
+// h1{
+//   font-size: 65px;
+//   line-height: 1.2em;
+//   border-bottom: #CCC solid 1px;
+//   padding: 20px 0;
+// }
+
+// h3{
+//   font-weight: 300;
+// }
