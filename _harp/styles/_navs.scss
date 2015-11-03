@@ -10,7 +10,7 @@ nav .lead-link {
   padding: 10px 0;
   display: block;
   font-size: $font-size-h4;
-  font-weight: 700;
+  font-weight: $headings-font-weight;
   text-align: center;
   @media(min-width: $screen-sm-min) {
     padding: $nav-link-padding;

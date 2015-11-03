@@ -1,0 +1,17 @@
+.hero {
+  padding: $jumbotron-padding;
+  margin-top: 15px;
+}
+.hero-text {
+  text-align: center;
+
+  @media (min-width: $screen-sm-min) {
+    text-align: left;
+  }
+}
+.hero-img > img {
+  margin: $padding-large-vertical * 2 auto 0;
+  @media (min-width: $screen-sm-min) {
+    float: right;
+  }
+}

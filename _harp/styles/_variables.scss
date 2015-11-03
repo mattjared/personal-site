@@ -14,16 +14,12 @@ $gray:                   #A7A6A8 !default;
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         #608C7F !default; // #337ab7
-$brand-success:         #5cb85c !default;
-$brand-info:            #5bc0de !default;
-$brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
-$blue:                  #19849c !default;
-
-// Custom Colors
-$mj-black:               #233331 !default;
-$mj-gray:                #A7A6A8 !default;
+$brand-primary:         #3D7F75 !default; // #337ab7
+$brand-success:         #CBFFF7 !default;
+$brand-info:            $gray !default;
+$brand-warning:         #F6E29A !default;
+$brand-danger:          #B267B2 !default;
+$brand-black:           #545454 !default;
 
 //== Scaffolding
 //
@@ -32,7 +28,7 @@ $mj-gray:                #A7A6A8 !default;
 //** Background color for `<body>`.
 $body-bg:               #fff !default;
 //** Global text color on `<body>`.
-$text-color:            $mj-black !default;
+$text-color:            $brand-black !default;
 
 //** Global textual link color.
 $link-color:            $brand-primary !default;
@@ -46,11 +42,16 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  'PT Sans', Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  'Ubuntu', Helvetica, Arial, sans-serif !default;
 $font-family-serif:       'Alegreya', "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
+
+$sans-weight:        300 !default;
+$sans-weight-bold:   400 !default;
+$serif-weight:       400 !default;
+$serif-weight-bold:       700 !default;
 
 $font-size-base:          18px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
@@ -70,9 +71,9 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    $font-family-sans-serif !default;
-$headings-font-weight:    700 !default;
+$headings-font-weight:    400 !default;
 $headings-line-height:    1.1 !default;
-$headings-color:          inherit !default;
+$headings-color:          $brand-black !default;
 
 
 //== Iconography
@@ -103,7 +104,7 @@ $line-height-small:         1.5 !default;
 
 $border-radius-base:        4px !default;
 $border-radius-large:       6px !default;
-$border-radius-small:       3px !default;
+$border-radius-small:       2px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff !default;
@@ -141,9 +142,9 @@ $table-border-color:            #ddd !default;
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-font-weight:                normal !default;
+$btn-font-weight:                300 !default;
 
-$btn-default-color:              #333 !default;
+$btn-default-color:              $brand-black !default;
 $btn-default-bg:                 #fff !default;
 $btn-default-border:             #ccc !default;
 
@@ -151,7 +152,7 @@ $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border:             darken($btn-primary-bg, 5%) !default;
 
-$btn-success-color:              #fff !default;
+$btn-success-color:              $brand-black !default;
 $btn-success-bg:                 $brand-success !default;
 $btn-success-border:             darken($btn-success-bg, 5%) !default;
 
@@ -159,7 +160,7 @@ $btn-info-color:                 #fff !default;
 $btn-info-bg:                    $brand-info !default;
 $btn-info-border:                darken($btn-info-bg, 5%) !default;
 
-$btn-warning-color:              #fff !default;
+$btn-warning-color:              $brand-black !default;
 $btn-warning-bg:                 $brand-warning !default;
 $btn-warning-border:             darken($btn-warning-bg, 5%) !default;
 
