@@ -15,7 +15,6 @@
   touch-action: manipulation;
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border-bottom: 4px solid transparent;
   white-space: nowrap;
   @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-small);
   @include user-select(none);
@@ -164,5 +163,6 @@ input[type="reset"],
 input[type="button"] {
   &.btn-block {
     width: 100%;
+    border: 0;
   }
 }
