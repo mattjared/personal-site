@@ -31,6 +31,12 @@ body {
   line-height: $line-height-base;
   color: $text-color;
   background-color: $body-bg;
+  height: 100%;
+}
+
+.body-contain {
+  min-height: 100%;
+  position: relative;
 }
 
 // Reset fonts for relevant elements

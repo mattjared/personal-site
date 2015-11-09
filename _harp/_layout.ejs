@@ -7,9 +7,11 @@
     <link href="main.css" type="text/css" rel="stylesheet">
   </head>
   <body>
-    <%- partial("_nav") %>
-    <%- yield %>
-    <%- partial("_footer") %>
+    <div class="body-contain">
+        <%- partial("_nav") %>
+            <%- yield %>
+        <%- partial("_footer") %>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
