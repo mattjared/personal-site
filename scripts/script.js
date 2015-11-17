@@ -1,4 +1,12 @@
-console.log('testing');
-var x = document.querySelector('footer').offsetWidth;
-var y = document.querySelector('footer').offsetHeight;
-console.log(x, y);
+// $(document).ready(function(){
+//   $(window).resize(function(){
+//     var footerHeight = $('.footer').outerHeight();
+//     var stickFooterPush = $('.push').height(footerHeight);
+
+//     $('.wrapper').css({'marginBottom':'-' + footerHeight + 'px'});
+//   });
+//   $(window).resize();
+// });
+
+var footerH = $('footer').outerHeight();
+$('.body-contain')
