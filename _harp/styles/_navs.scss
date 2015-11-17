@@ -40,6 +40,9 @@ nav .lead-link {
       position: relative;
       display: block;
       padding: $nav-link-padding;
+      @media(max-width: $screen-xs-max) {
+        padding: 9;
+      }
       &:hover,
       &:focus {
         text-decoration: none;
@@ -135,6 +138,9 @@ nav .lead-link {
 // Pills
 // -------------------------
 .nav-pills {
+   @media(max-width: $screen-xs-max) {
+    width: 100%;
+   }
   float: right;
 
   > li {
