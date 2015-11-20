@@ -9,4 +9,5 @@
 // });
 
 var footerH = $('footer').outerHeight();
-$('.body-contain')
+
+$('.body-contain').css({'marginBottom':'-' + footerH + 'px'});
