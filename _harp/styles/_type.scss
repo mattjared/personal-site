@@ -105,7 +105,8 @@ mark,
 .text-lowercase      { text-transform: lowercase; }
 .text-uppercase      { text-transform: uppercase; }
 .text-capitalize     { text-transform: capitalize; }
-.text-light          { font-weight: 300; }
+.text-light-serif    { font-weight: $serif-weight; }
+.text-light-sans     { font-weight: $sans-weight; }
 
 // Contextual colors
 .text-muted {
