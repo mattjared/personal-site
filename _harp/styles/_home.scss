@@ -1,6 +1,7 @@
 .hero {
   padding: $jumbotron-padding;
-  margin-top: 15px;
+  margin-top: $line-height-computed;
+  margin-bottom: $line-height-computed;
 }
 .hero-text {
   text-align: center;

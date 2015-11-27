@@ -62,6 +62,15 @@ h6, .h6 { font-size: $font-size-h6; }
 // Body text
 // -------------------------
 
+article p,
+.nested-list {
+  margin-bottom: $line-height-computed * 2;
+}
+
+article .row {
+  margin-top: $line-height-computed * 2;
+  margin-bottom: $line-height-computed * 3;
+}
 p {
   font-family: $font-family-serif;
   margin: 0 0 ($line-height-computed / 2);

@@ -115,6 +115,10 @@ img {
 .img-circle {
   border: 3px solid $brand-danger;
   border-radius: 50%; // set radius in percents
+  &.centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 
