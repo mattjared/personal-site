@@ -89,6 +89,10 @@ img {
 // Responsive images (ensure images don't scale beyond their parents)
 .img-responsive {
   @include img-responsive;
+  &.centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 // Rounded corners

@@ -1,8 +1,14 @@
 {
-    "post1": {
-        "title":"First Post"
-    },
-    "post2": {
-        "title":"Second Post"
-    }
+  "flip": {
+    "title": "Coin Flip with JavaScript"
+  },
+  "following": {
+    "title": "Following"
+  },
+  "daily-practice": {
+    "title": "Daily Practice"
+  },
+  "purple-cow": {
+    "title": "The Purple Cow"
+  }
 }
