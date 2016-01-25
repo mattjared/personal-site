@@ -103,5 +103,5 @@ Here's a post inspired but Justin Jackson' <a href="http://megamaker.co/">Mega M
     <li>A useful SCSS mixin</li>
     <li>A spotify playlist</li>
     <li>A song</li>
-    <li><strike>A list of things that I can do this year</strike> Done: <a href="http://mattjared.github.io/posts/megamaker"></a></li>
+    <li><strike>A list of things that I can do this year</strike> Done: <a href="http://mattjared.github.io/posts/megamaker">http://mattjared.github.io/posts/megamaker</a></li>
 </ol>
