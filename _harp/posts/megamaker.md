@@ -1,3 +1,8 @@
+# MegaMaker
+###### Jan 24, 2016
+
+Here's a post inspired but Justin Jackson' <a href="http://megamaker.co/">Mega Maker Series</a>. My goal is to get to all 100 or variations of all 100.
+
 <ol>
     <li>Make something on wtfrugal.xyz</li>
     <li>Use surge.sh to utilize a domain I have </li>
@@ -98,5 +103,5 @@
     <li>A useful SCSS mixin</li>
     <li>A spotify playlist</li>
     <li>A song</li>
-    <li>A list of things that I can do this year</li>
+    <li><strike>A list of things that I can do this year</strike> Done: <a href="http://mattjared.github.io/posts/megamaker"></a></li>
 </ol>

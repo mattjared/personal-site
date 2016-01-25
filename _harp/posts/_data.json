@@ -1,4 +1,7 @@
 {
+  "megamaker": {
+    "title": "MegaMaker"
+  },
   "flip": {
     "title": "Coin Flip with JavaScript"
   },
