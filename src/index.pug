@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    link(rel='stylesheet', href='/css/style.css')
+    script(src="/js/script.js")
+    script(type='text/javascript').
+  body
+    h1 Pug - node template enginesr
+    #container.col
+      if 1 > 2
+        p You are amazing
+      else
+        p Get on it!
+      p.
+        Pug is a terse and simple templating language with a
+        strong focus on performance and powerful features.
+      p.
+        Test test

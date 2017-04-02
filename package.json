@@ -5,7 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "http-server -p 9090 -c-1"
+    "html:build": "pug src/ -o ./",
+    "html:watch": "pug -w  src/ -o ./",
+    "css:build": "node-sass src/scss/style.scss css/style.css --output-style compressed",
+    "css:watch": "node-sass -w src/scss/style.scss css/style.css --output-style compressed",
+    "js:build": "uglifyjs src/js/script.js > js/script.js",
+    "serve": "http-server -p 9090 -c-1",
+    "build": "npm run html:build && npm run css:build && npm run js:build",
+    "watch": "npm run serve | npm run html:watch | npm run css:watch"
   },
   "repository": {
     "type": "git",
@@ -21,6 +28,7 @@
     "http-server": "^0.9.0",
     "node-sass": "^4.5.2",
     "pug": "^2.0.0-beta11",
-    "pug-cli": "^1.0.0-alpha6"
+    "pug-cli": "^1.0.0-alpha6",
+    "uglify-js": "^2.8.21"
   }
 }
