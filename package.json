@@ -1,0 +1,23 @@
+{
+  "name": "mattjared.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"server": "http-server -p 9090 -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattjared/mattjared.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattjared/mattjared.github.io/issues"
+  },
+  "homepage": "https://github.com/mattjared/mattjared.github.io#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}

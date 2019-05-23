@@ -1,0 +1,41 @@
+html {
+	font-family: 'Source Sans Pro', sans-serif;
+	-ms-text-size-adjust:100%;
+	-webkit-text-size-adjust:100%;
+	font-size: 16px;
+	font-weight: 400;
+}
+body{
+	margin:0;
+	background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+a {
+	background-color:transparent;
+	color: #FF6E30;
+}
+a:active,
+a:hover {
+	outline:0;
+	color: darksalmon;
+}
+.headline {
+	font-size:calc(5.5vw);
+	font-weight: 900;
+	color: #FF6E30;
+	margin: 0;
+	border-bottom: 1px solid #aaa;
+}
+.headline a {
+	text-decoration: none;
+}
+.wrapper {
+	margin: 3rem;
+}
+.list-card * {
+	padding-left: .5rem;
+	padding-right: .5rem;
+}
+footer {
+	font-size: .85rem;
+	margin-top: 4rem;
+}
