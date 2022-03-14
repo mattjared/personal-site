@@ -1,6 +1,7 @@
-a website made with html, css and js.
+a website made with 11ty
 
-commands: `npm install && npm run server`
+`npm install`
 
+`npm run start`
 
-
+`npm run build`

@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"server": "http-server -p 9090 -c-1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,6 @@
   },
   "homepage": "https://github.com/mattjared/mattjared.github.io#readme",
   "dependencies": {
-    "http-server": "^0.11.1"
+    "@11ty/eleventy": "^1.0.0"
   }
 }
