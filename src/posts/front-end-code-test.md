@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:900,400' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/styles.css">
-  <meta name="description" content="Matt Jared | Learn to Code and Taco Enthusiast">
-  <title>Matt Jared | Front End Code Test</title>
-</head>
-<body>
-  <div class="wrapper">
-    <h1 class="headline"><a href="/">MATT JARED</a></h1>
-    <h2>Front End Code Test</h2>
+---
+layout: layout.njk
+title: Front End Code Test
+tags: blog
+---
+
+<h2>Front End Code Test</h2>
 <h5>Posted on: Sept 1, 2021</h5>
 <p>Here's a series of front end code tests that I published on Code Sandbox. Take a look and feel free to use these when interviewing front end candidates. See the README's in the Sandboxes for more details.</p>
 <p>WARNING: The instructions below and in the CodeSandboxes are imperfect and nebulous. I’ll be in the room interviewing people and I’d like to work with them to see how they think and try to understand their experience level. If anyone wants more thorough instructions and final requirements for interviewees then please ping me.</p>
@@ -47,10 +39,3 @@
 <p>This isn’t an all encompassing solution nor is it perfect but it will be a good tool to share with candidates so they
 know how to manage apps like this in the future. If there’s ever a point where something in the previous parts doesn’t
 make sense we can easily jump to this and work around some other problems.</p>
-    <footer>
-      <p>site made with code. all right's reserved <span class="current-year"></span></p>
-    </footer>
-  </div>
-  <script src="/script.js"></script>
-</body>
-</html>

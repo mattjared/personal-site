@@ -1,31 +1,9 @@
-<html>
-  <head>
-    <title>Matt Jared</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='//fonts.googleapis.com/css?family=Alegreya:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:600,300' rel='stylesheet' type='text/css'>
-    <link href="../main.css" type="text/css" rel="stylesheet">
-    <meta name="description" content="Matt Jared | Learn to Code and Taco Enthusiast">
-  </head>
-  <body>
-    <div class="body-contain">
-        <nav class="container">
-    <div class="row">
-        <div class="col-sm-3">
-            <a class="lead-link" href="/">Matt Jared</a>
-        </div>
-        <div class="col-sm-9">
-            <ul class="nav nav-pills">
-                <li><a href="/backstory">Backstory</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/work">Work</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-            <div class="container">
-                <h1>MegaMaker</h1><h6>Jan 24, 2016</h6><p>Here&#39;s a post inspired but Justin Jackson&#39; <a href="http://megamaker.co/">Mega Maker Series</a>. My goal is to get to all 100 or variations of all 100.</p>
+---
+layout: layout.njk
+title: MegaMaker
+tags: blog
+---
+<h1>MegaMaker</h1><h6>Jan 24, 2016</h6><p>Here&#39;s a post inspired but Justin Jackson&#39; <a href="http://megamaker.co/">Mega Maker Series</a>. My goal is to get to all 100 or variations of all 100.</p>
 <ol>
     <li>Make something on wtfrugal.xyz</li>
     <li>Use surge.sh to utilize a domain I have </li>
@@ -128,23 +106,3 @@
     <li>A song</li>
     <li><strike>A list of things that I can do this year</strike> Done: <a href="http://mattjared.github.io/posts/megamaker">http://mattjared.github.io/posts/megamaker</a></li>
 </ol>
-            </div>
-        <div class="spacer"></div>
-    </div>
-    <footer class="text-center">
-    <div class="container">Made in 2015 with <a href="http://harpjs.com" target="blank">Harp</a> and <a href="https://github.com/mattjared/mattjared.github.io" target="blank">Github</a>. No legally binding terms here.</div>
-</footer>
-    <script src="../scripts/jquery.js"></script>
-    <script src="../scripts/script.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-70944312-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-  </body>
-</html>

@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:900,400' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/styles.css">
-  <meta name="description" content="Matt Jared | Learn to Code and Taco Enthusiast">
-  <title>Matt Jared | Following</title>
-</head>
-<body>
-  <div class="wrapper">
-    <h1 class="headline"><a href="/">MATT JARED</a></h1>
-    <h2>Following</h2>
+---
+layout: layout.njk
+title: Following
+tags: blog
+---
+
+<h2>Following</h2>
 <h5>Posted on: May 27, 2014</h5>
 <p>One of the pillars of learning web design, in my opinion, is filtering who you follow through all mediums. As James Altucher explains, “You become what inspires you the most” meaning that every piece of content you imbibe is inspiring, defeating or distracting your work and life. I wholeheartedly agree with James and think that everywhere online we go to recharge or get information is effecting the work we create down the road.</p>
 <p>Everything from podcasts to blogs to Twitter is effecting the work we’ll create as designers on a project in the future. It’s effecting how we learn to build sites and how we learn new pieces of code. The easiest way I get trapped or distracted is to hoard bookmarks or follow new people on Twitter in hopes that I’ll grab some new skills along the way.</p>
@@ -22,10 +14,3 @@
 <p>For entrepreneurs, getting to your first customer is the only thing you should be focused on. Cut all bookmarks or anything thats influencing you that’s preventing that from happening. For web designers and n00bs, don’t start learning anything new until you finish that thing you’ve had in the back of your mind. Don’t perfect it, just finish it and share it. No more bookmark library or a following unnecessary personalities or distractions on Twitter. Pick one link and become consumed by it and don’t add another thing until you’re an expert on that subject.</p>
 <p>I’ve learned to be ruthless with who I allow into my mind if I want to succeed in my journey. I started unfollowing people and trashing bookmarks using the framework below…</p>
 <p><img src="../images/framework.jpg"></p>
-    <footer>
-      <p>site made with code. all right's reserved <span class="current-year"></span></p>
-    </footer>
-  </div>
-  <script src="/script.js"></script>
-</body>
-</html>

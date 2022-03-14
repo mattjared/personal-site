@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:900,400' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/styles.css">
-  <meta name="description" content="Matt Jared | Learn to Code and Taco Enthusiast">
-  <title>Matt Jared | Purple Cow</title>
-</head>
-<body>
-  <div class="wrapper">
-    <h1 class="headline"><a href="/">MATT JARED</a></h1>
-    <h2>The Purple Cow</h2>
+---
+layout: layout.njk
+title: Purple Cow
+tags: blog
+---
+
+<h2>The Purple Cow</h2>
 <h5>Posted on: February 23, 2014</h5>
 <p>I’ve been subscribed to everything Seth Godin writes for years. His reach goes far beyond a few years of me reading blogs. Purple Cow is a book published in 2003 and the sheer mass of amazing content and life changing material Seth shared is frankly a little scary.</p>
 <p>Seth Godin has had a profound affect on the way I think as a person, a marketer and someone who gives a shit.</p>
@@ -75,11 +67,3 @@
 <p>Remember it’s not about being weird. It’s about being irresistible to a tiny group of easily reached sneezers with otaku. Irresistible isn’t the same as ridiculous. Irresistable (for the right niche) is just remarkable.</p>
 <p>Top 50 companies in 2002: #2 Microsoft. #50 Apple</p>
 <p>You have to go where the competition is NOT. The farther the better.</p>
-
-    <footer>
-      <p>site made with code. all right's reserved <span class="current-year"></span></p>
-    </footer>
-  </div>
-  <script src="/script.js"></script>
-</body>
-</html>

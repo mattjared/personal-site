@@ -22,14 +22,13 @@ title: The Best Eleventy Demo TM
   <a href="https://www.linkedin.com/in/mattjared9">LinkedIn</a>
   <a href="https://www.npmjs.com/~mattjared">npm</a>
   <a href="https://codesandbox.io/u/mattjared">Code Sandbox</a>
+  <a href="https://www.polywork.com/mattjared">Polywork</a>
+  <a href="https://stackoverflow.com/users/2658883/matt-jared">Stack Overflow</a>  
+  <a href="https://dev.to/mattjared">dev.to</a>
 </div>
 <h3>Blog Posts</h3>
 <div class="list-card">
   {% for post in collections.blog %}
     <a href="{{ post.url}}">{{ post.data.title }}</a>
-  <a href="/posts/front-end-code-test.html">Front End Code Test</a>
-  <a href="/posts/daily-practice.html">Daily Practice</a>
-  <a href="/posts/following.html">Following</a>
-  <a href="/posts/purple-cow.html">Purple Cow</a>
   {% endfor %}
 </div>
