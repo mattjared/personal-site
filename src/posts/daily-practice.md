@@ -1,12 +1,9 @@
 ---
-layout: layout.njk
+layout: post_layout.njk
 title: Daily Practice
 tags: blog
+post_date: May 1, 2014
 ---
-
-## Daily Practice
-
-##### Posted on: May 1, 2014
 
 James Altucher wrote a book that changed my day to day living in 2013 titled Choose Yourself! In the book, James explains his shortcomings and failures along with his successes over the past 20 years of business. This is not a normal book, there are no major triumphs over humanity and a museum built in James’ honor at the end. It’s an honest look at how James has completely lost his entire livelihood multiple times and after each collapse he’s had to completely reinvent himself with new ways to make a living and define himself. After the 2008 crash of his life (and the stock market), James resolved to build himself back using a daily practice.
 

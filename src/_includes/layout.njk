@@ -14,7 +14,7 @@
     <h1 class="headline"><a href="/">MATT JARED</a></h1>
     {{ content | safe }}
     <footer>
-      <p>site made with code. all right's reserved <span class="current-year"></span></p>
+      <p>site made with code. all right's reserved {{ helpers.currentYear() }}</p>
     </footer>
   </div>
   <script src="/script.js"></script>
