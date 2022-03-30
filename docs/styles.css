@@ -42,3 +42,6 @@ footer {
 	font-size: .85rem;
 	margin-top: 4rem;
 }
+.post-wrapper {
+  max-width: 50vw;
+}
