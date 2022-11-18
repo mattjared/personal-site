@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/mattjared/mattjared.github.io#readme",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0"
+    "@11ty/eleventy": "^1.0.0",
+    "@vercel/analytics": "^0.1.4"
   }
 }
