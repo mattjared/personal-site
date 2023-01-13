@@ -2,9 +2,10 @@ import Link from 'next/link';
 
 export default function Layout({ children }) {
   const currentYear = new Date().getFullYear();
+  // const opacities = ['bg-altBlue/100', 'bg-altBlue/90', 'bg-altBlue/80', 'bg-altBlue/70', 'bg-altBlue/60', 'bg-altBlue/50', 'bg-altBlue/40', 'bg-altBlue/30', 'bg-altBlue/20', 'bg-altBlue/10', 'bg-altBlue/5', 'bg-altBlue/2']
   let items = [];
-  const opacities = ['100', '90', '80', '70', '60', '50', '40', '30', '20', '10', '5', '2'];
-  opacities.forEach((el) => { 
+  const opacities2 = ['100', '90', '80', '70', '60', '50', '40', '30', '20', '10', '5', '2'];
+  opacities2.forEach((el) => { 
     items.push(`bg-altBlue/${el}`)
   })
   return (
@@ -15,15 +16,18 @@ export default function Layout({ children }) {
       </Link>
     </h1>
     <div className="flex items-stretch gap-1 mb-3 h-[32px]">
+      {/* {opacities.map((el, i) => {
+        return (<div className={`${el} grow h-full`} key={i}></div>)
+      })} */}
       {items.map((el, i) => {
         return (<div className={`${el} grow h-full`} key={i}></div>)
       })}
     </div>
-    <div className='mb-6'>
-      { children }
-    </div>
-    <footer className="shadow p-6">
-      <p>Site made with code. All rights reserved {currentYear}. Hosted on Vercel, code available on <Link target="_blank" href="https://github.com/mattjared/personal-site ">Github</Link></p>
+    { children }
+    <footer>
+    <article className="css-gui-1vyjrns">
+      <p>Site made with code. All rights reserved {currentYear}. Hosted on Vercel, code available on <Link target="_blank" href="https://github.com/mattjared/mattjared.github.io">Github</Link></p>
+    </article>
     </footer>
   </div>
   );
