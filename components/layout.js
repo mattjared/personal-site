@@ -9,13 +9,13 @@ export default function Layout({ children }) {
     items.push(`bg-altBlue/${el}`)
   })
   return (
-    <div className="wrapper">
+    <div className="py-32 px-8 max-w-4xl min-h-screen transition-all m-auto">
     <h1 className="m-0 text-jumbo font-extrabold">
       <Link href='/' className="">
         Matt Jared
       </Link>
     </h1>
-    <div className="flex items-stretch gap-1 mb-3 h-[32px]">
+    <div className="flex items-stretch gap-1 mb-9 h-[32px]">
       {/* {opacities.map((el, i) => {
         return (<div className={`${el} grow h-full`} key={i}></div>)
       })} */}

@@ -37,13 +37,13 @@ export default function Home({ posts }: {posts: any}) {
       <div>
         <section>
           <article className="css-gui-1vyjrns">
-            <h4 className="css-gui-se617d">About</h4>
+            <h2 className="text-2xl font-semibold mb-2">About</h2>
             <p className="css-gui-za5pjy">
               I am a self taught software engineer who loves solving problems and delivering high impact solutions. After starting my career in marketing I taught myself to code and spent years working on engineering teams at startups and most recently at Atlassian. I recently transitioned to Sales Engineering at Vercel where I live at the  cross section between sales and web development helping companies and developers build the future of the web.
             </p>
           </article>
         </section>
-        <section className="css-gui-1jxdhg4">
+        <section className="blog-grid">
           {posts.map(({slug, frontmatter}: { slug: any, frontmatter: any}) => (
             (frontmatter.published === true && 
               <Link href={`/post/${slug}`} key={slug} className="blog-card">
@@ -54,33 +54,30 @@ export default function Home({ posts }: {posts: any}) {
                   width={100}
                   height={100}
                 /> */}
-                <h4 className="css-gui-se617d">{frontmatter.title}</h4>
+                <h2 className="text-2xl font-semibold mb-2">{frontmatter.title}</h2>
                 <p className="css-gui-za5pjy">Published: {frontmatter.post_date}</p>
               </Link>
             )            
           ))}
-          
         </section>
-        <blockquote className="css-gui-huzsxs">
-          <p className="css-gui-12xj8cy">
+        <blockquote className="pl-8 ml-0 w-full border-l-4 border-current">
+          <p className="text-3xl mb-4 font-semibold">
             What if you stopped trying to think your way through it <br />
             and started to act your way through it?
           </p>
-          <footer className="css-gui-sxoyg7">
-            <i className="css-gui-6uezh4">James Clear</i>
-          </footer>
+          <p className="opacity-60">- James Clear</p>
         </blockquote>  
         <article className="label-cards">
           <div className="label-card">
             <h4 className="label-card-headline">Experience</h4>
             <div className="label-card-col">
-              <div>
-                <p className="label-card-item">Vercel</p>
-                <p className="label-card-item">Atlassian</p>
-                <p className="label-card-item">The Zebra</p>
-                <p className="label-card-item">Techstars</p>
-                <p className="label-card-item">Ohio University</p>
-              </div>
+              <ul>
+                <li>Vercel</li>
+                <li>Atlassian</li>
+                <li>The Zebra</li>
+                <li>Techstars</li>
+                <li>Ohio University</li>
+              </ul>
             </div>
           </div>
           <div className="label-card">
