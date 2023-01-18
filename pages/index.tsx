@@ -36,11 +36,9 @@ export default function Home({ posts }: {posts: any}) {
       </Head>
       <div>
         <section>
-          <article className="css-gui-1vyjrns">
+          <article className="shadow p-6">
             <h2 className="text-2xl font-semibold mb-2">About</h2>
-            <p className="css-gui-za5pjy">
-              I am a self taught software engineer who loves solving problems and delivering high impact solutions. After starting my career in marketing I taught myself to code and spent years working on engineering teams at startups and most recently at Atlassian. I recently transitioned to Sales Engineering at Vercel where I live at the  cross section between sales and web development helping companies and developers build the future of the web.
-            </p>
+            <p>I am a self taught software engineer who loves solving problems and delivering high impact solutions. After starting my career in marketing I taught myself to code and spent years working on engineering teams at startups and most recently at Atlassian. I recently transitioned to Sales Engineering at Vercel where I live at the  cross section between sales and web development helping companies and developers build the future of the web.</p>
           </article>
         </section>
         <section className="blog-grid">
@@ -55,7 +53,7 @@ export default function Home({ posts }: {posts: any}) {
                   height={100}
                 /> */}
                 <h2 className="text-2xl font-semibold mb-2">{frontmatter.title}</h2>
-                <p className="css-gui-za5pjy">Published: {frontmatter.post_date}</p>
+                <p className="opacity-60 text-sm">Published: {frontmatter.post_date}</p>
               </Link>
             )            
           ))}
@@ -65,9 +63,9 @@ export default function Home({ posts }: {posts: any}) {
             What if you stopped trying to think your way through it <br />
             and started to act your way through it?
           </p>
-          <p className="opacity-60">- James Clear</p>
+          <p className="opacity-60 text-sm">- James Clear</p>
         </blockquote>  
-        <article className="label-cards">
+        <article className="label-cards mb-8">
           <div className="label-card">
             <h4 className="label-card-headline">Experience</h4>
             <div className="label-card-col">
