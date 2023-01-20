@@ -45,35 +45,37 @@ export default function Contact() {
   }
 
   useEffect(() => {
-    if (form.name[0] !== "" && form.email[0] !== ""  && form.message[0] !== "") {
+    if (form.name !== "" && form.email !== ""  && form.message !== "") {
       setIsValid(true);
     } 
-    if (form.name[0] === "" || form.email[0] === "" || form.message[0] === "" ) {
+    if (form.name === "" || form.email === "" || form.message === "" ) {
       setIsValid(false);
     }
   }, [form])
 
   return (
-    <>
+    <div className="shadow p-6 flex-col mb-10">
+      <h2 className="text-2xl font-semibold mb-2">Contact</h2>
       {!formSubmitted ? (
         <form action="/api/form" method="post" onSubmit={submitForm}>
-          
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" required onChange={handleChange}/>
-          
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" required onChange={handleChange} />
-
-          <label htmlFor="message">Message:</label>
-          <textarea type="message" id="message" name="message" required onChange={handleChange} />
-          
-          <button type="submit">Submit</button>
+          <div className="flex flex-col mb-4">
+            <label className="mb-1" htmlFor="name">Name:</label>
+            <input className="border p-3 bg-transparent" placeholder="Full Name" type="text" id="name" name="name" required onChange={handleChange}/>
+          </div>
+          <div className="flex flex-col mb-4">
+            <label className="mb-1" htmlFor="email">Email:</label>
+            <input className="border p-3 bg-transparent" placeholder="email@example.com" type="email" id="email" name="email" required onChange={handleChange} />
+          </div>
+          <div className="flex flex-col mb-4">
+            <label className="mb-1" htmlFor="message">Message:</label>
+            <textarea className="border p-3 bg-transparent" placeholder="Hi. Here is a great message" type="message" id="message" name="message" required onChange={handleChange} />
+          </div>
+          <button type="submit" className={`bg-altBlue font-bold p-2 text-mainBlue ${isValid ? "opacity-100" : "opacity-50"}`} disabled={!isValid}>Submit</button>
         </form>
       ) : (
         <h3>heard ya. ill be in touch</h3>
     )}
-        {isValid ? "its valid" : "its not valid"}
-    </>
+    </div>
     
   )
 }

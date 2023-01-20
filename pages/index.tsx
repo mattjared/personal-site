@@ -68,7 +68,7 @@ export default function Home({ posts }: {posts: any}) {
         </blockquote>  
         <article className="label-cards mb-8">
           <div className="label-card">
-            <h4 className="label-card-headline">Experience</h4>
+            <h2 className="text-2xl font-semibold mb-2">Experience</h2>
             <div className="label-card-col">
               <ul>
                 <li>Vercel</li>
@@ -80,7 +80,7 @@ export default function Home({ posts }: {posts: any}) {
             </div>
           </div>
           <div className="label-card">
-            <h4 className="label-card-headline">Socials</h4>
+            <h2 className="text-2xl font-semibold mb-2">Socials</h2>
             <div className="label-card-row">
               <div className="label-card-col">
                 <p className="label-card-item"><a href="https://codepen.io/matt_jared">CodePen</a></p>

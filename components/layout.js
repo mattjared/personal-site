@@ -25,7 +25,7 @@ export default function Layout({ children }) {
     </div>
     { children }
     <footer className="shadow p-6">
-      <p className="opacity-60 text-sm">Site made with code. All rights reserved {currentYear}. Hosted on Vercel, code available on <Link target="_blank" href="https://github.com/mattjared/mattjared.github.io">Github</Link></p>
+      <p className="text-sm">Site made with code. All rights reserved {currentYear}. Hosted on Vercel, code available on <Link target="_blank" href="https://github.com/mattjared/mattjared.github.io">Github</Link></p>
     </footer>
   </div>
   );
