@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
+// import Image from 'next/image'
 import fs, { read } from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
+import Contact from "../components/contact";
 
 export async function getStaticProps() {
   const files = fs.readdirSync('posts');
@@ -98,6 +99,7 @@ export default function Home({ posts }: {posts: any}) {
             </div>
           </div>
         </article>
+        <Contact />
       </div>
     </>
   )
