@@ -1,5 +1,4 @@
 ---
-layout: post_layout.njk
 title: Purple Cow
 published: true
 post_date: February 23, 2014
