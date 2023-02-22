@@ -9,12 +9,6 @@ export default function Navbar() {
           Matt Jared
         </Link>
       </h1>      
-      {/* <div className="flex items-stretch gap-1 mb-5">
-        <Link href="/">Home</Link>
-        <Link href="/">Blog</Link>
-        <Link href="/">Experience</Link>
-        <Link href="/">Contact</Link>
-      </div> */}
       <div className="flex items-stretch gap-1 mb-9 h-[32px]">
         {opacities.map((el, i) => {
           return (<div className={`${el} grow h-full`} key={i}></div>)
