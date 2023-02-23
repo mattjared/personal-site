@@ -1,7 +1,7 @@
 // import { Analytics } from '@vercel/analytics/react';
 import Footer from './Footer';
 import Header from './Navbar';
-import { Inter } from '@next/font/google'
+import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ['latin'] })
 import './globals.css';
 import { AnalyticsWrapper } from './Analytics';
