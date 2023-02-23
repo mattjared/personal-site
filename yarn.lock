@@ -51,15 +51,15 @@
   "resolved" "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   "version" "1.2.1"
 
-"@next/env@13.0.7":
-  "integrity" "sha512-ZBclBRB7DbkSswXgbJ+muF5RxfgmAuQKAWL8tcm86aZmoiL1ZainxQK0hMcMYdh+IYG8UObAKV2wKB5O+6P4ng=="
-  "resolved" "https://registry.npmjs.org/@next/env/-/env-13.0.7.tgz"
-  "version" "13.0.7"
+"@next/env@13.2.0":
+  "integrity" "sha512-yv9oaRVa+AxFa27uQOVecS931NrE+GcQSqcL2HaRxL8NunStLtPiyNm/VixvdzfiWLabMz4dXvbXfwCNaECzcw=="
+  "resolved" "https://registry.npmjs.org/@next/env/-/env-13.2.0.tgz"
+  "version" "13.2.0"
 
-"@next/eslint-plugin-next@13.0.7":
-  "integrity" "sha512-Q/Z0V3D3UpKhhzFU6/s17wD4rqJ+ZDGded8UpqNyzX1nUdD+/PnsZexPhSIZ2Yf/c8QESeirmJVRb3eAfCQkRQ=="
-  "resolved" "https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-13.0.7.tgz"
-  "version" "13.0.7"
+"@next/eslint-plugin-next@13.2.0":
+  "integrity" "sha512-/UW29MPgX5P1J1AVIj9g1TCv4BKzUTBB54wgtEp7X15pEKerACGYv9iny44KGZxSJDizWD2+Zaw6+E7do4kwRA=="
+  "resolved" "https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-13.2.0.tgz"
+  "version" "13.2.0"
   dependencies:
     "glob" "7.1.7"
 
@@ -68,10 +68,10 @@
   "resolved" "https://registry.npmjs.org/@next/font/-/font-13.0.7.tgz"
   "version" "13.0.7"
 
-"@next/swc-darwin-arm64@13.0.7":
-  "integrity" "sha512-F/mU7csN1/J2cqXJPMgTQ6MwAbc1pJ6sp6W+X0z5JEY4IFDzxKd3wRc3pCiNF7j8xW381JlNpWxhjCctnNmfaw=="
-  "resolved" "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.0.7.tgz"
-  "version" "13.0.7"
+"@next/swc-darwin-arm64@13.2.0":
+  "integrity" "sha512-F4zbvPnq3zCTqyyM6WN8ledazzJx3OrxIdc2ewnqnfk6tjBZ/aq1M27GhEfylGjZG1KvbtJCxUqi7dR/6R94bA=="
+  "resolved" "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.2.0.tgz"
+  "version" "13.2.0"
 
 "@nodelib/fs.scandir@2.1.5":
   "integrity" "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="
@@ -738,12 +738,12 @@
   "resolved" "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz"
   "version" "4.0.0"
 
-"eslint-config-next@13.0.7":
-  "integrity" "sha512-X7DB7iDJ9iHi5DAZbnFdWm4M0dwarj5h5y6Vpm9INCYzFgAwSWslq3v0qjYEjtUO5IQ8n1WK6IU5FkOQ2HBhOA=="
-  "resolved" "https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-13.0.7.tgz"
-  "version" "13.0.7"
+"eslint-config-next@^13.2.0":
+  "integrity" "sha512-nZfIQG5m82xwgGO8EjakbF5qjnXADcveGxOxlg5J1jZ9MQlESvqqRrvl4+KHE+JKRgFD2h0q5xwDDWfFbtZmMA=="
+  "resolved" "https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-13.2.0.tgz"
+  "version" "13.2.0"
   dependencies:
-    "@next/eslint-plugin-next" "13.0.7"
+    "@next/eslint-plugin-next" "13.2.0"
     "@rushstack/eslint-patch" "^1.1.3"
     "@typescript-eslint/parser" "^5.42.0"
     "eslint-import-resolver-node" "^0.3.6"
@@ -1699,30 +1699,30 @@
   "resolved" "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   "version" "1.4.0"
 
-"next@13.0.7":
-  "integrity" "sha512-YfTifqX9vfHm+rSU/H/3xvzOHDkYuMuh4wsvTjiqj9h7qHEF7KHB66X4qrH96Po+ohdid4JY8YVGPziDwdXL0A=="
-  "resolved" "https://registry.npmjs.org/next/-/next-13.0.7.tgz"
-  "version" "13.0.7"
+"next@^13.2.0":
+  "integrity" "sha512-vhByvKHedsaMwNTwXKzK4IMmNp7XI7vN4etcGUoIpLrIuDfoYA3bS0ImS4X9F6lKzopG5aVp7a1CjuzF2NGkvA=="
+  "resolved" "https://registry.npmjs.org/next/-/next-13.2.0.tgz"
+  "version" "13.2.0"
   dependencies:
-    "@next/env" "13.0.7"
+    "@next/env" "13.2.0"
     "@swc/helpers" "0.4.14"
     "caniuse-lite" "^1.0.30001406"
     "postcss" "8.4.14"
-    "styled-jsx" "5.1.0"
+    "styled-jsx" "5.1.1"
   optionalDependencies:
-    "@next/swc-android-arm-eabi" "13.0.7"
-    "@next/swc-android-arm64" "13.0.7"
-    "@next/swc-darwin-arm64" "13.0.7"
-    "@next/swc-darwin-x64" "13.0.7"
-    "@next/swc-freebsd-x64" "13.0.7"
-    "@next/swc-linux-arm-gnueabihf" "13.0.7"
-    "@next/swc-linux-arm64-gnu" "13.0.7"
-    "@next/swc-linux-arm64-musl" "13.0.7"
-    "@next/swc-linux-x64-gnu" "13.0.7"
-    "@next/swc-linux-x64-musl" "13.0.7"
-    "@next/swc-win32-arm64-msvc" "13.0.7"
-    "@next/swc-win32-ia32-msvc" "13.0.7"
-    "@next/swc-win32-x64-msvc" "13.0.7"
+    "@next/swc-android-arm-eabi" "13.2.0"
+    "@next/swc-android-arm64" "13.2.0"
+    "@next/swc-darwin-arm64" "13.2.0"
+    "@next/swc-darwin-x64" "13.2.0"
+    "@next/swc-freebsd-x64" "13.2.0"
+    "@next/swc-linux-arm-gnueabihf" "13.2.0"
+    "@next/swc-linux-arm64-gnu" "13.2.0"
+    "@next/swc-linux-arm64-musl" "13.2.0"
+    "@next/swc-linux-x64-gnu" "13.2.0"
+    "@next/swc-linux-x64-musl" "13.2.0"
+    "@next/swc-win32-arm64-msvc" "13.2.0"
+    "@next/swc-win32-ia32-msvc" "13.2.0"
+    "@next/swc-win32-x64-msvc" "13.2.0"
 
 "node-fetch@^2.6.7":
   "integrity" "sha512-RZ6dBYuj8dRSfxpUSu+NsdF1dpPpluJxwOp+6IoDp/sH2QNDSvurYsAa+F1WxY2RjA1iP93xhcsUoYbF2XBqVg=="
@@ -2004,7 +2004,7 @@
   "resolved" "https://registry.npmjs.org/quick-lru/-/quick-lru-5.1.1.tgz"
   "version" "5.1.1"
 
-"react-dom@^18.2.0", "react-dom@18.2.0":
+"react-dom@^18.2.0":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -2017,7 +2017,7 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   "version" "16.13.1"
 
-"react@^16.8||^17||^18", "react@^18.2.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@18.2.0":
+"react@^16.8||^17||^18", "react@^18.2.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
@@ -2235,10 +2235,10 @@
   "resolved" "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz"
   "version" "3.1.1"
 
-"styled-jsx@5.1.0":
-  "integrity" "sha512-/iHaRJt9U7T+5tp6TRelLnqBqiaIT0HsO0+vgyj8hK2KUk7aejFqRrumqPUlAqDwAj8IbS/1hk3IhBAAK/FCUQ=="
-  "resolved" "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.1.0.tgz"
-  "version" "5.1.0"
+"styled-jsx@5.1.1":
+  "integrity" "sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw=="
+  "resolved" "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.1.1.tgz"
+  "version" "5.1.1"
   dependencies:
     "client-only" "0.0.1"
 
