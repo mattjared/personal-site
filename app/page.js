@@ -52,6 +52,7 @@ export default function Home() {
             <h2 className="text-2xl font-semibold mb-2">Socials</h2>
             <div className="label-card-row">
               <div className="label-card-col">
+                <p className="label-card-item"><a href="https://bento.me/mattjared">Bento</a></p>
                 <p className="label-card-item"><a href="https://codepen.io/matt_jared">CodePen</a></p>
                 <p className="label-card-item"><a href="https://github.com/mattjared">GitHub</a></p>
                 <p className="label-card-item"><a href="https://www.linkedin.com/in/mattjared9">LinkedIn</a></p>
