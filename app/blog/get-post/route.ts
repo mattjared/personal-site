@@ -16,8 +16,6 @@ export async function GET(request: NextRequest) {
     .use(html)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
-  // console.log(contentHtml);
-  return new Response(contentHtml, {
-    status: 200,
-  });
+  const options = { status: 200 }
+  return new Response(contentHtml, options);
 }

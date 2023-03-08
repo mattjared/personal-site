@@ -21,6 +21,22 @@ module.exports = {
       boxShadow: {
         DEFAULT: "currentColor 0px 0px 0px 1px",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            color: '#51d1b9',
+            h2: {
+              color: '#51d1b9'
+            },
+            a: {
+              color: '#ffffff',
+              '&:hover': {
+                color: '#51d1b9',
+              },
+            },
+          },
+        },
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],
