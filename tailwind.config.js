@@ -25,7 +25,22 @@ module.exports = {
         DEFAULT: {
           css: {
             color: '#51d1b9',
+            h1: {
+              color: '#51d1b9'
+            },
             h2: {
+              color: '#51d1b9'
+            },
+            h3: {
+              color: '#51d1b9'
+            },
+            h4: {
+              color: '#51d1b9'
+            },
+            h5: {
+              color: '#51d1b9'
+            },
+            h6: {
               color: '#51d1b9'
             },
             a: {

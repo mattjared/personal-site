@@ -19,9 +19,8 @@ export default async function PostPage({params}: { params: { id: string}}) {
     console.log("error", e.toString())
   });
   return (
-    <div className='mx-auto prose prose-stone'>
+    <div className='mx-auto prose prose-stone max-w-none'>
       <div dangerouslySetInnerHTML={{ __html: content }} />
-      asdf
     </div>
   );
 }
