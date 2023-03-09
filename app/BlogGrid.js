@@ -3,13 +3,17 @@ import Box from "./Box";
 
 export default async function BlogGrid() {
   let route;
+  let allPosts;
   if (process.env.NODE_ENV === "development") {
     route = "http://localhost:3000"
   } else {
-    route = "https://mattjared.vercel.app"
+    route = "https://mattjared.vercel.app/"
   }
-  const allPosts = await fetch(`${route}/blog/get-all-posts`).then((res) => {
+  const allPostsRes = await fetch(`${route}/blog/get-all-posts`).then((res) => {
     return res.json();
+  })
+  .then((allPostsResJson) => {
+    allPosts = allPostsResJson;
   })
   .catch((e) => {
     console.log("error", e.toString())
