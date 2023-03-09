@@ -1,5 +1,4 @@
 import Box from "./Box";
-// import route from "./utils/routing";
 
 async function getData() {
   const route = process.env.NODE_ENV === "development"
@@ -7,7 +6,6 @@ async function getData() {
   : "https://mattjared.vercel.app/";
   const res = await fetch(`${route}/blog/get-all-posts`);
   if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch data');
   }
   return res.json();
