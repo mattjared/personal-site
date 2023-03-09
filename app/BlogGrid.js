@@ -16,7 +16,6 @@ async function getData() {
 
 export default async function BlogGrid() {
   const allPosts = await getData();
-  // console.log(allPosts);
   return (
     <Box>
       <h2 className="text-2xl font-semibold mb-2">Blog</h2>
