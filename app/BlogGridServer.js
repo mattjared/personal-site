@@ -1,6 +1,4 @@
-'use client';
 import Box from "./Box";
-import { useEffect, useState } from "react";
 
 async function getData() {
   let route;
@@ -17,19 +15,11 @@ async function getData() {
   return res.json();
 } 
 
-export default function BlogGrid() {
-  const [allBlogs, setAllBlogs] = useState([])
-  useEffect(() => {
-    async function getBlogs() {
-      const blogs = await getData();
-      setAllBlogs(blogs);
-    }
-    getBlogs();
-  }, [])
-
+export default async function BlogGridServer() {
+  const allBlogs = await getData();
   return (
     <Box>
-      <h2 className="text-2xl font-semibold mb-2">Client Blogs</h2>
+      <h2 className="text-2xl font-semibold mb-2">ServerBlogs</h2>
       {allBlogs.map((post, i) => {
         return (
           <div key={i} className="mb-3">
