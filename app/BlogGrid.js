@@ -6,7 +6,7 @@ export default async function BlogGrid() {
   if (process.env.NODE_ENV === "development") {
     route = "http://localhost:3000"
   } else {
-    route = "https://mattjared.vercel.app/"
+    route = "https://mattjared.vercel.app"
   }
   const allPosts = await fetch(`${route}/blog/get-all-posts`).then((res) => {
     return res.json();
