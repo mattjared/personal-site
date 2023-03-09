@@ -20,7 +20,7 @@ export default async function BlogGrid() {
   return (
     <Box>
       <h2 className="text-2xl font-semibold mb-2">Blog</h2>
-      {allPosts.map((post, i) => {
+      {allPosts && allPosts.map((post, i) => {
         return (
           <div key={i} className="mb-3">
             <h3>{post.title}</h3>
