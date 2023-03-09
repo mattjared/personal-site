@@ -9,19 +9,20 @@ export default async function BlogGrid() {
   } else {
     route = "https://mattjared.vercel.app/"
   }
-  const allPostsRes = await fetch(`${route}/blog/get-all-posts`).then((res) => {
+  await fetch(`${route}/blog/get-all-posts`).then((res) => {
     return res.json();
   })
-  .then((allPostsResJson) => {
-    allPosts = allPostsResJson;
+  .then((allPostsRes) => {
+    allPosts = allPostsRes;
   })
   .catch((e) => {
     console.log("error", e.toString())
   });
+  console.log(allPosts);
   return (
     <Box>
       <h2 className="text-2xl font-semibold mb-2">Blog</h2>
-      {allPosts.map((post, i) => {
+      {allPosts && allPosts.map((post, i) => {
         return (
           <div key={i} className="mb-3">
             <h3>{post.title}</h3>
