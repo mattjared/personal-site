@@ -34,14 +34,14 @@ export default async function BlogGrid() {
   return (
     <Box>
       <h2 className="text-2xl font-semibold mb-2">Blog</h2>
-      {content.map((post, i) => {
+      {/* {content.map((post, i) => {
         return (
           <div key={i} className="mb-3">
             <h3>{post.title}</h3>
             <p>{post.postDate}</p>
           </div>
         )
-      })}
+      })} */}
     </Box>
   )
 }
