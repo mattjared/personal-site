@@ -11,10 +11,9 @@ export default async function BlogGrid() {
   const allPosts = await fetch(`${route}/blog/get-all-posts`).then((res) => {
     return res.json();
   })
-  console.log(allPosts);
   return (
     <Box>
-      <h3>blogs and shit</h3>
+      <h2 className="text-2xl font-semibold mb-2">Blog</h2>
       {allPosts.map((post, i) => {
         return (
           <div key={i} className="mb-3">

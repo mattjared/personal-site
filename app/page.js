@@ -16,22 +16,11 @@ const site = {
 export default function Home() {
   return (
     <div>
-        <section>
+        <section className="mb-8">
           <Box headline={site.about.heading} text={site.about.bio}/>
         </section>
-        
         <section>
           <BlogGrid />
-        </section>
-        <section className="blog-grid">
-          {/* {posts.map(({slug, frontmatter}) => (
-            (frontmatter.published === true && 
-              <Link href={`/post/${slug}`} key={slug} className="blog-card">
-                <h2 className="text-2xl font-semibold mb-2">{frontmatter.title}</h2>
-                <p className="opacity-60 text-sm">Published: {frontmatter.post_date}</p>
-              </Link>
-            )            
-          ))} */}
         </section>
         <blockquote className="pl-8 ml-0 my-11  w-full border-l-4 border-current">
           <p className="text-3xl mb-4 font-semibold">

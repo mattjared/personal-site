@@ -17,7 +17,6 @@ export default function Contact() {
       ...form,
       [e.target.name]: e.target.value
     });
-    console.log(form);
   }
 
   const submitForm = async (e) => {
