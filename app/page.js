@@ -44,21 +44,21 @@ export default function Home() {
           </Box>
           <Box>
             <h2 className="text-2xl font-semibold mb-2">Socials</h2>
-            <div className="label-card-row">
-              <div className="label-card-col">
-                <p className="label-card-item"><a href="https://bento.me/mattjared">Bento</a></p>
-                <p className="label-card-item"><a href="https://codepen.io/matt_jared">CodePen</a></p>
-                <p className="label-card-item"><a href="https://github.com/mattjared">GitHub</a></p>
-                <p className="label-card-item"><a href="https://www.linkedin.com/in/mattjared9">LinkedIn</a></p>
-                <p className="label-card-item"><a href="https://dev.to/mattjared">dev.to</a></p>
-                <p className="label-card-item"><a href="https://twitter.com/matt_jared">Twitter</a></p>
+            <div>
+              <div>
+                <p><a href="https://bento.me/mattjared">Bento</a></p>
+                <p><a href="https://codepen.io/matt_jared">CodePen</a></p>
+                <p><a href="https://github.com/mattjared">GitHub</a></p>
+                <p><a href="https://www.linkedin.com/in/mattjared9">LinkedIn</a></p>
+                <p><a href="https://dev.to/mattjared">dev.to</a></p>
+                <p><a href="https://twitter.com/matt_jared">Twitter</a></p>
               </div>
-              <div className="label-card-col">
-                <p className="label-card-item"><a href="https://dribbble.com/matt_jared">Dribbble</a></p>
-                <p className="label-card-item"><a href="https://www.npmjs.com/~mattjared">npm</a></p>
-                <p className="label-card-item"><a href="https://codesandbox.io/u/mattjared">Code Sandbox</a></p>
-                <p className="label-card-item"><a href="https://www.polywork.com/mattjared">Polywork</a></p>
-                <p className="label-card-item"><a href="https://stackoverflow.com/users/2658883/matt-jared">Stack Overflow</a> </p> 
+              <div>
+                <p><a href="https://dribbble.com/matt_jared">Dribbble</a></p>
+                <p><a href="https://www.npmjs.com/~mattjared">npm</a></p>
+                <p><a href="https://codesandbox.io/u/mattjared">Code Sandbox</a></p>
+                <p><a href="https://www.polywork.com/mattjared">Polywork</a></p>
+                <p><a href="https://stackoverflow.com/users/2658883/matt-jared">Stack Overflow</a> </p> 
               </div>
             </div>
           </Box>
