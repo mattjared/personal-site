@@ -11,7 +11,6 @@ async function getData() {
   return res.json();
 }
 
-
 export default async function BlogGrid() {
   const allPosts = await getData();
   return (
