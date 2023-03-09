@@ -1,21 +1,23 @@
-import { type NextRequest } from 'next/server'
 import fs from "fs";
 import { join } from "path";
-import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html';
-
+import graymatter from "gray-matter";
 const postsDirectory = join(process.cwd(), "__posts");
 
-export async function GET(request: NextRequest) {
-  const slug = request ? request.nextUrl.search.substring(1) : undefined;
-  const fullPath = join(postsDirectory, `${slug}.md`)
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const matterResult = matter(fileContents);
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+export async function GET() {
+  const slugs =  fs.readdirSync(postsDirectory);
+  let allPosts: { title: string; postDate: graymatter.GrayMatterFile<string>; }[]= [];
+  slugs.map((slug) => {
+    const realSlug = slug.replace(/\.md$/, "");
+    const fullPath = join(postsDirectory, `${realSlug}.md`);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const frontMatter = graymatter(fileContents);
+    const title = realSlug.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+    const postDate = frontMatter.data.date;
+    allPosts.push({
+      title,
+      postDate
+    })
+  });
   const options = { status: 200 }
-  return new Response(contentHtml, options);
+  return new Response(JSON.stringify(allPosts), options);
 }

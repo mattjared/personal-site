@@ -3,6 +3,7 @@
 // import Link from 'next/link';
 import Contact from "./Contact";
 import Box from "../app/Box"
+import BlogGrid from "./BlogGrid";
 // import { site } from "../utils/data";
 
 const site = {
@@ -17,6 +18,10 @@ export default function Home() {
     <div>
         <section>
           <Box headline={site.about.heading} text={site.about.bio}/>
+        </section>
+        
+        <section>
+          <BlogGrid />
         </section>
         <section className="blog-grid">
           {/* {posts.map(({slug, frontmatter}) => (

@@ -1,8 +1,8 @@
 // import { Analytics } from '@vercel/analytics/react';
 import Footer from './Footer';
 import Header from './Navbar';
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ['latin'] })
+import { Source_Code_Pro } from "next/font/google";
+const sourceCodePro = Source_Code_Pro({ subsets: ['latin'] })
 import './globals.css';
 import { AnalyticsWrapper } from './Analytics';
 
@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`bg-mainBlue text-altBlue ${inter.className}`}>
+      <body className={`bg-mainBlue text-altBlue ${sourceCodePro.className}`}>
         <div className="py-32 px-8 max-w-4xl min-h-screen transition-all m-auto">
           <Header />
           { children }
