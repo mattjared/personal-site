@@ -1,10 +1,6 @@
-// import fs, { read } from 'fs';
-// import matter from 'gray-matter';
-// import Link from 'next/link';
 import Contact from "./Contact";
 import Box from "../app/Box"
 import BlogGrid from "./BlogGrid";
-// import { site } from "../utils/data";
 
 const site = {
   about: { 
