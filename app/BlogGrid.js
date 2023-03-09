@@ -1,24 +1,22 @@
-
 import Box from "./Box";
+// import route from "./utils/routing";
+
+async function getData() {
+  const route = process.env.NODE_ENV === "development"
+  ? "http://localhost:3000"
+  : "https://mattjared.vercel.app/";
+  const res = await fetch(`${route}/blog/get-all-posts`);
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data');
+  }
+  return res.json();
+}
+
 
 export default async function BlogGrid() {
-  let route;
-  let allPosts;
-  if (process.env.NODE_ENV === "development") {
-    route = "http://localhost:3000"
-  } else {
-    route = "https://mattjared.vercel.app/"
-  }
-  await fetch(`${route}/blog/get-all-posts`).then((res) => {
-    return res.json();
-  })
-  .then((allPostsRes) => {
-    allPosts = allPostsRes;
-  })
-  .catch((e) => {
-    console.log("error", e.toString())
-  });
-  console.log(allPosts);
+  const allPosts = await getData();
+  // console.log(allPosts);
   return (
     <Box>
       <h2 className="text-2xl font-semibold mb-2">Blog</h2>
