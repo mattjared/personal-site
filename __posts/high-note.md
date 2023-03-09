@@ -1,5 +1,4 @@
 ---
-layout: post_layout.njk
 title: High Note
 published: true
 post_date: March 29, 2022

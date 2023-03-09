@@ -1,9 +1,10 @@
+"use client"
 import { useEffect, useState } from "react";
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation';
 
 export default function Contact() {
   const router = useRouter();
-  const [form, setForm] =useState({
+  const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
@@ -16,7 +17,6 @@ export default function Contact() {
       ...form,
       [e.target.name]: e.target.value
     });
-    console.log(form);
   }
 
   const submitForm = async (e) => {
@@ -73,7 +73,7 @@ export default function Contact() {
           <button type="submit" className={`bg-altBlue font-bold p-2 text-mainBlue ${isValid ? "opacity-100" : "opacity-50"}`} disabled={!isValid}>Submit</button>
         </form>
       ) : (
-        <h3>heard ya. ill be in touch</h3>
+        <h3>... redirecting ...</h3>
     )}
     </div>
     

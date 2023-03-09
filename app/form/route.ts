@@ -14,11 +14,8 @@ const GOOGLE_SERVICE_PRIVATE_KEY =
 
 const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  const body = req.body;
+export async function POST(request: NextApiRequest, res: NextApiResponse<Data>) {
+  const body = request.body;
   console.log(body);
   const newRow = {
     Name: body.name,

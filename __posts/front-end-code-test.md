@@ -1,5 +1,4 @@
 ---
-layout: post_layout.njk
 title: Front End Code Test
 published: true
 post_date: September 1, 2021

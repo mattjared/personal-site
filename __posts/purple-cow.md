@@ -1,11 +1,10 @@
 ---
-layout: post_layout.njk
 title: Purple Cow
 published: true
 post_date: February 23, 2014
 ---
 
-I’ve been subscribed to everything Seth Godin writes for years. His reach goes far beyond a few years of me reading blogs. Purple Cow is a book published in 2003 and the sheer mass of amazing content and life changing material Seth shared is frankly a little scary.
+## I’ve been subscribed to everything Seth Godin writes for years. His reach goes far beyond a few years of me reading blogs. Purple Cow is a book published in 2003 and the sheer mass of amazing content and life changing material Seth shared is frankly a little scary.
 
 Seth Godin has had a profound affect on the way I think as a person, a marketer and someone who gives a shit.
 
@@ -15,17 +14,17 @@ I wrote down all my favorite quotes from Purple Cow that impacted me in some way
 
 The post-consumption consumer is out of things to buy. We have what we need, we want very little, and we’re too busy to spend a lot of time researching something you’ve worked hard to create for us.
 
-I believe we’ve reach the point where can now longer market directly to the masses.
+# I believe we’ve reach the point where can now longer market directly to the masses.
 
-Stop advertising and start innovating.
+## Stop advertising and start innovating.
 
-The best vegetable seller at the market had a reputation and her booth was always crowded.
+### The best vegetable seller at the market had a reputation and her booth was always crowded.
 
-A partnership with the right ad agency and the right banker meant you could drive a company to be almost as big as you could imagine.
+#### A partnership with the right ad agency and the right banker meant you could drive a company to be almost as big as you could imagine.
 
-â€¦ the power of our new networks allows remarkable ideas to diffuse through segments of the population at rocket speed.
+##### the power of our new networks allows remarkable ideas to diffuse through segments of the population at rocket speed
 
-The Pursuit of Wow, a visionary book that described why the only products with a future were those created by passionate people.
+###### The Pursuit of Wow, a visionary book that described why the only products with a future were those created by passionate people.
 
 Companies win when they treat the attention of their prospects as an asset, not as a resource to be strip-mined and then abandoned.
 

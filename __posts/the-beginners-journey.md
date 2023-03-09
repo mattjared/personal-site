@@ -1,5 +1,4 @@
 ---
-layout: post_layout.njk
 title: The Beginners Journey
 published: false
 post_date: October 24, 2022

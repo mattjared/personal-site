@@ -1,5 +1,4 @@
 ---
-layout: post_layout.njk
 title: MegaMaker
 published: true
 post_date: January 24, 2016

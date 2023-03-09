@@ -1,5 +1,4 @@
 ---
-layout: post_layout.njk
 title: Following
 published: true
 post_date: May 27, 2014
