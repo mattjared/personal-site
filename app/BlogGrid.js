@@ -14,14 +14,15 @@ export default async function BlogGrid() {
   .catch((e) => {
     console.log("error", e.toString())
   });
+  console.log(allPosts);
   return (
     <Box>
       <h2 className="text-2xl font-semibold mb-2">Blog</h2>
-      {allPosts && allPosts.map((post, i) => {
+      {allPosts.map((post, i) => {
         return (
           <div key={i} className="mb-3">
             <h3>{post.title}</h3>
-            <p>{post.postDate}</p>
+            <p>{post.postDate && post.postDate}</p>
           </div>
         )
       })}
