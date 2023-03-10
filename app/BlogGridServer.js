@@ -19,6 +19,7 @@ export default async function BlogGridServer() {
           return (
             <Box key={i}>
               <Link href={`/blog/${post.slug}`}>
+                <h3>{post.slug}</h3>
                 <h3>{post.title}</h3>
                 <p><small>{post.postDate}</small></p>
               </Link>  
