@@ -1,10 +1,5 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { type NextRequest } from 'next/server'
 import { GoogleSpreadsheet } from 'google-spreadsheet';
-
-type Data = {
-  data: string
-}
 
 const SPREADSHEET_ID = process.env.NEXT_PUBLIC_SPREADSHEET_ID;
 const SHEET_ID = process.env.NEXT_PUBLIC_SHEET_ID;
@@ -14,13 +9,12 @@ const GOOGLE_SERVICE_PRIVATE_KEY =
 
 const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
 
-export async function POST(request: NextApiRequest, res: NextApiResponse<Data>) {
-  const body = request.body;
-  console.log(body);
+export async function POST(request: NextRequest) {
+  const data = await request.json();
   const newRow = {
-    Name: body.name,
-    Email: body.email,
-    Message: body.message
+    Name: data.name,
+    Email: data.email,
+    Message: data.message
   };
   if (GOOGLE_CLIENT_EMAIL && GOOGLE_SERVICE_PRIVATE_KEY && SHEET_ID) {
     try {
@@ -35,5 +29,6 @@ export async function POST(request: NextApiRequest, res: NextApiResponse<Data>) 
       console.error("Error: ", e);
     };
   }
-  res.status(200).json({ data: body })
+  const options = { status: 200 }
+  return new Response(data, options);
 }

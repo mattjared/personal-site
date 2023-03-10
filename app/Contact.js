@@ -24,7 +24,7 @@ export default function Contact() {
     if (isValid) {
       setFormSubmitted(true);
     }
-    const res = await fetch("/api/form", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/form`, {
       body: JSON.stringify({
         name: form.name,
         email: form.email,
@@ -35,10 +35,9 @@ export default function Contact() {
       },
       method: "POST"
     });
-    const { error } = await res.json();
-    if (error) {
-      console.log(error);
-      return;
+    if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+      throw new Error('Failed to fetch data');
     } else {
       router.push('/thanks')
     }
@@ -51,6 +50,7 @@ export default function Contact() {
     if (form.name === "" || form.email === "" || form.message === "" ) {
       setIsValid(false);
     }
+    console.log(process.env.NEXT_PUBLIC_URL);
   }, [form])
 
   return (
