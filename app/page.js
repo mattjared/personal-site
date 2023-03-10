@@ -30,11 +30,11 @@ export default function Home() {
           <Box>
             <h2 className="text-2xl font-semibold mb-2">Experience</h2>
               <ul>
-                <li>Vercel</li>
-                <li>Atlassian</li>
-                <li>The Zebra</li>
-                <li>Techstars</li>
-                <li>Ohio University</li>
+                <li>Vercel <small>(Sales Engineer)</small></li>
+                <li>Atlassian <small>(Senior Developer)</small></li>
+                <li>The Zebra <small>(Front End Developer)</small></li>
+                <li>Techstars <small>(Hackstar)</small></li>
+                <li>Ohio University <small>(BBA Marketing)</small></li>
               </ul>
           </Box>
           <Box>
