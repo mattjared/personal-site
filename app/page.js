@@ -1,7 +1,7 @@
 import Contact from "./Contact";
 import Box from "../app/Box"
-import BlogGrid from "./BlogGrid";
 import BlogGridServer from "./BlogGridServer";
+import Link from "next/link";
 
 const site = {
   about: { 
@@ -19,9 +19,6 @@ export default function Home() {
         <section>
           <BlogGridServer />
         </section>
-        {/* <section>
-          <BlogGrid />
-        </section> */}
         <blockquote className="pl-8 ml-0 my-11  w-full border-l-4 border-current">
           <p className="text-3xl mb-4 font-semibold">
             What if you stopped trying to think your way through it <br />
@@ -32,7 +29,6 @@ export default function Home() {
         <article className="mb-8 grid gap-8 grid-cols-1 md:grid-cols-2">
           <Box>
             <h2 className="text-2xl font-semibold mb-2">Experience</h2>
-            <div className="label-card-col">
               <ul>
                 <li>Vercel</li>
                 <li>Atlassian</li>
@@ -40,25 +36,24 @@ export default function Home() {
                 <li>Techstars</li>
                 <li>Ohio University</li>
               </ul>
-            </div>
           </Box>
           <Box>
             <h2 className="text-2xl font-semibold mb-2">Socials</h2>
-            <div>
+            <div className="mb-8 grid gap-8 grid-cols-1 md:grid-cols-2">
               <div>
-                <p><a href="https://bento.me/mattjared">Bento</a></p>
-                <p><a href="https://codepen.io/matt_jared">CodePen</a></p>
-                <p><a href="https://github.com/mattjared">GitHub</a></p>
-                <p><a href="https://www.linkedin.com/in/mattjared9">LinkedIn</a></p>
-                <p><a href="https://dev.to/mattjared">dev.to</a></p>
-                <p><a href="https://twitter.com/matt_jared">Twitter</a></p>
+                <p><Link href="https://bento.me/mattjared">Bento</Link></p>
+                <p><Link href="https://codepen.io/matt_jared">CodePen</Link></p>
+                <p><Link href="https://github.com/mattjared">GitHub</Link></p>
+                <p><Link href="https://www.linkedin.com/in/mattjared9">LinkedIn</Link></p>
+                <p><Link href="https://dev.to/mattjared">dev.to</Link></p>
+                <p><Link href="https://twitter.com/matt_jared">Twitter</Link></p>
               </div>
               <div>
-                <p><a href="https://dribbble.com/matt_jared">Dribbble</a></p>
-                <p><a href="https://www.npmjs.com/~mattjared">npm</a></p>
-                <p><a href="https://codesandbox.io/u/mattjared">Code Sandbox</a></p>
-                <p><a href="https://www.polywork.com/mattjared">Polywork</a></p>
-                <p><a href="https://stackoverflow.com/users/2658883/matt-jared">Stack Overflow</a> </p> 
+                <p><Link href="https://dribbble.com/matt_jared">Dribbble</Link></p>
+                <p><Link href="https://www.npmjs.com/~mattjared">npm</Link></p>
+                <p><Link href="https://codesandbox.io/u/mattjared">Code Sandbox</Link></p>
+                <p><Link href="https://www.polywork.com/mattjared">Polywork</Link></p>
+                <p><Link href="https://stackoverflow.com/users/2658883/matt-jared">Stack Overflow</Link> </p> 
               </div>
             </div>
           </Box>

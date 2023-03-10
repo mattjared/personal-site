@@ -1,4 +1,5 @@
 import Box from "./Box";
+import Link from "next/link";
 
 async function getData() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/blog/get-all-posts`);
@@ -12,16 +13,20 @@ async function getData() {
 export default async function BlogGridServer() {
   const allBlogs = await getData();
   return (
-    <Box>
-      <h2 className="text-2xl font-semibold mb-2">ServerBlogs</h2>
-      {allBlogs.map((post, i) => {
-        return (
-          <div key={i} className="mb-3">
-            <h3>{post.title}</h3>
-            <p>{post.postDate}</p>
-          </div>
-        )
-      })}
-    </Box>
+    <div>
+      {/* <h2 className="text-2xl font-semibold mb-8">Blogs</h2> */}
+      <div className="mb-8 grid gap-8 grid-cols-1 md:grid-cols-3">
+        {allBlogs.map((post, i) => {
+          return (
+            <Box key={i}>
+              <Link href={`/blog/${post.slug}`}>
+                <h3>{post.title}</h3>
+                <p>{post.postDate}</p>
+              </Link>
+            </Box>
+          )
+        })}
+      </div>
+    </div>
   )
 }
