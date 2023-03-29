@@ -1,9 +1,10 @@
 'use client';
 import Box from "./Box";
 import { useEffect, useState } from "react";
+import { route } from "./utils/routing";
 
 async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}}/blog/get-all-posts`);
+  const res = await fetch(`${route}/blog/get-all-posts`);
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch data');

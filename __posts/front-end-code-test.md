@@ -1,7 +1,7 @@
 ---
 title: Front End Code Test
 published: true
-post_date: September 1, 2021
+date: September 1, 2021
 ---
 
 Here's a series of front end code tests that I published on Code Sandbox. Take a look and feel free to use these when interviewing front end candidates. See the README's in the Sandboxes for more details.

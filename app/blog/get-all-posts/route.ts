@@ -5,7 +5,7 @@ const postsDirectory = join(process.cwd(), "__posts");
 
 export async function GET() {
   const slugs =  fs.readdirSync(postsDirectory);
-  let allPosts: { title: string; slug: string; postDate: graymatter.GrayMatterFile<string>; }[]= [];
+  let allPosts: { title: string; slug: string; postDate: graymatter.GrayMatterFile<string>; published: boolean; }[]= [];
   slugs.map((slug) => {
     const realSlug = slug.replace(/\.md$/, "");
     const fullPath = join(postsDirectory, `${realSlug}.md`);
@@ -13,10 +13,12 @@ export async function GET() {
     const frontMatter = graymatter(fileContents);
     const title = realSlug.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
     const postDate = frontMatter.data.date;
+    const published = frontMatter.data.published;
     allPosts.push({
       title,
       slug: slug.replace(/\.md$/, ""),
-      postDate
+      postDate,
+      published
     })
   });
   const options = { status: 200 }

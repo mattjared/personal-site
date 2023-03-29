@@ -1,8 +1,9 @@
 import Box from "./Box";
 import Link from "next/link";
+import { route } from "./utils/routing";
 
 async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/blog/get-all-posts`);
+  const res = await fetch(`${route}/blog/get-all-posts`);
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch data');
@@ -12,6 +13,9 @@ async function getData() {
 
 export default async function BlogGridServer() {
   const allBlogs = await getData();
+  // console.log(allBlogs);
+  console.log(route);
+  console.log(allBlogs);
   return (
     <div>
       <div className="mb-8 grid gap-8 grid-cols-1 md:grid-cols-3">

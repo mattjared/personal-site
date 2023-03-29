@@ -1,7 +1,7 @@
 ---
 title: Flip
 published: false
-post_date: May 21, 2015
+date: May 21, 2015
 ---
 # Coin Flip with JavaScript
 

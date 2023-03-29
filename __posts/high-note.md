@@ -1,7 +1,7 @@
 ---
 title: High Note
 published: true
-post_date: March 29, 2022
+date: March 29, 2022
 ---
 
 Always start and end the day on a high note. It sometimes feels impossible to get over the hump of projects that take forever but the slow incremental progress and chaining together high notes will most likely get the project over the hump.

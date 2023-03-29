@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
+import { route } from "./utils/routing";
 
 export default function Contact() {
   const router = useRouter();
@@ -24,7 +25,7 @@ export default function Contact() {
     if (isValid) {
       setFormSubmitted(true);
     }
-    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/form`, {
+    const res = await fetch(`${route}/form`, {
       body: JSON.stringify({
         name: form.name,
         email: form.email,
@@ -50,7 +51,7 @@ export default function Contact() {
     if (form.name === "" || form.email === "" || form.message === "" ) {
       setIsValid(false);
     }
-    console.log(process.env.NEXT_PUBLIC_URL);
+    console.log(route);
   }, [form])
 
   return (

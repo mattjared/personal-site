@@ -1,7 +1,7 @@
 ---
 title: The Beginners Journey
 published: false
-post_date: October 24, 2022
+date: October 24, 2022
 ---
 
 # Beginners Journey
