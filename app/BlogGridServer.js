@@ -14,8 +14,7 @@ async function getData() {
 export default async function BlogGridServer() {
   const allBlogs = await getData();
   // console.log(allBlogs);
-  console.log(route);
-  console.log(allBlogs);
+  // console.log(route);
   return (
     <div>
       <div className="mb-8 grid gap-8 grid-cols-1 md:grid-cols-3">
