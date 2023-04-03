@@ -21,7 +21,7 @@ export default async function BlogGridServer() {
         {allBlogs.map((post, i) => {
           return (
             <>
-              {post.published &&
+              
                 <Box key={i}>
                   <Link href={`/blog/${post.slug}`}>
                     <h3>{post.title}</h3>
@@ -29,7 +29,7 @@ export default async function BlogGridServer() {
                     {post.published && "published"}
                   </Link>  
                 </Box>
-              }
+              
             </>
           )
         })}
