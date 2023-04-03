@@ -2,6 +2,8 @@ import fs from "fs";
 import { join } from "path";
 import graymatter from "gray-matter";
 const postsDirectory = join(process.cwd(), "_posts");
+import { NextResponse } from 'next/server'
+
 
 export const revalidate = 0 // disable cache
 
@@ -25,5 +27,5 @@ export async function GET() {
     })
   });
   const options = { status: 200, revalidate }
-  return new Response(JSON.stringify(allPosts), options);
+  return new NextResponse(JSON.stringify(allPosts), options);
 }
