@@ -3,7 +3,10 @@ import { join } from "path";
 import graymatter from "gray-matter";
 const postsDirectory = join(process.cwd(), "__posts");
 
+export const revalidate = 0 // disable cache
+
 export async function GET() {
+  console.log(postsDirectory);
   const allSlugs = fs.readdirSync(postsDirectory);
   const slugs = allSlugs.filter(file => file !== '.DS_Store');
   console.log(slugs);
