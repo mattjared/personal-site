@@ -5,10 +5,15 @@ import Link from "next/link";
 export const revalidate = 0 // disable cache
 
 async function getData() {
-  const route = process.env.NODE_ENV === "development"
-  ? "http://localhost:3000/blog/get-all-posts/"
-  : "https://mattjared.vercel.app/blog/get-all-posts/";
-  const res = await fetch(route);
+  // const route = process.env.NODE_ENV === "development"
+  // ? ""
+  // : "https://mattjared.vercel.app/blog/get-all-posts/";
+  let res;
+  if (process.env.NODE_ENV === "development") {
+    res = await fetch("http://localhost:3000/blog/get-all-posts/");
+  } else {
+    res = await fetch("https://mattjared.vercel.app/blog/get-all-posts/");
+  }
   if (!res.ok) { throw new Error('Failed to fetch data')}
   return res.json();
 } 
