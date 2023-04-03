@@ -20,10 +20,10 @@ async function getData() {
 
 export default async function BlogGridServer() {
   const allBlogs = await getData();
-  console.log(allBlogs);
+  console.log("ALL BLOGS", allBlogs.allPosts);
   return (
     <div className="mb-8 grid gap-8 grid-cols-1 md:grid-cols-3">
-      {/* {allBlogs.map((post, i) => {
+      {allBlogs.allPosts.map((post, i) => {
         return (
           <Box key={`${i}-${post}-bottom`}>
             <Link href={`/blog/${post.slug}`}>
@@ -33,7 +33,7 @@ export default async function BlogGridServer() {
             </Link>  
           </Box>
         )
-      })} */}
+      })}
     </div>
   )
 }
