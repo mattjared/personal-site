@@ -1,12 +1,13 @@
 import fs from "fs";
 import { join } from "path";
 import graymatter from "gray-matter";
-const postsDirectory = join(process.cwd(), "__posts");
+const postsDirectory = join(process.cwd(), "_posts");
 
 export const revalidate = 0 // disable cache
 
 export async function GET() {
-  console.log(postsDirectory);
+  // console.log(postsDirectory);
+  console.log("")
   const allSlugs = fs.readdirSync(postsDirectory);
   const slugs = allSlugs.filter(file => file !== '.DS_Store');
   let allPosts: { title: string; slug: string; postDate: graymatter.GrayMatterFile<string>; published: boolean; }[]= [];
