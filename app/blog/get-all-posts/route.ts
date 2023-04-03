@@ -24,6 +24,6 @@ export async function GET() {
       published
     })
   });
-  const options = { status: 200 }
+  const options = { status: 200, revalidate }
   return new Response(JSON.stringify(allPosts), options);
 }
