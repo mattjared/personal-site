@@ -11,6 +11,8 @@ async function getData() {
   return res.json();
 } 
 
+export const revalidate = 0 // disable cache
+
 export default async function BlogGridServer() {
   const allBlogs = await getData();
   return (
