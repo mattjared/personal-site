@@ -4,7 +4,7 @@ published: true
 date: March 31, 2023
 ---
 
-# Scraping Every NBA Player Ever 
+## Scraping Every NBA Player Ever
 
 I recently stumbled upon a comprehensive list of every NBA player ever on Basketball Reference, and I couldn't resist the urge to scrape it.
 
@@ -18,7 +18,7 @@ And that's it! With just a few lines of code and some powerful tools, I was able
 
 p.s. All of the above was written by ChatGPT. Here's my prompt..
 
-```
+```bash
 rewrite the following to be more interesting, all content should be output in markdown: 
 - I found a list of every NBA player ever on <https://www.basketball-reference.com/players/>
 - I used [Puppeteer](https://pptr.dev/) to go and scrape and store all of those players in a huge array (5101 items so far!)
