@@ -5,7 +5,7 @@ import { route } from "./utils/routing";
 export const revalidate = 0 // disable cache
 
 async function getData() {
-  const res = await fetch(`${route}/blog/get-all-posts`);
+  const res = await fetch("https://mattjared.vercel.app/blog/get-all-posts");
   // console.log(route, res);
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
