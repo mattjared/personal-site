@@ -4,9 +4,9 @@ import { route } from "./utils/routing";
 
 export const revalidate = 0 // disable cache
 
-console.log(route);
 async function getData() {
   const res = await fetch(`${route}/blog/get-all-posts`);
+  // console.log(route, res);
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch data');
@@ -16,12 +16,13 @@ async function getData() {
 
 export default async function BlogGridServer() {
   const allBlogs = await getData();
-  console.log(allBlogs);
+  console.log(allBlogs.allPosts[7]);
   return (
     <div>
       {route}
+      {allBlogs.allPosts[7].title}
       <div className="grid gap-1 grid-cols-10">
-        {allBlogs.map((p, i) => {
+        {allBlogs.allPosts.map((p, i) => {
           return (
             <div className="border" key={`${i}-${p}-top`}>
               <p>{p.slug}</p>
@@ -33,7 +34,7 @@ export default async function BlogGridServer() {
         })}
       </div>
       <div className="mb-8 grid gap-8 grid-cols-1 md:grid-cols-3">
-        {allBlogs.map((post, i) => {
+        {/* {allBlogs.map((post, i) => {
           return (
             <Box key={`${i}-${post}-bottom`}>
               <Link href={`/blog/${post.slug}`}>
@@ -43,7 +44,7 @@ export default async function BlogGridServer() {
               </Link>  
             </Box>
           )
-        })}
+        })} */}
       </div>
     </div>
   )
