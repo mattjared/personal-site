@@ -1,5 +1,6 @@
 import Contact from "./Contact";
 import Box from "../app/Box"
+import BlogGrid from "./BlogGrid";
 import BlogGridServer from "./BlogGridServer";
 import Link from "next/link";
 
@@ -17,6 +18,9 @@ export default function Home() {
     <div>
         <section className="mb-8">
           <Box headline={site.about.heading} text={site.about.bio}/>
+        </section>
+        <section>
+          <BlogGrid />
         </section>
         <section>
           <BlogGridServer />
