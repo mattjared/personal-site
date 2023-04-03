@@ -20,17 +20,13 @@ export default async function BlogGridServer() {
       <div className="mb-8 grid gap-8 grid-cols-1 md:grid-cols-3">
         {allBlogs.map((post, i) => {
           return (
-            <>
-              
-                <Box key={i}>
-                  <Link href={`/blog/${post.slug}`}>
-                    <h3>{post.title}</h3>
-                    <p><small>{post.postDate}</small></p>
-                    {post.published && "published"}
-                  </Link>  
-                </Box>
-              
-            </>
+            <Box key={i}>
+              <Link href={`/blog/${post.slug}`}>
+                <h3>{post.title}</h3>
+                <p><small>{post.postDate}</small></p>
+                {post.published && "published"}
+              </Link>  
+            </Box>
           )
         })}
       </div>
