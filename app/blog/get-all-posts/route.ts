@@ -4,12 +4,11 @@ import graymatter from "gray-matter";
 const postsDirectory = join(process.cwd(), "_posts");
 import { NextResponse } from 'next/server'
 
-
 export const revalidate = 0 // disable cache
 
 export async function GET() {
-  const slugs = fs.readdirSync(postsDirectory);
-  // const slugs = allSlugs.filter(file => file !== '.DS_Store');
+  const allSlugs = fs.readdirSync(postsDirectory);
+  const slugs = allSlugs.filter(file => file !== '.DS_Store');
   let allPosts: { title: string; slug: string; postDate: graymatter.GrayMatterFile<string>; published: boolean; }[]= [];
   slugs.map((slug) => {
     const realSlug = slug.replace(/\.md$/, "");
@@ -27,5 +26,5 @@ export async function GET() {
     })
   });
   const options = { status: 200, revalidate }
-  return new NextResponse(JSON.stringify(allPosts), options);
+  return NextResponse.json({allPosts, options});
 }
