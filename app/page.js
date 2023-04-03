@@ -10,6 +10,8 @@ const site = {
   },
 }
 
+export const revalidate = 0 // disable cache
+
 export default function Home() {
   return (
     <div>
