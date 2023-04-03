@@ -8,8 +8,8 @@ import { NextResponse } from 'next/server'
 export const revalidate = 0 // disable cache
 
 export async function GET() {
-  const allSlugs = fs.readdirSync(postsDirectory);
-  const slugs = allSlugs.filter(file => file !== '.DS_Store');
+  const slugs = fs.readdirSync(postsDirectory);
+  // const slugs = allSlugs.filter(file => file !== '.DS_Store');
   let allPosts: { title: string; slug: string; postDate: graymatter.GrayMatterFile<string>; published: boolean; }[]= [];
   slugs.map((slug) => {
     const realSlug = slug.replace(/\.md$/, "");
