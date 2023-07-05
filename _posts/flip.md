@@ -9,5 +9,5 @@ After a lengthy Netflix session it’s always hard to figure out what to watch n
 
 ```javascript
 var flip = Math.floor(Math.random() * 10) <= 5;
-console.log(flip);
+return flip;
 ```

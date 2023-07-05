@@ -1,15 +1,12 @@
 'use client';
 import Box from "./Box";
 import { useEffect, useState } from "react";
-import { route } from "./utils/routing";
+import { routingUrl } from "./utils/routing";
 import Link from "next/link";
 
 async function getData() {
-  const res = await fetch(`${route}/blog/get-all-posts`, { cache: "no-store"});
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error('Failed to fetch data');
-  }
+  const res = await fetch(`${routingUrl}/blog/get-all-posts`, { cache: "no-store"});
+  if (!res.ok) { throw new Error('Failed to fetch data'); }
   return res.json();
 } 
 
