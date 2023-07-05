@@ -19,12 +19,14 @@ export async function GET(request: NextRequest) {
     const title = realSlug.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
     const postDate = frontMatter.data.date;
     const published = frontMatter.data.published;
-    allPosts.push({
-      title,
-      slug: slug.replace(/\.md$/, ""),
-      postDate,
-      published
-    })
+    if (published) {
+      allPosts.push({
+        title,
+        slug: slug.replace(/\.md$/, ""),
+        postDate,
+        published
+      })
+    }
   });
   return new Response(JSON.stringify(allPosts));
 }

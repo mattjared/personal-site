@@ -5,7 +5,7 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 
-const postsDirectory = join(process.cwd(), "__posts");
+const postsDirectory = join(process.cwd(), "_posts");
 
 export async function GET(request: NextRequest) {
   const slug = request ? request.nextUrl.search.substring(1) : undefined;
@@ -13,8 +13,8 @@ export async function GET(request: NextRequest) {
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
   const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
+  .use(html)
+  .process(matterResult.content);
   const contentHtml = processedContent.toString();
   const options = { status: 200 }
   return new Response(contentHtml, options);

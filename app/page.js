@@ -18,9 +18,9 @@ export default function Home() {
         <section className="mb-8">
           <Box headline={site.about.heading} text={site.about.bio}/>
         </section>
-        {/* <section>
+        <section>
           <BlogGridServer />
-        </section> */}
+        </section>
         <blockquote className="pl-8 ml-0 my-11  w-full border-l-4 border-current">
           <p className="text-3xl mb-4 font-semibold">
             What if you stopped trying to think your way through it <br />

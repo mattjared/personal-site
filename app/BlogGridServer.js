@@ -1,6 +1,5 @@
 import Box from "./Box";
 import Link from "next/link";
-// import { route } from "./utils/routing";
 
 export const revalidate = 0 // disable cache
 
@@ -10,9 +9,9 @@ async function getData() {
   // : "https://mattjared.vercel.app/blog/get-all-posts/";
   let res;
   if (process.env.NODE_ENV === "development") {
-    res = await fetch("http://localhost:3000/blog/get-all-posts/");
+    res = await fetch("http://localhost:3000/blog/get-all-posts/", { cache: "no-store"});
   } else {
-    res = await fetch("https://mattjared.vercel.app/blog/get-all-posts/");
+    res = await fetch("https://mattjared.vercel.app/blog/get-all-posts/", { cache: "no-store"});
   }
   if (!res.ok) { throw new Error('Failed to fetch data')}
   return res.json();
@@ -20,10 +19,9 @@ async function getData() {
 
 export default async function BlogGridServer() {
   const allBlogs = await getData();
-  console.log("ALL BLOGS", allBlogs.allPosts);
   return (
     <div className="mb-8 grid gap-8 grid-cols-1 md:grid-cols-3">
-      {allBlogs.allPosts.map((post, i) => {
+      {allBlogs.map((post, i) => {
         return (
           <Box key={`${i}-${post}-bottom`}>
             <Link href={`/blog/${post.slug}`}>

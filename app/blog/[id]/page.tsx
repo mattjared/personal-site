@@ -8,7 +8,7 @@ export default async function PostPage({params}: { params: { id: string}}) {
   } else {
     route = "https://mattjared.vercel.app/"
   }
-  await fetch(`${route}/blog/get-post?${id}`)
+  await fetch(`${route}/blog/get-post?${id}`, { cache: "no-store"})
   .then((res) => {
     return res.text();
   })

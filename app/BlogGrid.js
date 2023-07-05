@@ -5,7 +5,7 @@ import { route } from "./utils/routing";
 import Link from "next/link";
 
 async function getData() {
-  const res = await fetch(`${route}/blog/get-all-posts`);
+  const res = await fetch(`${route}/blog/get-all-posts`, { cache: "no-store"});
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch data');
