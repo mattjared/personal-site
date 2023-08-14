@@ -20,10 +20,16 @@ const site = {
     { service: 'Code Sandbox', url: 'https://codesandbox.io/u/mattjared' },
     { service: 'Polywork', url: 'https://www.polywork.com/mattjared' },
     { service: 'Stack Overflow', url: 'https://stackoverflow.com/users/2658883/matt-jared' },
+  ],
+  career: [
+    { organization: "Vercel", role: "Sales Engineer" },
+    { organization: "Atlassian", role: "Senior Developer" },
+    { organization: "The Zebra", role: "Front End Developer" },
+    { organization: "Techstars", role: "Hackstar" },
+    { organization: "Cratejoy", role: "Designer / Developer" },
+    { organization: "Ohio University", role: "BBA Marketing" },
   ]
 }
-
-export const revalidate = 0 // disable cache
 
 export default function Home() {
   const halfwayIndex = Math.ceil(site.socials.length / 2);
@@ -45,17 +51,13 @@ export default function Home() {
         <article className="mb-8 grid gap-8 grid-cols-1 md:grid-cols-2">
           <Box>
             <h2 className="text-2xl font-semibold mb-2">Experience</h2>
-              <ul>
-                <li>Vercel <small>(Sales Engineer)</small></li>
-                <li>Atlassian <small>(Senior Developer)</small></li>
-                <li>The Zebra <small>(Front End Developer)</small></li>
-                <li>Techstars <small>(Hackstar)</small></li>
-                <li>Ohio University <small>(BBA Marketing)</small></li>
-              </ul>
+              {site.career.map((c,i) => (
+                <p key={`${c.i}-${c.role}`}>{c.organization} <small>({c.role})</small></p>
+              ))}
           </Box>
           <Box>
             <h2 className="text-2xl font-semibold mb-2">Socials</h2>
-            <div className="mb-8 grid grid-cols-1 md:grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-2">
               {site.socials.map((s,i)=> (
                 <div className="mb-0" key={`${s.url}-${i}`}>
                   <Link key={`${s.url}-${i}`} href={s.url}>{s.service}</Link>
