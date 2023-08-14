@@ -27,5 +27,6 @@ export async function GET(request: NextRequest) {
       })
     }
   });
+  console.log(allPosts);
   return new Response(JSON.stringify(allPosts));
 }
