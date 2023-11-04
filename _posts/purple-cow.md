@@ -4,7 +4,7 @@ published: true
 date: February 23, 2014
 ---
 
-## I’ve been subscribed to everything Seth Godin writes for years. His reach goes far beyond a few years of me reading blogs. Purple Cow is a book published in 2003 and the sheer mass of amazing content and life changing material Seth shared is frankly a little scary.
+I’ve been subscribed to everything Seth Godin writes for years. His reach goes far beyond a few years of me reading blogs. Purple Cow is a book published in 2003 and the sheer mass of amazing content and life changing material Seth shared is frankly a little scary.
 
 Seth Godin has had a profound affect on the way I think as a person, a marketer and someone who gives a shit.
 

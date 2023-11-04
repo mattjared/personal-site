@@ -43,7 +43,7 @@ export default function Home() {
         </section>
         <blockquote className="pl-8 ml-0 my-11  w-full border-l-4 border-current">
           <p className="text-3xl mb-4 font-semibold">
-            What if you stopped trying to think your way through it <br />
+            What if you stopped trying to think your way through it
             and started to act your way through it?
           </p>
           <p className="opacity-60 text-sm">- James Clear</p>
