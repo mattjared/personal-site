@@ -1,44 +1,48 @@
-'use client';
 import Box from "./Box";
-import { useEffect, useState } from "react";
-import { routingUrl } from "./utils/routing";
 import Link from "next/link";
+import fs from "fs";
+import { join } from "path";
+import graymatter from "gray-matter";
+const postsDirectory = join(process.cwd(), "_posts");
 
 async function getData() {
-  const res = await fetch(`${routingUrl}/blog/get-all-posts`, { cache: "no-store"});
-  if (!res.ok) { throw new Error('Failed to fetch data'); }
-  return res.json();
+  const allSlugs = fs.readdirSync(postsDirectory);
+  const slugs = allSlugs.filter(file => file !== '.DS_Store');
+  let allPosts = [];
+  slugs.map((slug) => {
+    const realSlug = slug.replace(/\.md$/, "");
+    const fullPath = join(postsDirectory, `${realSlug}.md`);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const frontMatter = graymatter(fileContents);
+    const title = realSlug.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+    const postDate = frontMatter.data.date;
+    const published = frontMatter.data.published;
+    if (published) {
+      allPosts.push({
+        title,
+        slug: slug.replace(/\.md$/, ""),
+        postDate,
+        published
+      })
+    }
+  });
+  return allPosts;
 } 
 
-export default function BlogGrid() {
-  const [allBlogs, setAllBlogs] = useState([])
-  useEffect(() => {
-    async function getBlogs() {
-      const blogs = await getData();
-      setAllBlogs(blogs);
-    }
-    getBlogs();
-  }, [])
-
+export default async function BlogGrid() {
+  const allBlogs = await getData();
   return (
-    <Box>
-      <h2 className="text-2xl font-semibold mb-2">Client Blogs</h2>
+    <div className="mb-8 grid gap-8 grid-cols-1 md:grid-cols-3">
       {allBlogs.map((post, i) => {
         return (
-          <>
-            {post.published &&
-              <Box key={i}>
-                <Link href={`/blog/${post.slug}`}>
-                  <h3>{post.title}</h3>
-                  <p><small>{post.postDate}</small></p>
-                  {post.published && "published"}
-                </Link>  
-              </Box>
-            }
-          </>
+          <Box key={`${i}-${post}-bottom`}>
+            <Link href={`/blog/${post.slug}`}>
+              <h3>{post.title}</h3>
+              <p><small>{post.postDate}</small></p>
+            </Link>  
+          </Box>
         )
       })}
-    </Box>
+    </div>
   )
 }
-

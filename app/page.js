@@ -1,6 +1,6 @@
 import Contact from "./Contact";
 import Box from "../app/Box"
-import BlogGridServerAction from "./BlogGridServerAction";
+import BlogGrid from "./BlogGrid";
 import Link from "next/link";
 
 const site = {
@@ -39,7 +39,7 @@ export default function Home() {
           <Box headline={site.about.heading} text={site.about.bio}/>
         </section>
         <section>
-          <BlogGridServerAction />
+          <BlogGrid />
         </section>
         <blockquote className="pl-8 ml-0 my-11  w-full border-l-4 border-current">
           <p className="text-3xl mb-4 font-semibold">
@@ -66,7 +66,7 @@ export default function Home() {
             </div>
           </Box>
         </article>
-        {/* <Contact /> */}
+        <Contact />
       </div>
   )
 }

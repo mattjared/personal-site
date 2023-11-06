@@ -14,13 +14,9 @@ export default async function PostPage({params}: { params: { id: string}}) {
   .use(html)
   .process(matterResult.content);
   const contentHtml = processedContent.toString();
-  console.log(contentHtml)
-
   return (
     <div className='mx-auto prose prose-stone max-w-none'>
       <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
-      <h2>POST</h2>
-      <h2>{params.id}</h2>
     </div>
   );
 }
