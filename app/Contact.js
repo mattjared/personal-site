@@ -20,29 +20,29 @@ export default function Contact() {
     });
   }
 
-  const submitForm = async (e) => {
-    e.preventDefault();
-    if (isValid) {
-      setFormSubmitted(true);
-    }
-    const res = await fetch(`${routingUrl}/form`, {
-      body: JSON.stringify({
-        name: form.name,
-        email: form.email,
-        message: form.message,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST"
-    });
-    if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-      throw new Error('Failed to fetch data');
-    } else {
-      router.push('/thanks')
-    }
-  }
+  // const submitForm = async (e) => {
+  //   e.preventDefault();
+  //   if (isValid) {
+  //     setFormSubmitted(true);
+  //   }
+  //   const res = await fetch(`${routingUrl}/form`, {
+  //     body: JSON.stringify({
+  //       name: form.name,
+  //       email: form.email,
+  //       message: form.message,
+  //     }),
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     method: "POST"
+  //   });
+  //   if (!res.ok) {
+  //   // This will activate the closest `error.js` Error Boundary
+  //     throw new Error('Failed to fetch data');
+  //   } else {
+  //     router.push('/thanks')
+  //   }
+  // }
 
   useEffect(() => {
     const { name, email, message } = form;
