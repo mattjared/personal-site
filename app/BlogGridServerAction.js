@@ -1,15 +1,14 @@
-import { type NextRequest } from 'next/server'
+import Box from "./Box";
+import Link from "next/link";
 import fs from "fs";
 import { join } from "path";
 import graymatter from "gray-matter";
 const postsDirectory = join(process.cwd(), "_posts");
 
-export const revalidate = 0 // disable cache
-
-export async function GET(request: NextRequest) {
+async function getData() {
   const allSlugs = fs.readdirSync(postsDirectory);
   const slugs = allSlugs.filter(file => file !== '.DS_Store');
-  let allPosts: { title: string; slug: string; postDate: graymatter.GrayMatterFile<string>; published: boolean; }[]= [];
+  let allPosts = [];
   slugs.map((slug) => {
     const realSlug = slug.replace(/\.md$/, "");
     const fullPath = join(postsDirectory, `${realSlug}.md`);
@@ -27,6 +26,24 @@ export async function GET(request: NextRequest) {
       })
     }
   });
-  // console.log(allPosts);
-  return new Response(JSON.stringify(allPosts));
+  return allPosts;
+} 
+
+export default async function BlogGridServer() {
+  const allBlogs = await getData();
+  return (
+    <div className="mb-8 grid gap-8 grid-cols-1 md:grid-cols-3">
+      {allBlogs.map((post, i) => {
+        return (
+          <Box key={`${i}-${post}-bottom`}>
+            <Link href={`/blog/${post.slug}`}>
+              <h3>{post.title}</h3>
+              <p><small>{post.postDate}</small></p>
+            </Link>  
+          </Box>
+        )
+      })}
+      <h2>server action blogs</h2>
+    </div>
+  )
 }
