@@ -1,9 +1,9 @@
-import BlogGridServer from "../BlogGridServer";
+import BlogGrid from "../BlogGrid";
 
 export default function BlogPage() {
   return (
     <div className='mx-auto'>
-      <BlogGridServer />
+      <BlogGrid />
     </div>
   );
 }
