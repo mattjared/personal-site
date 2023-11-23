@@ -7,14 +7,15 @@ export default function Contact() {
     'use server'
     const formattedFormData = {
       name: formData.get("name").toString(),
+      email: formData.get("email").toString(),
       message: formData.get("message").toString(),
     }
     // mutate data
     // revalidate cache
     try {
       await sql`
-        INSERT INTO submissions (name, message)
-        VALUES (${formattedFormData.name}, ${formattedFormData.message})
+        INSERT INTO contactforms (name, email, message)
+        VALUES (${formattedFormData.name}, ${formattedFormData.email}, ${formattedFormData.message})
       `;
     } catch (error) {
       console.log(error)
@@ -31,9 +32,15 @@ export default function Contact() {
             <label className="mb-1" htmlFor="name">Name:</label>
             <input className="border p-3 bg-transparent" placeholder="Full Name" type="text" id="name" name="name" required />
           </div>
-          <label className="mb-1" htmlFor="message">message:</label>
-          <input className="border p-3 bg-transparent" placeholder="Message" type="text" id="message" name="message" required />
-          <button type="submit">Contact</button>
+          <div>
+            <label className="mb-1" htmlFor="name">Email:</label>
+            <input className="border p-3 bg-transparent" placeholder="Email" type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label className="mb-1" htmlFor="message">Message:</label>
+            <input className="border p-3 bg-transparent" placeholder="Message" type="text" id="message" name="message" required />
+          </div>
+          <button type="submit">Contact Me</button>
         </form>
       </div>
     </div>
