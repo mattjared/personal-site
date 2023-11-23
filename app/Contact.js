@@ -2,6 +2,16 @@ import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { sql } from '@vercel/postgres';
 
+async function sendContactMessage(formData) {
+  console.log(formData);
+  const res = await fetch("http://localhost:3000/api/sendMail");
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  }
+  return res.json()
+}
+
 export default function Contact() {
   async function create(formData) {
     'use server'
@@ -10,18 +20,17 @@ export default function Contact() {
       email: formData.get("email").toString(),
       message: formData.get("message").toString(),
     }
-    // mutate data
-    // revalidate cache
-    try {
-      await sql`
-        INSERT INTO contactforms (name, email, message)
-        VALUES (${formattedFormData.name}, ${formattedFormData.email}, ${formattedFormData.message})
-      `;
-    } catch (error) {
-      console.log(error)
-    }
-    revalidatePath('/');
-    redirect('/');
+    // try {
+    //   await sql`
+    //     INSERT INTO contactforms (name, email, message)
+    //     VALUES (${formattedFormData.name}, ${formattedFormData.email}, ${formattedFormData.message})
+    //   `;
+    // } catch (error) {
+    //   console.log(error)
+    // }
+    await sendContactMessage(formData);
+    // revalidatePath('/');
+    // redirect('/');
   }
   return (
     <div className="shadow p-6 flex-col mb-10">
