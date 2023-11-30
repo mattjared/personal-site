@@ -3,13 +3,15 @@ import { redirect } from 'next/navigation';
 import { sql } from '@vercel/postgres';
 
 async function sendContactMessage(formData) {
-  console.log(formData);
-  const res = await fetch("http://localhost:3000/api/sendMail");
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error('Failed to fetch data')
-  }
-  return res.json()
+  // console.log(formData);
+  const response = await fetch("http://localhost:3000/api/send", { 
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",      
+      body: "hello world", 
+    },
+  });
+  return response;
 }
 
 export default function Contact() {
