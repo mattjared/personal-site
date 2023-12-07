@@ -18,7 +18,7 @@ Not having an answer for every question is how life and work just...are. Pursuin
 
 Try. Give a shit. Take pride in your work. Have fun getting there.
 
-## One day you'll be at a new job.
+## One day you'll be at a new job
 
 All yoru current colleagues will quit or be fired. You'll go somewhere new. What can this day teach you? How can I have an outsized impact on today?
 
