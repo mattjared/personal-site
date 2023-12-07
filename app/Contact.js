@@ -1,18 +1,10 @@
+import { Resend } from 'resend';
+const resend = new Resend(process.env.RESEND_API_KEY);
+// import { EmailTemplate } from "../../components/email-template";
+import { EmailTemplate } from "./components/email-template";
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { sql } from '@vercel/postgres';
-
-async function sendContactMessage(formData) {
-  // console.log(formData);
-  const response = await fetch("http://localhost:3000/api/send", { 
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",      
-      body: "hello world", 
-    },
-  });
-  return response;
-}
 
 export default function Contact() {
   async function create(formData) {
@@ -22,17 +14,30 @@ export default function Contact() {
       email: formData.get("email").toString(),
       message: formData.get("message").toString(),
     }
-    // try {
-    //   await sql`
-    //     INSERT INTO contactforms (name, email, message)
-    //     VALUES (${formattedFormData.name}, ${formattedFormData.email}, ${formattedFormData.message})
-    //   `;
-    // } catch (error) {
-    //   console.log(error)
-    // }
-    await sendContactMessage(formData);
-    // revalidatePath('/');
-    // redirect('/');
+    try {
+      await sql`
+        INSERT INTO contactforms (name, email, message)
+        VALUES (${formattedFormData.name}, ${formattedFormData.email}, ${formattedFormData.message})
+      `;
+    } catch (error) {
+      console.log(error)
+    }
+    // const formData = await request.formData()
+    const name = formData.get('name')
+    const email = formData.get('email')
+    const submittedTime = new Date();
+    try {
+      await resend.emails.send({
+        from: 'onboarding@resend.dev',
+        to: 'mattjared9@gmail.com',
+        subject: 'Hello World',
+        react: EmailTemplate({ firstName: name, email: email, submittedTime: submittedTime }),
+      });
+    } catch (error) {
+      throw(error);
+    }
+    revalidatePath('/');
+    redirect('/');
   }
   return (
     <div className="shadow p-6 flex-col mb-10">

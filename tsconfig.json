@@ -29,7 +29,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "app/api/route.ts", "app/blog/page.js"  ],
+, "app/api/route.ts", "app/blog/page.js", "app/api/send/route.ts"  ],
   "exclude": [
     "node_modules"
   ]
