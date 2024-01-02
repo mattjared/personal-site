@@ -21,11 +21,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={sourceCodePro.className}>
-      <body className={`bg-mainBlue text-altBlue`}>
-        <div className="py-32 px-8 max-w-4xl min-h-screen transition-all m-auto">
-          <Navbar />
+    <html lang="en">
+      <body className="bg-slate-100 min-height-100">
+        <Navbar />
+        <div className='mx-auto w-full max-w-3xl p-10 bg-white'>
           { children }
+        </div>
+        <div >
           <Footer />
         </div>
         <AnalyticsWrapper />

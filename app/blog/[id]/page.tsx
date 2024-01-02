@@ -15,7 +15,7 @@ export default async function PostPage({params}: { params: { id: string}}) {
   .process(matterResult.content);
   const contentHtml = processedContent.toString();
   return (
-    <div className='mx-auto prose prose-stone max-w-none'>
+    <div className='mx-auto prose prose-slate max-w-none'>
       <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
     </div>
   );

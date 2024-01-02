@@ -1,14 +1,13 @@
-a {
+/* a {
 	transition: color .25s cubic-bezier(0.075, 0.82, 0.165, 1);
   color: #51d1b9;
-  /* @apply: text */
 }
 a:active,
 a:hover {
   transition: color .25s cubic-bezier(0.075, 0.82, 0.165, 1);
 	outline:0;
 	color: white;
-}
+} */
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
