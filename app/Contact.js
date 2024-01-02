@@ -1,6 +1,5 @@
 import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
-// import { EmailTemplate } from "../../components/email-template";
 import { EmailTemplate } from "./components/email-template";
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
@@ -28,9 +27,9 @@ export default function Contact() {
     const submittedTime = new Date();
     try {
       await resend.emails.send({
-        from: 'onboarding@resend.dev',
+        from: email,
         to: 'mattjared9@gmail.com',
-        subject: 'Hello World',
+        subject: 'Contact Form Submission',
         react: EmailTemplate({ firstName: name, email: email, submittedTime: submittedTime }),
       });
     } catch (error) {
@@ -41,20 +40,22 @@ export default function Contact() {
   }
   return (
     <div className="shadow p-6 flex-col mb-10">
-      <h2 className="text-2xl font-semibold mb-2">Contact</h2>
-      <div className="flex flex-col mb-4">
+      <h2 className="text-2xl font-semibold mb-4">Contact</h2>
+      <div className="mb-4">
         <form action={create}>
-          <div>
-            <label className="mb-1" htmlFor="name">Name:</label>
-            <input className="border p-3 bg-transparent" placeholder="Full Name" type="text" id="name" name="name" required />
+          <div className="grid grid-cols-2 gap-8 mb-8">
+            <div>
+              <label className="mb-1" htmlFor="name">Name:</label>
+              <input className="shadow-bottom p-3 bg-transparent w-full" placeholder="Full Name" type="text" id="name" name="name" required />
+            </div>
+            <div>
+              <label className="mb-1" htmlFor="name">Email:</label>
+              <input className="shadow-bottom p-3 bg-transparent w-full" placeholder="Email" type="email" id="email" name="email" required />
+            </div>
           </div>
-          <div>
-            <label className="mb-1" htmlFor="name">Email:</label>
-            <input className="border p-3 bg-transparent" placeholder="Email" type="email" id="email" name="email" required />
-          </div>
-          <div>
+          <div className='mb-10'>
             <label className="mb-1" htmlFor="message">Message:</label>
-            <input className="border p-3 bg-transparent" placeholder="Message" type="text" id="message" name="message" required />
+            <input className="shadow-bottom p-3 bg-transparent w-full" placeholder="Message" type="text" id="message" name="message" required />
           </div>
           <button type="submit">Contact Me</button>
         </form>

@@ -20,6 +20,7 @@ module.exports = {
       },
       boxShadow: {
         DEFAULT: "currentColor 0px 0px 0px 1px",
+        bottom: "currentColor 0px 1px 0px 0px"
       },
       typography: {
         DEFAULT: {
