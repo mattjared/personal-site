@@ -32,7 +32,7 @@ async function getData() {
 export default async function BlogGrid() {
   const allBlogs = await getData();
   return (
-    <div className="mb-8 grid gap-8 grid-cols-1 md:grid-cols-3">
+    <div className="mb-8 grid gap-8 grid-cols-1 md:grid-cols-3 font-mono">
       {allBlogs.map((post, i) => {
         return (
           <Box key={`${i}-${post}-bottom`}>

@@ -1,7 +1,7 @@
 export const site = {
   about: { 
     heading: "About",
-    bio: "I am a self-taught software engineer who loves solving problems and delivering high impact solutions. After starting my career in marketing I taught myself to code and spent years working on engineering teams at startups and most recently at Atlassian. I recently transitioned to Sales Engineering at Vercel where I live at the  cross section between sales and web development helping companies and developers build the future of the web."
+    bio: "I am a self-taught software engineer who loves solving problems and delivering high impact solutions. After starting my career in marketing I taught myself to code and spent years working on engineering teams at startups (Cratejoy, Techstars and The Zebra) and larger companies (Atlassian). I currently work as a Sales Engineer for Vercel helping large and small companies adopt Next.js and Vercel."
   },
   socials: [
     { service: "Bento", url: "https://bento.me/mattjared" },
