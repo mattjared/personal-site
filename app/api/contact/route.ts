@@ -11,12 +11,12 @@ export async function GET(request: Request) {
   }
 }
 
-export async function GET(request: Request) {
-  try {
-    const result =
-      await sql`ALTER TABLE ContactForms ADD COLUMN created_at TIMESTAMP DEFAULT NOW(); `;
-    return NextResponse.json({ result }, { status: 200 });
-  } catch (error) {
-    return NextResponse.json({ error }, { status: 500 });
-  }
-}
+// export async function GET(request: Request) {
+//   try {
+//     const result =
+//       await sql`ALTER TABLE ContactForms ADD COLUMN created_at TIMESTAMP DEFAULT NOW(); `;
+//     return NextResponse.json({ result }, { status: 200 });
+//   } catch (error) {
+//     return NextResponse.json({ error }, { status: 500 });
+//   }
+// }
