@@ -1,7 +1,8 @@
 export const site = {
   about: { 
-    heading: "About",
-    bio: "I am a self-taught software engineer who loves solving problems and delivering high impact solutions. After starting my career in marketing I taught myself to code and spent years working on engineering teams at startups (Cratejoy, Techstars and The Zebra) and larger companies (Atlassian). I currently work as a Sales Engineer for Vercel helping large and small companies adopt Next.js and Vercel."
+    title: "Matt Jared",
+    heading: "Sales and Web Development.  ",
+    bio: "👋🏻 I am a self-taught software engineer who loves solving problems and delivering high impact solutions. After starting my career in marketing I taught myself to code and spent years working on engineering teams at startups (Cratejoy, Techstars and The Zebra) and larger companies (Atlassian). I currently work as a Sales Engineer for Vercel helping organizations make fast sites with fast teams. I'm located in Austin, TX."
   },
   socials: [
     { service: "Bento", url: "https://bento.me/mattjared" },

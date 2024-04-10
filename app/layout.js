@@ -20,15 +20,18 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const now = new Date();
+  console.log(now);
   return (
     <html lang="en">
-      <body>
-        {/* <Navbar /> */}
-        <div className="text-lg text-orange-600">
-          asdf
+      <body className="bg-slate-50">
+        <div key="1" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 font-sans shadow-lg bg-white min-h-screen">
+          <div className="max-w-2xl mx-auto">
+            <Navbar />
+            { children }
+            <Footer />
+          </div>
         </div>
-        { children }
-        {/* <Footer />         */}
         <AnalyticsWrapper />
       </body>
     </html>
