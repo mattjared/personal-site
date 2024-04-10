@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center py-6">
       <Avatar>
-        <AvatarImage src="https://github.com/mattjared.png" />
+        <AvatarImage src="/images/profilepic.png" />
         <AvatarFallback>MJ</AvatarFallback>
       </Avatar>
       
