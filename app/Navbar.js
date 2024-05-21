@@ -1,38 +1,57 @@
+'use client'
+
 import { AvatarImage, Avatar, AvatarFallback } from "@/components/ui/avatar"
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const navList = [
+    {
+      "routeName": "Home",
+      "routePath": '/' 
+    },
+    {
+      "routeName": "Blog",
+      "routePath": '/blog' 
+    },
+    {
+      "routeName": "Projects",
+      "routePath": '/projects' 
+    },
+    {
+      "routeName": "Contact",
+      "routePath": '/contact' 
+    }
+  ];
   return (
-    <nav className="flex justify-between items-center py-6">
+    <div className="flex justify-between items-center py-6">
       <Avatar>
         <AvatarImage src="/images/profilepic.png" />
         <AvatarFallback>MJ</AvatarFallback>
       </Avatar>
-      
-      <ul className="flex space-x-4">
-        <li>
-          <Link className="text-gray-600 hover:text-gray-900" href="/">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link className="text-gray-600 hover:text-gray-900" href="/blog">
-            Blog
-          </Link>
-        </li>
-        <li>
-          <Link className="text-gray-600 hover:text-gray-900" href="/projects">
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link className="text-gray-600 hover:text-gray-900" href="/contact">
-            Contact
-          </Link>
-        </li>
-        <li />
+      <ul className="flex gap-4">
+          {navList.map((nav, i) => {
+            const isActive = function() {
+              let navClassName; 
+              if ((pathname.startsWith("/blog") && nav.routePath === "/blog") || pathname === nav.routePath) {
+                navClassName = "text-orange-400"
+              } else {
+                navClassName = "text-blue-400"
+              }
+              {/* if () {
+                console.log("hey this is a blog");
+              } */}
+              return navClassName
+            }
+            return (
+                <li key={`${i}-list`} className="space-x-4">
+                  <Link href={nav.routePath} className={isActive()}>{nav.routeName}</Link>
+                </li>
+            )
+          })}
       </ul>
-    </nav>
+    </div>
   )
 }
 

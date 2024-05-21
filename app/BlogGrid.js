@@ -1,4 +1,3 @@
-import Box from "./Box";
 import Link from "next/link";
 import fs from "fs";
 import { join } from "path";
@@ -29,18 +28,33 @@ async function getData() {
   return allPosts;
 } 
 
-export default async function BlogGrid() {
+const BlogBox = function({post, i}) {
+  return (
+    <div className="p-4 border rounded-lg shadow-sm bg-white" key={`post-${i}`}>
+      <h3 className="text-xl font-bold mb-2">{post.title}</h3>
+      <p className="text-gray-600">
+        {post.postDate}
+      </p>
+      <Link className="text-blue-600 hover:text-blue-800 mt-4 inline-block" href={`/blog/${post.slug}`}>
+        Read More
+      </Link>
+    </div>  
+  )
+} 
+
+export default async function BlogGrid({isHome}) {
   const allBlogs = await getData();
   return (
-    <div className="mb-8 grid gap-8 grid-cols-1 md:grid-cols-3 font-mono">
+    <div className="mb-8 grid gap-8 grid-cols-1 md:grid-cols-3">
       {allBlogs.map((post, i) => {
         return (
-          <Box key={`${i}-${post}-bottom`}>
-            <Link href={`/blog/${post.slug}`}>
-              <h3>{post.title}</h3>
-              <p><small>{post.postDate}</small></p>
-            </Link>  
-          </Box>
+          <div key={`${i}-post`}>
+            {isHome ? (
+              <>{i <=2 && (<BlogBox post={post} />)}</>
+            ) : (
+              <BlogBox post={post} />
+            )}
+          </div>
         )
       })}
     </div>
