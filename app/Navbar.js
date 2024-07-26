@@ -26,10 +26,12 @@ export default function Navbar() {
   ];
   return (
     <div className="flex justify-between items-center py-6">
-      <Avatar>
-        <AvatarImage src="/images/profilepic.png" />
-        <AvatarFallback>MJ</AvatarFallback>
-      </Avatar>
+      <Link href="/">
+        <Avatar>
+          <AvatarImage src="/images/profilepic.png" />
+          <AvatarFallback>MJ</AvatarFallback>
+        </Avatar>
+      </Link>
       <ul className="flex gap-4">
           {navList.map((nav, i) => {
             const isActive = function() {
