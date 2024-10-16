@@ -2,6 +2,7 @@
 title: Public Vercel Ships
 published: true
 date: November 1, 2023
+update: September 16, 2024
 ---
 
 ## A list of public ships and collatoral that I worked on at Vercel
@@ -16,4 +17,16 @@ Live Demo I delivered on scaling a Next.js site on Vercel. This was a fun first 
 
 ### [Migrating to Next.js and Vercel for increased developer velocity](https://www.youtube.com/watch?v=w4fiW0yWgbA)
 
-Talking about building and shipping software and the true cost behind a slow development velocity
+Talking about building and shipping software and the true cost behind a slow development velocity.
+
+### [React Chicago](https://www.youtube.com/watch?v=dR2gFFmCHzo)
+
+How to use v0 to deploy any website in 2024.
+
+### [Deploy an AI app at enterprise scale with Vercel](https://www.youtube.com/watch?v=9h_dFCNSiQ4)
+
+Online event where I acted as a CTO looking to evaluate Vercel.
+
+### [Inspiration for isthiscsr.com](https://drew.tech/posts/idea-to-prod-in-34-minutes)
+
+Site that uses AI to see if a site is using client side rendering or not
