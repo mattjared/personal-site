@@ -19,6 +19,10 @@ export default function Navbar() {
       "routeName": "Projects",
       "routePath": '/projects' 
     },
+    {
+      "routeName": "Contact",
+      "routePath": '/contact' 
+    },
   ];
   return (
     <header className="container mx-auto px-4 py-6 flex justify-between items-center">
@@ -36,7 +40,7 @@ export default function Navbar() {
           )
         })}
       </nav>
-      <Button variant="outline" className="text-sm" asChild><Link href="/contact">Get in touch</Link></Button>
+      <Button variant="outline" className="text-sm" asChild><Link href="/deploy">Deploy this site</Link></Button>
     </header>
   )
 }

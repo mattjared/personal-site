@@ -9,3 +9,7 @@ body {
 .font-sans {
   font-family: 'Source Sans Pro', sans-serif;
 }
+
+a {
+  @apply text-teal-400;
+}

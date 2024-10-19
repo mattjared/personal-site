@@ -3,7 +3,6 @@ import fs from "fs";
 import { join } from "path";
 import graymatter from "gray-matter";
 const postsDirectory = join(process.cwd(), "_posts");
-import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card"
 import MugShot from "../components/MugShot";
 import { site } from "../../siteData";

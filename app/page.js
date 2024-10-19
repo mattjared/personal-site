@@ -16,7 +16,7 @@ export default function Home() {
             <p className="text-md font-sans mb-6">{site.about.bio}</p>
             <div className="mt-4 space-x-4">
               <Button className="bg-black text-white hover:bg-gray-800" asChild><Link href="/contact">Talk with me</Link></Button>
-              <Button variant="outline" asChild><Link href="/projects">See my work</Link></Button>
+              <Button variant="outline" asChild><Link href="/projects" className="text-black">See my work</Link></Button>
             </div>
             <hr className="my-8" />
             <div>
@@ -58,7 +58,7 @@ export default function Home() {
                 </Card>
               ))}
             </div>
-            <hr />
+            <hr className="my-8" />
             <div>
               <h4 className="text-2xl font-serif mb-4">Latest Post</h4>
               {site.recentAppearances.map((job, index) => (

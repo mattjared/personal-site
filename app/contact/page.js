@@ -19,7 +19,7 @@ export default function ContactPage() {
                 {site.socials.map((s,i)=> (
                   <Card className="mb-4" key={`${s.url}-${i}`}>
                     <CardContent className="flex items-center p-4">
-                      <span className="text-2xl mr-4">✍🏻</span>
+                      <span className="text-2xl mr-4">{s.logo}</span>
                       <div>
                         <h5 className="font-semibold">{s.service}</h5>
                         <Link href={s.url} className="text-sm text-gray-500">Read more</Link>

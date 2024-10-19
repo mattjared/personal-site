@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Contact from "../components/Contact";
 import { site } from "../../siteData";
 import MugShot from "../components/MugShot";
 import { Card, CardContent } from "@/components/ui/card";

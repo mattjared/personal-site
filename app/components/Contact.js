@@ -1,50 +1,37 @@
-import { Resend } from 'resend';
-const resend = new Resend(process.env.RESEND_API_KEY);
-import { EmailTemplate } from "./email-template";
-import { revalidatePath } from 'next/cache';
-import { redirect } from 'next/navigation';
-import { sql } from '@vercel/postgres';
+'use client'
+// import { Resend } from 'resend';
+// const resend = new Resend(process.env.RESEND_API_KEY);
+// import { EmailTemplate } from "./email-template";
+import { createContact } from '../lib/actions';
+import { useState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
+function SubmitButton() {
+  const { pending } = useFormStatus();
+  return <Button type="submit" disabled={pending}>{pending ? 'Submitting...' : 'Contact Me'}</Button>
+}
+
 export default function Contact() {
+  const [message, setMessage] = useState('');
   async function create(formData) {
-    'use server'
-    const formattedFormData = {
-      name: formData.get("name").toString(),
-      email: formData.get("email").toString(),
-      message: formData.get("message").toString(),
+    const result = await createContact(formData);
+    if (result.error) {
+      setMessage(result.error);
+    } else {
+      setMessage(result.message);
     }
-    try {
-      await sql`
-        INSERT INTO contactforms (name, email, message)
-        VALUES (${formattedFormData.name}, ${formattedFormData.email}, ${formattedFormData.message})
-      `;
-    } catch (error) {
-      console.log(error)
-    }
-    // const formData = await request.formData()
-    const name = formData.get('name')
-    const email = formData.get('email')
-    const submittedTime = new Date();
-    try {
-      await resend.emails.send({
-        from: email,
-        to: 'mattjared9@gmail.com',
-        subject: 'Contact Form Submission',
-        react: EmailTemplate({ firstName: name, email: email, submittedTime: submittedTime }),
-      });
-    } catch (error) {
-      throw(error);
-    }
-    revalidatePath('/');
-    redirect('/');
   }
+
   return (
     <Card className="p-6 flex-col mb-10">
       <CardContent>
-        <form action={create}>
+        { message ? (
+          <p>{message}</p>
+        ) : (
+          <form action={create}>
           <div className="mb-4">
             <Input placeholder="Full Name" type="text" id="name" name="name" required />
           </div>
@@ -54,8 +41,9 @@ export default function Contact() {
           <div className="mb-4">
             <Input placeholder="Message" type="text" id="message" name="message" required />
           </div>
-          <Button type="submit">Contact Me</Button>
-        </form>
+          <SubmitButton />
+          </form>
+        )}
       </CardContent>
     </Card>
   )
