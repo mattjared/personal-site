@@ -1,80 +1,86 @@
 import { site } from "../siteData";
-import GithubIcon from "@/icons/github";
-import LinkedinIcon from "@/icons/linkedin";
-import Image from "next/image";
-import BlogGrid from "./BlogGrid";
+import MugShot from "./components/MugShot";
+import PicGrid from "./components/PicGrid";
 import Link from "next/link"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
     <>
-      <div key="1">
-      <div className="mt-12 md:flex md:items-center md:justify-between">
-        <div className="max-w-xxl">
-          <h1 className="text-5xl font-bold leading-tight mb-2">{site.about.title}</h1>
-          <h2 className="text-xl font-semibold leading-tighter">{site.about.heading}</h2>
-          <p className="mt-5 text-gray-600">{site.about.bio}</p>
-          <div className="flex space-x-3 mt-6">
-            <Link href="https://github.com/mattjared">
-              <GithubIcon className="text-gray-600 hover:text-gray-900" />
-            </Link>
-            <Link href="https://linkedin.com/in/mattjared9">
-              <LinkedinIcon className="text-gray-600 hover:text-gray-900" />
-            </Link>
+      <main className="container mx-auto px-4 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <MugShot subheading={site.about.subheading} heading={site.about.heading} />
+          <div>
+            <h3 className="text-4xl font-serif mb-6">{site.about.mission}</h3>
+            <p className="text-md font-sans mb-6">{site.about.bio}</p>
+            <div className="mt-4 space-x-4">
+              <Button className="bg-black text-white hover:bg-gray-800" asChild><Link href="/contact">Talk with me</Link></Button>
+              <Button variant="outline" asChild><Link href="/projects">See my work</Link></Button>
+            </div>
+            <hr className="my-8" />
+            <div>
+              <h4 className="text-2xl font-serif mb-4">Work experience</h4>
+              {site.careerCards.map((job, index) => (
+                <Card key={index} className="mb-4">
+                  <CardContent className="flex items-center p-4">
+                    <span className="text-2xl mr-4">{job.logo}</span>
+                    <div>
+                      <h5 className="font-semibold">{job.title}</h5>
+                      <p className="text-sm">{job.company}</p>
+                    </div>
+                    <span className="ml-auto text-sm text-gray-500">{job.date}</span>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Image
-          alt="Image 1"
-          className="rounded-lg shadow-lg"
-          height="200"
-          src="/images/mug.jpeg"
-          style={{
-            aspectRatio: "200/200",
-            objectFit: "cover",
-          }}
-          width="200"
-        />
-        <Image
-          alt="Image 2"
-          className="rounded-lg shadow-lg"
-          height="200"
-          src="/images/badge.jpg"
-          style={{
-            aspectRatio: "200/200",
-            objectFit: "cover",
-          }}
-          width="200"
-        />
-        <Image
-          alt="Image 3"
-          className="rounded-lg shadow-lg"
-          height="200"
-          src="/images/dexter.jpeg"
-          style={{
-            aspectRatio: "200/200",
-            objectFit: "cover",
-          }}
-          width="200"
-        />
-        <Image
-          alt="Image 4"
-          className="rounded-lg shadow-lg"
-          height="200"
-          src="/images/bridge.jpeg"
-          style={{
-            aspectRatio: "200/200",
-            objectFit: "cover",
-          }}
-          width="200"
-        />
-      </div>
-      <section className="mt-12">
-        <h2 className="text-3xl font-bold mb-6">Latest Blogs</h2>
-        <BlogGrid isHome />
-      </section>
-    </div> 
+        <PicGrid />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="col-start-2">
+            <hr className="my-8" />
+            <div>
+              <h4 className="text-2xl font-serif mb-4">Recent Appearances</h4>
+              {site.recentAppearances.map((job, index) => (
+                <Card key={index} className="mb-4">
+                  <CardContent className="flex items-center p-4">
+                    <span className="text-2xl mr-4">{job.logo}</span>
+                    <div>
+                      <h5 className="font-semibold">{job.title}</h5>
+                      <p className="text-sm">{job.company}</p>
+                    </div>
+                    <span className="ml-auto text-sm text-gray-500">{job.date}</span>
+                  </CardContent>
+                  <CardFooter>
+                    <Link href={job.url}>See more</Link>
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
+            <hr />
+            <div>
+              <h4 className="text-2xl font-serif mb-4">Latest Post</h4>
+              {site.recentAppearances.map((job, index) => (
+                <Card key={index} className="mb-4">
+                  <CardContent className="flex items-center p-4">
+                    <span className="text-2xl mr-4">{job.logo}</span>
+                    <div>
+                      <h5 className="font-semibold">{job.title}</h5>
+                      <p className="text-sm">{job.company}</p>
+                    </div>
+                    <span className="ml-auto text-sm text-gray-500">{job.date}</span>
+                  </CardContent>
+                  <CardFooter>
+                    <Link href={job.url}>See more</Link>
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </main>
     </>
   )
 }
+

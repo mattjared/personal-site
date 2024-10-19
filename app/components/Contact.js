@@ -1,9 +1,12 @@
 import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
-import { EmailTemplate } from "./components/email-template";
+import { EmailTemplate } from "./email-template";
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { sql } from '@vercel/postgres';
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export default function Contact() {
   async function create(formData) {
@@ -39,27 +42,21 @@ export default function Contact() {
     redirect('/');
   }
   return (
-    <div className="shadow p-6 flex-col mb-10">
-      <h2 className="text-2xl font-semibold mb-4">Contact</h2>
-      <div className="mb-4">
+    <Card className="p-6 flex-col mb-10">
+      <CardContent>
         <form action={create}>
-          <div className="grid grid-cols-2 gap-8 mb-8">
-            <div>
-              <label className="mb-1" htmlFor="name">Name:</label>
-              <input className="shadow-bottom p-3 bg-transparent w-full" placeholder="Full Name" type="text" id="name" name="name" required />
-            </div>
-            <div>
-              <label className="mb-1" htmlFor="name">Email:</label>
-              <input className="shadow-bottom p-3 bg-transparent w-full" placeholder="Email" type="email" id="email" name="email" required />
-            </div>
+          <div className="mb-4">
+            <Input placeholder="Full Name" type="text" id="name" name="name" required />
           </div>
-          <div className='mb-10'>
-            <label className="mb-1" htmlFor="message">Message:</label>
-            <input className="shadow-bottom p-3 bg-transparent w-full" placeholder="Message" type="text" id="message" name="message" required />
+          <div className="mb-4">
+            <Input placeholder="Email" type="email" id="email" name="email" required />
           </div>
-          <button type="submit">Contact Me</button>
+          <div className="mb-4">
+            <Input placeholder="Message" type="text" id="message" name="message" required />
+          </div>
+          <Button type="submit">Contact Me</Button>
         </form>
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   )
 }

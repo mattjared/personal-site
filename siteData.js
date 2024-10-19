@@ -1,9 +1,23 @@
 export const site = {
   about: { 
-    title: "Matt Jared",
-    heading: "Sales and Web Development.  ",
-    bio: "👋🏻 I am a self-taught software engineer who loves solving problems and delivering high impact solutions. After starting my career in marketing I taught myself to code and spent years working on engineering teams at startups (Cratejoy, Techstars and The Zebra) and larger companies (Atlassian). I currently work as a Sales Engineer for Vercel helping organizations make fast sites with fast teams. I'm located in Austin, TX."
+    heading: "I'm Matt Jared",
+    subheading: "Sales Engineer based in Austin, USA.",
+    mission: "Empowering teams to solve complex challenges at scale.",
+    bio: "I’m a self-taught software developer delivering high-impact solutions. I’ve worked at startups and a large public company. Today, I’m a Sales Engineer at Vercel, helping organizations build fast sites with fast teams."
   },
+  careerCards: [
+    { logo: '▲', title: 'Senior Sales Engineer', company: 'Vercel', date: 'Jan 2023 - Present' },
+    { logo: '🌎', title: 'Senior Developer', company: 'Atlassian', date: 'June 2018 - Jan 2023' },
+    { logo: '🦓', title: 'Frontend Developer', company: 'The Zebra', date: 'Jan 2015 - June 2018' },
+  ],
+  recentAppearances: [
+    { logo: '🌐', title: 'The WordPress Edge', company: 'American Eagle', date: 'September 2024', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
+    { logo: '🌐', title: 'How to scale your business with AI', company: 'American Eagle', date: 'September 2024', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
+  ],
+  projects: [
+    { logo: '🌐', title: 'Random Hooper', company: 'American Eagle', date: 'September 2024', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
+    { logo: '🌐', title: 'Scorelord', company: 'American Eagle', date: 'September 2024', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
+  ],
   socials: [
     { service: "Bento", url: "https://bento.me/mattjared" },
     { service: 'CodePen', url: 'https://codepen.io/matt_jared' },
