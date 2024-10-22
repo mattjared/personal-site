@@ -6,33 +6,10 @@ const postsDirectory = join(process.cwd(), "_posts");
 import { Card, CardContent } from "@/components/ui/card"
 import MugShot from "../components/MugShot";
 import { site } from "../../siteData";
-
-async function getData() {
-  const allSlugs = fs.readdirSync(postsDirectory);
-  const slugs = allSlugs.filter(file => file !== '.DS_Store');
-  let allPosts = [];
-  slugs.map((slug) => {
-    const realSlug = slug.replace(/\.md$/, "");
-    const fullPath = join(postsDirectory, `${realSlug}.md`);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const frontMatter = graymatter(fileContents);
-    const title = realSlug.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
-    const postDate = frontMatter.data.date;
-    const published = frontMatter.data.published;
-    if (published) {
-      allPosts.push({
-        title,
-        slug: slug.replace(/\.md$/, ""),
-        postDate,
-        published
-      })
-    }
-  });
-  return allPosts;
-} 
+import { getBlogData } from "../lib/actions";
 
 export default async function BlogPage() {
-  const allBlogs = await getData();
+  const allBlogs = await getBlogData({ allPosts: true });
   return (
     <>
       <main className="container mx-auto px-4 mt-12">

@@ -1,6 +1,9 @@
 'use server'
-
 import { createClient } from '@supabase/supabase-js'
+import fs from "fs";
+import { join } from "path";
+import graymatter from "gray-matter";
+const postsDirectory = join(process.cwd(), "_posts");
 
 const supabase = createClient(
   process.env.SUPABASE_URL!,
@@ -48,4 +51,47 @@ export async function createContact(formData: FormData): Promise<ContactResult> 
     console.error('Error submitting form:', error)
     return { error: 'There was a problem sending your message. Please try again.' }
   }
+}
+
+export async function getBlogData(options: { allPosts: boolean; recentPost: boolean }) {
+  const allSlugs = fs.readdirSync(postsDirectory);
+  const slugs = allSlugs.filter(file => file !== '.DS_Store');
+  let posts: BlogPost[] = [];
+
+  slugs.forEach((slug) => {
+    const realSlug = slug.replace(/\.md$/, "");
+    const fullPath = join(postsDirectory, `${realSlug}.md`);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const { data: frontMatter } = graymatter(fileContents);
+    
+    if (frontMatter.published) {
+      posts.push({
+        title: frontMatter.title || realSlug.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase()),
+        slug: realSlug,
+        date: frontMatter.date,
+        excerpt: frontMatter.excerpt || '',
+        tags: frontMatter.tags || [],
+        published: frontMatter.published,
+      });
+    }
+  });
+
+  // Sort posts by date, most recent first
+  posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  
+  if (options.recentPost) {
+    console.log(posts.slice(0, 1));
+    return posts.slice(0, 1); 
+  }
+
+  return options.allPosts ? posts : [];
+}
+
+interface BlogPost {
+  title: string;
+  slug: string;
+  date: string;
+  excerpt: string;
+  tags: string[];
+  published: boolean;
 }

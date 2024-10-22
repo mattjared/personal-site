@@ -4,8 +4,10 @@ import PicGrid from "./components/PicGrid";
 import Link from "next/link"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { getBlogData } from "./lib/actions";
 
-export default function Home() {
+export default async function Home() {
+  const allBlogs = await getBlogData({ recentPost: true });
   return (
     <>
       <main className="container mx-auto px-4 mt-12">
@@ -61,21 +63,22 @@ export default function Home() {
             <hr className="my-8" />
             <div>
               <h4 className="text-2xl font-serif mb-4">Latest Post</h4>
-              {site.recentAppearances.map((job, index) => (
-                <Card key={index} className="mb-4">
+              {allBlogs.map((post, i) => {
+                return (
+                <Card key={i} className="mb-4">
                   <CardContent className="flex items-center p-4">
-                    <span className="text-2xl mr-4">{job.logo}</span>
+                    <span className="text-2xl mr-4">🔮</span>
                     <div>
-                      <h5 className="font-semibold">{job.title}</h5>
-                      <p className="text-sm">{job.company}</p>
+                      <h5 className="font-semibold">{post.title}</h5>
+                      {/* <p className="text-sm">{job.company}</p> */}
                     </div>
-                    <span className="ml-auto text-sm text-gray-500">{job.date}</span>
+                    <span className="ml-auto text-sm text-gray-500">{post.date}</span>
                   </CardContent>
                   <CardFooter>
-                    <Link href={job.url}>See more</Link>
+                    <Link href={`/blog/${post.slug}`}>See more</Link>
                   </CardFooter>
                 </Card>
-              ))}
+              )})}
             </div>
           </div>
         </div>

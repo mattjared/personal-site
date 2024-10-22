@@ -11,7 +11,7 @@ export const site = {
     { logo: '🦓', title: 'Frontend Developer', company: 'The Zebra', date: 'Jan 2015 - June 2018' },
   ],
   recentAppearances: [
-    { logo: '🌐', title: 'The WordPress Edge', company: 'American Eagle', date: 'September 2024', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
+    { logo: '🌐', title: 'The WordPress Edge', company: 'American Eagle', date: 'September 2024', url: 'https://www.youtube.com/watch?v=5ECzvKmOiMg' },
     { logo: '🌐', title: 'How to scale your business with AI', company: 'American Eagle', date: 'September 2024', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
   ],
   projects: [
