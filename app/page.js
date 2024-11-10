@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { getBlogData } from "./lib/actions";
 
 export default async function Home() {
-  const allBlogs = await getBlogData({ recentPost: true });
+  const latestBlogs = await getBlogData({ recentPost: true });
   return (
     <>
       <main className="container mx-auto px-4 mt-12">
@@ -44,26 +44,23 @@ export default async function Home() {
             <hr className="my-8" />
             <div>
               <h4 className="text-2xl font-serif mb-4">Recent Appearances</h4>
-              {site.recentAppearances.map((job, index) => (
+              {site.recentAppearances.map((appearance, index) => (
                 <Card key={index} className="mb-4">
                   <CardContent className="flex items-center p-4">
-                    <span className="text-2xl mr-4">{job.logo}</span>
+                    <span className="text-2xl mr-4">{appearance.logo}</span>
                     <div>
-                      <h5 className="font-semibold">{job.title}</h5>
-                      <p className="text-sm">{job.company}</p>
+                      <h5 className="font-semibold">{appearance.title}</h5>
+                      <p className="text-sm">{appearance.description}</p>
                     </div>
-                    <span className="ml-auto text-sm text-gray-500">{job.date}</span>
+                    <Link href={appearance.url} className="ml-auto text-sm text-gray-500">{appearance.cta}</Link>
                   </CardContent>
-                  <CardFooter>
-                    <Link href={job.url}>See more</Link>
-                  </CardFooter>
                 </Card>
               ))}
             </div>
             <hr className="my-8" />
             <div>
               <h4 className="text-2xl font-serif mb-4">Latest Post</h4>
-              {allBlogs.map((post, i) => {
+              {latestBlogs.map((post, i) => {
                 return (
                 <Card key={i} className="mb-4">
                   <CardContent className="flex items-center p-4">
@@ -72,11 +69,8 @@ export default async function Home() {
                       <h5 className="font-semibold">{post.title}</h5>
                       {/* <p className="text-sm">{job.company}</p> */}
                     </div>
-                    <span className="ml-auto text-sm text-gray-500">{post.date}</span>
+                    <Link href={`/blog/${post.slug}`} className="ml-auto text-sm text-gray-500">Read now</Link>
                   </CardContent>
-                  <CardFooter>
-                    <Link href={`/blog/${post.slug}`}>See more</Link>
-                  </CardFooter>
                 </Card>
               )})}
             </div>

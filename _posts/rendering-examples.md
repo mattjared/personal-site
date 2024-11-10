@@ -1,5 +1,5 @@
 ---
-title: Rendering by examples
+title: Rendering by example
 published: true
 date: Sept 10, 2024
 ---
