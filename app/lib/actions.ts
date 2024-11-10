@@ -80,12 +80,7 @@ export async function getBlogData(options: { allPosts: boolean; recentPost: bool
   posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   
   // Return the TWO most recent posts
-  if (options.recentPost) {
-    console.log(posts.slice(0, 2));
-    return posts.slice(0, 2); 
-  }
-
-  return options.allPosts ? posts : [];
+  return options.recentPost ? posts.slice(0, 2) : (options.allPosts ? posts : []);
 }
 
 interface BlogPost {

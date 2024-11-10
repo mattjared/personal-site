@@ -1,8 +1,4 @@
 import Link from "next/link";
-import fs from "fs";
-import { join } from "path";
-import graymatter from "gray-matter";
-const postsDirectory = join(process.cwd(), "_posts");
 import { Card, CardContent } from "@/components/ui/card"
 import MugShot from "../components/MugShot";
 import { site } from "../../siteData";
@@ -10,7 +6,7 @@ import { getBlogData } from "../lib/actions";
 import { randomEmoji } from "../lib/utils";
 
 export default async function BlogPage() {
-  const allBlogs = await getBlogData({ allPosts: true });
+  const allBlogs = await getBlogData({ allPosts: true, recentPost: false });
 
   return (
     <>
@@ -28,7 +24,7 @@ export default async function BlogPage() {
                         <h5 className="font-semibold">{post.title}</h5>
                         <Link href={`/blog/${post.slug}`} className="text-sm text-gray-500">Read more</Link>
                       </div>
-                      <span className="ml-auto text-sm text-gray-500">{post.postDate}</span>
+                      <span className="ml-auto text-sm text-gray-500">{post.date}</span>
                     </CardContent>
                   </Card>
                 </div>

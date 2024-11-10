@@ -2,12 +2,12 @@ import { site } from "../siteData";
 import MugShot from "./components/MugShot";
 import PicGrid from "./components/PicGrid";
 import Link from "next/link"
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { getBlogData } from "./lib/actions";
 
 export default async function Home() {
-  const latestBlogs = await getBlogData({ recentPost: true });
+  const latestBlogs = await getBlogData({ allPosts: false, recentPost: true });
   return (
     <>
       <main className="container mx-auto px-4 mt-12">
@@ -67,7 +67,6 @@ export default async function Home() {
                     <span className="text-2xl mr-4">🔮</span>
                     <div>
                       <h5 className="font-semibold">{post.title}</h5>
-                      {/* <p className="text-sm">{job.company}</p> */}
                     </div>
                     <Link href={`/blog/${post.slug}`} className="ml-auto text-sm text-gray-500">Read now</Link>
                   </CardContent>
