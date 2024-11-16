@@ -15,6 +15,7 @@ export const site = {
     { logo: '🏄🏻‍♂️', title: 'How to scale your business with AI', description: 'A look at how AI can help scale your business', cta: 'Watch the Video', url: 'https://www.youtube.com/watch?v=9h_dFCNSiQ4' },
   ],
   projects: [
+    { logo: '🔟', title: 'How much is 10mb?', desciption: 'A site pushing the limits of what can go into 10mb', url: 'https://how-much-is-10mb.yay.boo/' },
     { logo: '🏀', title: 'Random Hooper', desciption: 'An API to generate random NBA player names', url: 'https://random-hooper.vercel.app/' },
     { logo: '📊', title: 'Scorelord', desciption: 'Full stack app to track daily scores and post to Slack', url: 'https://github.com/mattjared/scorelord',},
     { logo: '⚽', title: 'Server Side Football Site', desciption: 'Using SS R to display English Soccer team data', url: 'https://server-side-football-site.vercel.app/',},
@@ -41,7 +42,10 @@ export const site = {
     { logo: "📦", service: 'npm', url: 'https://www.npmjs.com/~mattjared' },
     { logo: "🏗️", service: 'Code Sandbox', url: 'https://codesandbox.io/u/mattjared' },
     { logo: "🌐", service: 'Polywork', url: 'https://www.polywork.com/mattjared' },
-  { logo: "📚", service: 'Stack Overflow', url: 'https://stackoverflow.com/users/2658883/matt-jared' },
+    { logo: "📚", service: 'Stack Overflow', url: 'https://stackoverflow.com/users/2658883/matt-jared' },
+    { logo: "🎥", service: 'YouTube', url: 'https://www.youtube.com/@mattjared' },
+    { logo: "🐋", service: 'Album Whale', url: 'https://albumwhale.com/matt-jared' },
+    { logo: "☕", service: 'Buy Me a Coffee', url: 'https://www.buymeacoffee.com/mattjared' },
   ],
   career: [
     { organization: "Vercel", role: "Sales Engineer" },

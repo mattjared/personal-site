@@ -17,6 +17,13 @@ function SubmitButton() {
 export default function Contact() {
   const [message, setMessage] = useState('');
   async function create(formData) {
+    const email = formData.get('email');
+    const vercelEmailPattern = /^[a-zA-Z0-9._%+-]+@vercel\.com$/;
+    if (!vercelEmailPattern.test(email)) {
+      setMessage('Only @vercel.com email addresses are allowed');
+      return;
+    }
+    
     const result = await createContact(formData);
     if (result.error) {
       setMessage(result.error);

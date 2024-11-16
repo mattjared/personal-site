@@ -1,5 +1,5 @@
 ---
-title: Sales Methodologies
+title: Decision Making Deep Dive
 published: true
 date: July 26, 2024
 ---
