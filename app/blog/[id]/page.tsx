@@ -7,7 +7,8 @@ import html from 'remark-html';
 const postsDirectory = join(process.cwd(), "_posts");
 import Image from "next/image";
 
-export default async function PostPage({params}: { params: { id: string}}) {
+export default async function PostPage(props: { params: Promise<{ id: string}>}) {
+  const params = await props.params;
   const fullPath = join(postsDirectory, `${params.id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
