@@ -3,6 +3,7 @@ title: Public Vercel Ships
 published: true
 date: November 1, 2023
 update: September 16, 2024
+icon: 🚀
 ---
 
 ## A list of public ships and collatoral that I worked on at Vercel

@@ -15,11 +15,11 @@ export default function ContactPage() {
             <hr className="my-8" />
             <div>
               <h4 className="text-2xl font-serif mb-4">Socials</h4>
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 gap-4">
                 {site.socials.map((s,i)=> (
-                  <Card className="mb-4" key={`${s.url}-${i}`}>
+                  <Card key={`${s.url}-${i}`}>
                     <CardContent className="flex items-center p-4">
-                      <span className="text-2xl mr-4">{s.logo}</span>
+                      <span className="text-2xl mr-4">{s.icon}</span>
                       <div>
                         <h5 className="font-semibold">{s.service}</h5>
                         <Link href={s.url} className="text-sm text-gray-500">Read more</Link>

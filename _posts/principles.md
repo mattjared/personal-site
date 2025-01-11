@@ -2,6 +2,7 @@
 title: Principles
 published: true
 date: December 6, 2023
+icon: 🌱
 ---
 
 A few very simple principals that I think are an idea to guide how to think about work and life.

@@ -44,6 +44,7 @@ export default function PicGrid() {
               aspectRatio: "200/200",
               objectFit: "cover",
               transform: `rotate(${randomTilt}deg)`, // Apply random tilt
+              transition: "transform 0.3s ease-in-out",
             }}
             width="200"
           />

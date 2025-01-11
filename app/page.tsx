@@ -26,7 +26,7 @@ export default async function Home() {
               {site.careerCards.map((job, index) => (
                 <Card key={index} className="mb-4">
                   <CardContent className="flex items-center p-4">
-                    <span className="text-2xl mr-4">{job.logo}</span>
+                    <span className="text-2xl mr-4">{job.icon}</span>
                     <div>
                       <h5 className="font-semibold">{job.title}</h5>
                       <p className="text-sm">{job.company}</p>
@@ -47,7 +47,7 @@ export default async function Home() {
               {site.recentAppearances.map((appearance, index) => (
                 <Card key={index} className="mb-4">
                   <CardContent className="flex items-center p-4">
-                    <span className="text-2xl mr-4">{appearance.logo}</span>
+                    <span className="text-2xl mr-4">{appearance.icon}</span>
                     <div>
                       <h5 className="font-semibold">{appearance.title}</h5>
                       <p className="text-sm">{appearance.description}</p>
@@ -64,7 +64,7 @@ export default async function Home() {
                 return (
                 <Card key={i} className="mb-4">
                   <CardContent className="flex items-center p-4">
-                    <span className="text-2xl mr-4">🔮</span>
+                    <span className="text-2xl mr-4">{post.icon}</span>
                     <div>
                       <h5 className="font-semibold">{post.title}</h5>
                     </div>

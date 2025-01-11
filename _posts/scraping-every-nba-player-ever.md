@@ -2,6 +2,7 @@
 title: Scraping Every NBA Player Ever
 published: true
 date: March 31, 2023
+icon: ⛹🏻‍♂️
 ---
 
 ## Scraping Every NBA Player Ever

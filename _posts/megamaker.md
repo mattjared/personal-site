@@ -2,6 +2,7 @@
 title: MegaMaker
 published: true
 date: January 24, 2016
+icon: 🤖
 ---
 Here&#39;s a post inspired but Justin Jackson&#39; [Mega Maker Series](http://megamaker.co/). My goal is to get to all 100 or variations of all 100.
 

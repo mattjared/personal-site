@@ -71,6 +71,7 @@ export async function getBlogData(options: { allPosts: boolean; recentPost: bool
         date: frontMatter.date,
         excerpt: frontMatter.excerpt || '',
         tags: frontMatter.tags || [],
+        icon: frontMatter.icon || '',
         published: frontMatter.published,
       });
     }
@@ -86,6 +87,7 @@ export async function getBlogData(options: { allPosts: boolean; recentPost: bool
 interface BlogPost {
   title: string;
   slug: string;
+  icon: string;
   date: string;
   excerpt: string;
   tags: string[];

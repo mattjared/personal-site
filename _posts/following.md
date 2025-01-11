@@ -2,6 +2,7 @@
 title: Following
 published: true
 date: May 27, 2014
+icon: 🤔
 ---
 
 One of the pillars of learning web design, in my opinion, is filtering who you follow through all mediums. As James Altucher explains, “You become what inspires you the most” meaning that every piece of content you imbibe is inspiring, defeating or distracting your work and life. I wholeheartedly agree with James and think that everywhere online we go to recharge or get information is effecting the work we create down the road.
