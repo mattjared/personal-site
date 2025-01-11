@@ -1,6 +1,6 @@
 ---
 title: Rendering by example
-published: true
+published: false
 date: Sept 10, 2024
 ---
 

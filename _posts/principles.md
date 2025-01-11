@@ -1,5 +1,5 @@
 ---
-title: Principals
+title: Principles
 published: true
 date: December 6, 2023
 ---

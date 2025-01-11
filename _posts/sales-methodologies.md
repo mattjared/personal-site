@@ -1,6 +1,6 @@
 ---
 title: Sales Methodologies
-published: true
+published: false
 date: July 7, 2024
 ---
 

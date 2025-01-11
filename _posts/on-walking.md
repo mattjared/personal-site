@@ -1,5 +1,5 @@
 ---
-title: Designs I like
+title: On Walking
 published: true
 date: July 26, 2024
 ---
