@@ -2,7 +2,6 @@ import Link from "next/link";
 import { site } from "../../siteData";
 import MugShot from "../components/MugShot";
 import { Card, CardContent } from "@/components/ui/card";
-import { randomEmoji } from "../lib/utils";
 export default function ProjectsPage() {
   return (
     <>
