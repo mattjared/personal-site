@@ -31,3 +31,7 @@ Online event where I acted as a CTO looking to evaluate Vercel.
 ### [Inspiration for isthiscsr.com](https://drew.tech/posts/idea-to-prod-in-34-minutes)
 
 Site that uses AI to see if a site is using client side rendering or not
+
+###[Building secure SaaS with Vercel and Auth0](https://docs.google.com/spreadsheets/d/1C_wqSv3xqlAMS6Y-XFUhBKItV6z7j3lps9DEB7k6JJg/edit?gid=0#gid=0)
+
+Working with Auth0 to build and deploy a multi tenant SaaS application
