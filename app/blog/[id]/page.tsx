@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 const postsDirectory = join(process.cwd(), "_posts");
-import Image from "next/image";
+// import Image from "next/image";
 
 export default async function PostPage(props: { params: Promise<{ id: string}>}) {
   const params = await props.params;

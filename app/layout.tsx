@@ -9,6 +9,16 @@ export const metadata = {
   icons: {
     icon: '/favicon.ico',
   },
+  openGraph: {
+    title: 'Matt Jared',
+    description: "Matt Jared",
+    url: 'https://mattjared.com',
+    siteName: 'Matt Jared',
+    images: [
+      { url: '/favicon.ico' },
+    ],
+  },
+  keywords: ['Matt Jared', 'Matthew Jared', 'Matt Jared Austin', 'Matt Jared Vercel', 'Matt Jared Developer', 'Matt Jared Software Engineer', 'Matt Jared Developer Austin', 'Matt Jared Developer Vercel', 'Matt Jared Sales Engineer', 'Matt Jared Sales Engineer Austin', 'Matt Jared Sales Engineer Vercel'],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

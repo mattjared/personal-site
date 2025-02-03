@@ -30,13 +30,13 @@ export default function Navbar() {
         {navList.map((nav, i) => {
           const isActive = pathname === nav.routePath || (pathname.startsWith("/blog") && nav.routePath === "/blog");
           return (
-            <a 
+            <Link 
               key={nav.routeName} 
               href={nav.routePath} 
               className={`space-x-4 ${isActive ? "text-teal-400 font-semibold" : "text-slate-700"}`}
             >
               {nav.routeName}
-            </a>
+            </Link>
           )
         })}
       </nav>
