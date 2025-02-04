@@ -6,6 +6,26 @@ import html from 'remark-html';
 const postsDirectory = join(process.cwd(), "_posts");
 // import Image from "next/image";
 
+export async function generateMetadata({ params }: { params: { id: string } }) {
+  const fullPath = join(postsDirectory, `${params.id}.md`);
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const matterResult = matter(fileContents);
+  const title = matterResult.data.title;
+  // const date = matterResult.data.date;
+  return {
+    title: `${title} - Matt Jared`,
+    description: `Blog post about ${title}`,
+    openGraph: {
+      title: `${title} - Matt Jared`,
+      description: `Blog post about ${title}`,
+      // url: `https://mattjared.xyz/blog/${params.id}`,
+      // images: [
+      //   { url: `/images/blog/${params.id}.jpg` },
+      // ],
+    },
+  };
+}
+
 export default async function PostPage(props: { params: Promise<{ id: string}>}) {
   const params = await props.params;
   const fullPath = join(postsDirectory, `${params.id}.md`);
