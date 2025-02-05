@@ -4,30 +4,13 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 const postsDirectory = join(process.cwd(), "_posts");
-// import Image from "next/image";
+import Image from "next/image";
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const fullPath = join(postsDirectory, `${params.id}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const matterResult = matter(fileContents);
-  const title = matterResult.data.title;
-  // const date = matterResult.data.date;
-  return {
-    title: `${title} - Matt Jared`,
-    description: `Blog post about ${title}`,
-    openGraph: {
-      title: `${title} - Matt Jared`,
-      description: `Blog post about ${title}`,
-      // url: `https://mattjared.xyz/blog/${params.id}`,
-      // images: [
-      //   { url: `/images/blog/${params.id}.jpg` },
-      // ],
-    },
-  };
+interface Props {
+  params: { id: string };
 }
 
-export default async function PostPage(props: { params: Promise<{ id: string}>}) {
-  const params = await props.params;
+export default async function BlogPost({ params }: Props) {
   const fullPath = join(postsDirectory, `${params.id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
@@ -42,13 +25,13 @@ export default async function PostPage(props: { params: Promise<{ id: string}>})
       <main className='container px-4 mt-12 mx-auto'>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            {/* <Image
+            <Image
               src="/images/profilepic.png"
               alt="Profile picture"
               width={300}
               height={300}
               className="rounded-3xl"
-            /> */}
+            />
             <h2 className="text-5xl font-serif mt-8 mb-2">{title}</h2>
             <p className="text-xl mb-4">{date}</p>
           </div>
