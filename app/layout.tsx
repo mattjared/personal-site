@@ -15,7 +15,7 @@ export const metadata = {
     url: 'https://mattjared.com',
     siteName: 'Matt Jared',
     images: [
-      { url: '/favicon.ico' },
+      { url: '/profilepic.png' },
     ],
   },
   keywords: ['Matt Jared', 'Matthew Jared', 'Matt Jared Austin', 'Matt Jared Vercel', 'Matt Jared Developer', 'Matt Jared Software Engineer', 'Matt Jared Developer Austin', 'Matt Jared Developer Vercel', 'Matt Jared Sales Engineer', 'Matt Jared Sales Engineer Austin', 'Matt Jared Sales Engineer Vercel'],
