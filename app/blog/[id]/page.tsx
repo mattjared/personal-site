@@ -6,11 +6,14 @@ import html from 'remark-html';
 const postsDirectory = join(process.cwd(), "_posts");
 import Image from "next/image";
 
-interface Props {
+export const dynamicParams = false;
+
+interface PageProps {
   params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
-export default async function BlogPost({ params }: Props) {
+export default async function BlogPost({ params }: PageProps) {
   const fullPath = join(postsDirectory, `${params.id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
