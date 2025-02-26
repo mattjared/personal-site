@@ -32,6 +32,10 @@ Online event where I acted as a CTO looking to evaluate Vercel.
 
 Site that uses AI to see if a site is using client side rendering or not
 
-###[Building secure SaaS with Vercel and Auth0](https://www.youtube.com/watch?v=uHFDBtQYmzk)
+### [Building secure SaaS with Vercel and Auth0](https://www.youtube.com/watch?v=uHFDBtQYmzk)
 
 Working with Auth0 to build and deploy a multi tenant SaaS application
+
+### [How PAIGE exceeded their Black Friday goals with Next.js, Vercel, and Shopify](https://youtu.be/A2IVCYTXsYU)
+
+PAIGE is a large clothing retailer that used Next.js and Vercel to exceed their Black Friday goals.
