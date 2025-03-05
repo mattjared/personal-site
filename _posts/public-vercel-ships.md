@@ -39,3 +39,7 @@ Working with Auth0 to build and deploy a multi tenant SaaS application
 ### [How PAIGE exceeded their Black Friday goals with Next.js, Vercel, and Shopify](https://youtu.be/A2IVCYTXsYU)
 
 PAIGE is a large clothing retailer that used Next.js and Vercel to exceed their Black Friday goals.
+
+### [How Notion achieves high-performance experimentation with Statsig and Vercel](https://www.youtube.com/watch?v=x4-xXXJEDcY)
+
+Notion shares how their team runs experiments and uses feature flags with Vercel, Next.js, and Statsig
