@@ -43,3 +43,7 @@ PAIGE is a large clothing retailer that used Next.js and Vercel to exceed their 
 ### [How Notion achieves high-performance experimentation with Statsig and Vercel](https://www.youtube.com/watch?v=x4-xXXJEDcY)
 
 Notion shares how their team runs experiments and uses feature flags with Vercel, Next.js, and Statsig
+
+### [Getting Started with Vercel](https://youtu.be/Y3_uznYnQRs)
+
+Everything to know about getting started with Vercel
