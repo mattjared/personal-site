@@ -47,3 +47,7 @@ Notion shares how their team runs experiments and uses feature flags with Vercel
 ### [Getting Started with Vercel](https://youtu.be/Y3_uznYnQRs)
 
 Everything to know about getting started with Vercel
+
+### [Beyond the Basics with Vercel](https://www.youtube.com/watch?v=FkveQpw-lyc)
+
+Diving deep into a day-to-day flow with Vercel
