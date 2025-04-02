@@ -12,7 +12,7 @@ export default async function Home() {
     <>
       <main className="container mx-auto px-4 mt-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <MugShot subheading={site.about.subheading} heading={site.about.heading} />
+          {/* <MugShot subheading={site.about.subheading} heading={site.about.heading} /> */}
           <div>
             <h3 className="text-4xl font-serif mb-6">{site.about.mission}</h3>
             <p className="text-md font-sans mb-6">{site.about.bio}</p>

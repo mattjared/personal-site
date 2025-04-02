@@ -25,22 +25,25 @@ export default function Navbar() {
     },
   ];
   return (
-    <header className="container mx-auto px-4 py-6 flex justify-between items-center">
-      <nav className="flex gap-4 ml-auto mr-5">
-        {navList.map((nav, i) => {
-          const isActive = pathname === nav.routePath || (pathname.startsWith("/blog") && nav.routePath === "/blog");
-          return (
-            <Link 
-              key={nav.routeName} 
-              href={nav.routePath} 
-              className={`space-x-4 ${isActive ? "text-teal-400 font-semibold" : "text-slate-700"}`}
-            >
-              {nav.routeName}
-            </Link>
-          )
-        })}
-      </nav>
-      <Button variant="outline" className="text-sm" asChild><Link href="/deploy">Deploy this site</Link></Button>
+    <header className="mx-auto p-4 flex justify-between items-center border-b-2 border-gray-200">
+      <span>Matt Jared</span>
+      <div className="container">
+        <nav className="flex gap-4 ml-auto mr-5">
+          {navList.map((nav, i) => {
+            const isActive = pathname === nav.routePath || (pathname.startsWith("/blog") && nav.routePath === "/blog");
+            return (
+              <Link 
+                key={nav.routeName} 
+                href={nav.routePath} 
+                className={`space-x-4 ${isActive ? "text-teal-400 font-semibold" : "text-slate-700"}`}
+              >
+                {nav.routeName}
+              </Link>
+            )
+          })}
+        </nav>
+        <Button variant="outline" className="text-sm" asChild><Link href="/deploy">Deploy this site</Link></Button>
+      </div>
     </header>
   )
 }
