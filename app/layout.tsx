@@ -33,7 +33,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={cn("min-h-screen font-sans antialiased", font.variable)}>
         <Navbar />
-        {children}
+        <main className="container">
+          {children}
+        </main>
         <Footer />
         <AnalyticsWrapper />
       </body>

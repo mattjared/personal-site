@@ -2,8 +2,8 @@ export const site = {
   about: { 
     heading: "I'm Matt Jared",
     subheading: "Sales Engineer based in Austin, USA.",
-    mission: "Empowering teams and delivering high-impact solutions.",
-    bio: "I’m a self-taught software developer delivering high-impact solutions. I have worked at startups and a large public company. Today, I’m a Sales Engineer Manager at Vercel, helping organizations build fast sites with fast teams."
+    mission: "Frontend Developer and Sales Engineer",
+    bio: "I'm a self-taught deveveloper turned Sales Engineer at Vercel. I’ve worked at startups and a public company and today I help enable fast teams to build fast sites. I love building things, sharing what I’ve learned, and helping people do their best work. Check out my projects and articles below or hit me up to chat."
   },
   careerCards: [
     { icon: '▲', title: 'Sales Engineer Manager', company: 'Vercel', date: 'January 2025 - Present' },
