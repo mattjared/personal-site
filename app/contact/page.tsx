@@ -7,31 +7,19 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function ContactPage() {
   return (
     <>
-      <main className="container mx-auto px-4 mt-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <MugShot heading={site.about.heading} subheading="Contact me" />
-          <div>
-            <Contact />
-            <hr className="my-8" />
-            <div>
-              <h4 className="text-2xl mb-4">Socials</h4>
-              <div className="grid grid-cols-2 gap-4">
-                {site.socials.map((s,i)=> (
-                  <Card key={`${s.url}-${i}`}>
-                    <CardContent className="flex items-center p-4">
-                      <span className="text-2xl mr-4">{s.icon}</span>
-                      <div>
-                        <h5 className="font-semibold">{s.service}</h5>
-                        <Link href={s.url} className="text-sm text-gray-500">Read more</Link>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </div>
+      <h1 className="text-2xl font-semibold mb-12 mt-24">Contact Me</h1>
+      <Contact />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {
+          site.socials.map((s,i)=> (
+            <Card key={`${s.url}-${i}`}>
+              <CardContent>
+                <h4 className="text-md">{s.service}</h4>
+              </CardContent>
+            </Card>
+          ))
+        }
         </div>
-      </main>
     </>
   );
 }

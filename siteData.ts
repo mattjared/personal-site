@@ -6,7 +6,6 @@ export const site = {
   },
   titles: [
     'Sales Engineer & Developer',
-    'Developer & Senior Sales Engineer',
     'Sales Leader & Front End Developer',
     'Coach & Full Stack Developer',
     'Self taught developer & Solution Engineer',

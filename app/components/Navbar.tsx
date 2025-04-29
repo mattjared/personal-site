@@ -16,9 +16,9 @@ export default function Navbar() {
       "routePath": '/projects' 
     },
     {
-      "routeName": "Contact",
-      "routePath": '/contact',
-      "isButton": false
+      "routeName": "Build with me",
+      "routePath": '/deploy',
+      "isButton": true
     },
   ];
   return (
