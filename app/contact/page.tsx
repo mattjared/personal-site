@@ -14,7 +14,7 @@ export default function ContactPage() {
             <Contact />
             <hr className="my-8" />
             <div>
-              <h4 className="text-2xl font-serif mb-4">Socials</h4>
+              <h4 className="text-2xl mb-4">Socials</h4>
               <div className="grid grid-cols-2 gap-4">
                 {site.socials.map((s,i)=> (
                   <Card key={`${s.url}-${i}`}>

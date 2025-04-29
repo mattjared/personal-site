@@ -32,7 +32,7 @@ export default async function BlogPost(props: { params: Promise<{ id: string}>})
               height={300}
               className="rounded-3xl"
             />
-            <h2 className="text-5xl font-serif mt-8 mb-2">{title}</h2>
+            <h2 className="text-5xl mt-8 mb-2">{title}</h2>
             <p className="text-xl mb-4">{date}</p>
           </div>
           <div className='prose prose-slate prose-img:max-w-full prose-pre:overflow-x-auto max-w-none w-full mx-auto px-4 md:px-0'>

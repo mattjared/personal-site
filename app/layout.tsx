@@ -2,13 +2,20 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import './globals.css';
 import { AnalyticsWrapper } from './Analytics';
-import { Inter as FontSans } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 import { cn } from './lib/utils';
 
-const font = FontSans({
+// const font = FontSans({
+//   subsets: ["latin"],
+//   variable: "--font-sans",
+// });
+
+const robotoMono = Roboto_Mono({
   subsets: ["latin"],
-  variable: "--font-sans",
-});
+  weight: ["400"],
+  display: "swap",
+  variable: "--font-mono",
+})
 
 export const metadata = {
   title: 'Matt Jared',
@@ -31,7 +38,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={cn("min-h-screen font-sans antialiased", font.variable)}>
+      <body className={cn("min-h-screen font-mono antialiased", robotoMono.variable)}>
         <Navbar />
         <main className="container">
           {children}
@@ -40,5 +47,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <AnalyticsWrapper />
       </body>
     </html>
-  );
+);
 }

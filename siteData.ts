@@ -2,9 +2,20 @@ export const site = {
   about: { 
     heading: "I'm Matt Jared",
     subheading: "Sales Engineer based in Austin, USA.",
-    mission: "Frontend Developer and Sales Engineer",
-    bio: "I'm a self-taught deveveloper turned Sales Engineer at Vercel. I’ve worked at startups and a public company and today I help enable fast teams to build fast sites. I love building things, sharing what I’ve learned, and helping people do their best work. Check out my projects and articles below or hit me up to chat."
+    bio: "I'm a marketer turned self-taught deveveloper turned sales engineer turned sales leader. I’ve worked at startups and a public company and today I help enable fast teams to build fast sites at Vercel. I love building things, sharing what I’ve learned, and helping people do their best work. Check out my projects and articles below or hit me up to chat."
   },
+  titles: [
+    'Sales Engineer & Developer',
+    'Developer & Senior Sales Engineer',
+    'Sales Leader & Front End Developer',
+    'Coach & Full Stack Developer',
+    'Self taught developer & Solution Engineer',
+    'The Bill Laimbeeer of JavaScript',
+    'Startups & Web Development',
+    'eCommerce & Web Performance',
+    'Sales Leader & Developer',
+    'Sales Engineer & Front End Developer',
+  ],
   careerCards: [
     { icon: '▲', title: 'Sales Engineer Manager', company: 'Vercel', date: 'January 2025 - Present' },
     { icon: '▲', title: 'Senior Sales Engineer', company: 'Vercel', date: 'January 2023 - December 2024' },
