@@ -7,6 +7,21 @@ export default function ProjectsPage() {
     <>
       <main className="container mx-auto px-4 mt-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <h4 className="text-2xl mb-4">Work experience</h4>
+            {site.careerCards.map((job, index) => (
+              <Card key={index} className="mb-4">
+                <CardContent className="flex items-center p-4">
+                  <span className="text-2xl mr-4">{job.icon}</span>
+                  <div>
+                    <h5 className="font-semibold">{job.title}</h5>
+                    <p className="text-sm">{job.company}</p>
+                  </div>
+                  <span className="ml-auto text-sm text-gray-500">{job.date}</span>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
           <MugShot heading={site.about.heading} subheading="Relevent projects" />
           <div>
             <div className="grid grid-cols-1">

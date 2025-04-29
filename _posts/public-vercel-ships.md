@@ -51,3 +51,7 @@ Everything to know about getting started with Vercel
 ### [Beyond the Basics with Vercel](https://www.youtube.com/watch?v=FkveQpw-lyc)
 
 Diving deep into a day-to-day flow with Vercel
+
+### [Vercel Knowledge Session with This Dot Labs ](https://www.linkedin.com/events/vercelknowledgesession7313223611782205441/comments/)
+
+A breakdown of working with v0 and Vercel

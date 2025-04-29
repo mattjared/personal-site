@@ -2,6 +2,13 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import './globals.css';
 import { AnalyticsWrapper } from './Analytics';
+import { Inter as FontSans } from "next/font/google";
+import { cn } from './lib/utils';
+
+const font = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export const metadata = {
   title: 'Matt Jared',
@@ -24,9 +31,11 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-[#f8f7f4] text-black font-sans">
+      <body className={cn("min-h-screen font-sans antialiased", font.variable)}>
         <Navbar />
-        {children}
+        <main className="container">
+          {children}
+        </main>
         <Footer />
         <AnalyticsWrapper />
       </body>
