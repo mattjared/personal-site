@@ -22,24 +22,11 @@ export default async function BlogPost(props: { params: Promise<{ id: string}>})
   const contentHtml = processedContent.toString();
   return (
     <>
-      <main className='container px-4 mt-12 mx-auto'>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
-            <Image
-              src="/images/profilepic.png"
-              alt="Profile picture"
-              width={300}
-              height={300}
-              className="rounded-3xl"
-            />
-            <h2 className="text-5xl mt-8 mb-2">{title}</h2>
-            <p className="text-xl mb-4">{date}</p>
-          </div>
-          <div className='prose prose-slate prose-img:max-w-full prose-pre:overflow-x-auto max-w-none w-full mx-auto px-4 md:px-0'>
-            <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
-          </div>
-        </div>
-      </main>
+      <h1 className="text-2xl font-semibold mb-4 mt-24">{title}</h1>
+      <h4 className="text-slate-500 text-xs mb-12">{date}</h4>
+      <div className='prose prose-slate prose-img:max-w-full prose-pre:overflow-x-auto max-w-none w-full mx-auto px-4 md:px-0'>
+        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+      </div>
     </>
   );
 }
