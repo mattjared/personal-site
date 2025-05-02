@@ -8,16 +8,20 @@ export default function Navbar() {
   const pathname = usePathname();
   const navList = [
     {
-      "routeName": "Articles",
+      "routeName": "Blog",
       "routePath": '/blog' 
+    },
+    {
+      "routeName": "About",
+      "routePath": '/about' 
     },
     {
       "routeName": "Projects",
       "routePath": '/projects' 
     },
     {
-      "routeName": "Build with me",
-      "routePath": '/deploy',
+      "routeName": "Contact",
+      "routePath": '/contact',
       "isButton": true
     },
   ];
@@ -27,7 +31,7 @@ export default function Navbar() {
         <Link href="/" className="text-md font-semibold tracking-tight">Matt Jared</Link>
         <nav className="flex gap-2 ml-auto">
           {navList.map((nav, i) => {
-            // const isActive = pathname === nav.routePath || (pathname.startsWith("/blog") && nav.routePath === "/blog");
+            const isActive = pathname === nav.routePath || (pathname.startsWith("/blog") && nav.routePath === "/blog");
             return (
               <Link
                 key={nav.routeName} 

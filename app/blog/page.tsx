@@ -8,7 +8,7 @@ export default async function BlogPage() {
 
   return (
     <> 
-      <h1 className="text-2xl font-semibold mb-12 mt-24">Articles</h1>
+      <h1 className="text-2xl font-semibold mb-12 mt-24">Blog</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {allBlogs.map((post, i) => {
           return (

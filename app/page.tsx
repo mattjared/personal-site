@@ -18,7 +18,7 @@ const latestBlogs = await getBlogData({ allPosts: false, recentPost: true });
               <Pen className="w-6 h-6 mr-auto" />
             </CardHeader>
             <CardContent>
-              <h4 className="text-md">Articles</h4>
+              <h4 className="text-md">Blog</h4>
               <p className="text-slate-500 text-xs">I write about my experiences and learnings as a developer and sales engineer.</p>
             </CardContent>
           </Link>
@@ -46,7 +46,7 @@ const latestBlogs = await getBlogData({ allPosts: false, recentPost: true });
           </Link>
         </Card>
         <Card>
-          <Link href="/appearances">
+          <Link href="/about#appearances">
             <CardHeader className="mb-12">
               <MicVocal className="w-6 h-6 mr-auto" />
             </CardHeader>
@@ -57,7 +57,7 @@ const latestBlogs = await getBlogData({ allPosts: false, recentPost: true });
           </Link>
         </Card>
         <Card>
-          <Link href="/resume">
+          <Link href="/about#experience">
             <CardHeader className="mb-12">
               <File className="w-6 h-6 mr-auto" />
             </CardHeader>
@@ -68,7 +68,7 @@ const latestBlogs = await getBlogData({ allPosts: false, recentPost: true });
           </Link>
         </Card>
         <Card className="bg-purple-100">
-          <Link href="/deploy">
+          <Link href="/about#deploy">
           <CardHeader className="mb-12">
             <CodeXml className="w-6 h-6 mr-auto" />
           </CardHeader>

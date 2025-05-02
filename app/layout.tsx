@@ -18,6 +18,7 @@ const robotoMono = Roboto_Mono({
 })
 
 export const metadata = {
+  metadataBase: new URL('https://mattjared.xyz'),
   title: 'Matt Jared',
   description: "Matt Jared",
   icons: {
@@ -26,7 +27,7 @@ export const metadata = {
   openGraph: {
     title: 'Matt Jared',
     description: "Matt Jared",
-    url: 'https://mattjared.com',
+    url: 'https://mattjared.xyz',
     siteName: 'Matt Jared',
     images: [
       { url: '/profilepic.png' },
