@@ -55,3 +55,7 @@ Diving deep into a day-to-day flow with Vercel
 ### [Vercel Knowledge Session with This Dot Labs ](https://www.linkedin.com/events/vercelknowledgesession7313223611782205441/comments/)
 
 A breakdown of working with v0 and Vercel
+
+### [Building protection into every phase of the SDLC](https://youtu.be/xPIGcwvtzO4)
+
+Hosted alongside the CISO at Vercel showcasing how Vercel secures the software development lifecycle.
