@@ -59,3 +59,7 @@ A breakdown of working with v0 and Vercel
 ### [Building protection into every phase of the SDLC](https://youtu.be/xPIGcwvtzO4)
 
 Hosted alongside the CISO at Vercel showcasing how Vercel secures the software development lifecycle.
+
+### [Launch faster: Vercel essentials for startups](https://youtu.be/mayQ_yuwYns)
+
+Everything I know about how startups can use Vercel
