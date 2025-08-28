@@ -2,38 +2,21 @@ import { site } from "../siteData";
 import Link from "next/link"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { getBlogData } from "./lib/actions";
-import { Pen, Rocket, CodeXml, MicVocal, UserRound, File } from "lucide-react";
-import Typewriter from "./components/TypeWriter";
+import { Pen, UserRound } from "lucide-react";
+import Contact from "./components/Contact";
 export default async function Home() {
-const latestBlogs = await getBlogData({ allPosts: false, recentPost: true });
-  
+  const allBlogs = await getBlogData({ allPosts: true, recentPost: false });
   return (
     <>
-      <Typewriter />
-      <p className="text-sm my-6 tracking-tight">{site.about.bio}</p>
-      <div className="my-12 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <Card>
-          <Link href="/blog">
-            <CardHeader className="mb-12">
-              <Pen className="w-6 h-6 mr-auto" />
-            </CardHeader>
-            <CardContent>
-              <h4 className="text-md">Blog</h4>
-              <p className="text-slate-500 text-xs">I write about my experiences and learnings as a developer and sales engineer.</p>
-            </CardContent>
-          </Link>
-        </Card>
-        <Card>
-          <Link href="/projects">
-            <CardHeader className="mb-12">
-              <Rocket className="w-6 h-6 mr-auto" />
-            </CardHeader>
-            <CardContent>
-              <h4 className="text-md ">Projects</h4>
-              <p className="text-slate-500 text-xs">A list of projects I&apos;ve worked on and some I&apos;m working on.</p>
-              </CardContent>
-          </Link>
-        </Card>
+      <div className="mb-4 mt-12">
+        <h1 className="text-4xl font-semibold mb-2">Welcome! 👋🏻</h1>
+        <h4 className="font-bold text-xl">{site.about.subheading}</h4>
+      </div>
+      <div>
+        <p className="text-sm my-6 tracking-tight">{site.about.bio}</p>
+        <p className="text-sm my-6 tracking-tight">{site.about.howtowork}</p>
+      </div>
+      <div className="my-12 grid grid-cols-1 md:grid-cols-3 gap-4">        
         <Card>
           <Link href="/contact">
             <CardHeader className="mb-12">
@@ -45,39 +28,70 @@ const latestBlogs = await getBlogData({ allPosts: false, recentPost: true });
             </CardContent>
           </Link>
         </Card>
-        <Card>
-          <Link href="/about#appearances">
-            <CardHeader className="mb-12">
-              <MicVocal className="w-6 h-6 mr-auto" />
-            </CardHeader>
-            <CardContent>
-              <h4 className="text-md">Public Appearances</h4>
-              <p className="text-slate-500 text-xs">Where I&apos;ve spoken at conferences, online events or been interviewed.</p>
-            </CardContent>
-          </Link>
-        </Card>
-        <Card>
-          <Link href="/about#experience">
-            <CardHeader className="mb-12">
-              <File className="w-6 h-6 mr-auto" />
-            </CardHeader>
-            <CardContent>
-              <h4 className="text-md">Experience</h4>
-              <p className="text-slate-500 text-xs">Career timeline and work experience including my resume.</p>
-            </CardContent>
-          </Link>
-        </Card>
-        <Card className="bg-purple-100">
-          <Link href="/about#deploy">
-          <CardHeader className="mb-12">
-            <CodeXml className="w-6 h-6 mr-auto" />
-          </CardHeader>
-          <CardContent>
-            <h4 className="text-md">Build</h4>
-            <p className="text-slate-500 text-xs">Learn to rebuild this site with Next.js and Tailwind CSS together on a call.</p>
-            </CardContent>
-          </Link>
-        </Card>
+      </div>
+      <div className="py-10">
+        <h1 className="text-xl font-semibold mb-6 pb-3 border-b-blue-100 border-b-2">Blog Posts</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 tracking-tighter">
+          {allBlogs.map((post, i) => (
+            <div key={`${i}-project`} className="mb-2">
+              <Link href={`/blog/${post.slug}`}>
+                <h4 className="text-sm font-semibold">{post.title}</h4>
+                <p className="text-xs text-slate-500">{post.date}</p>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="py-10">
+        <h1 className="text-xl font-semibold mb-6 pb-3 border-b-blue-100 border-b-2">Projects</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 tracking-tighter">
+          {site.projects.map((project, i) => (
+            <div key={`${i}-project`} className="mb-2">
+              <Link href={project.url}>
+                <h4 className="text-sm font-semibold">{project.title}</h4>
+                <p className="text-xs text-slate-500">{project.description}</p>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="py-10">
+        <h1 className="text-xl font-semibold mb-6 pb-3 border-b-blue-100 border-b-2">Talks and Podcasts</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 tracking-tighter">
+          {site.recentAppearances.map((project, i) => (
+            <div key={`${i}-project`} className="mb-2">
+              <Link href={project.url}>
+                <h4 className="text-sm font-semibold">{project.title}</h4>
+                <p className="text-xs text-slate-500">{project.description}</p>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="py-10">
+        <h1 className="text-xl font-semibold mb-6 pb-3 border-b-blue-100 border-b-2">Career</h1>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 tracking-tighter">
+          {site.career.map((project, i) => (
+            <div key={`${i}-project`} className="mb-2">
+              <h4 className="text-sm font-semibold">{project.organization}</h4>
+              <p className="text-xs text-slate-500">{project.role}</p>
+              {project.role2 && <p className="text-xs text-slate-500">{project.role2}</p>}
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="py-10">
+        <h1 className="text-xl font-semibold mb-6 pb-3 border-b-blue-100 border-b-2">Contact</h1>
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-2 tracking-tighter">
+          {site.socials.map((social, i) => (
+            <p key={`${i}-social`} className="mb-2">
+              <Link href={social.url}>
+                <h4 className="text-sm font-semibold">{social.service}</h4>
+              </Link>
+            </p>
+          ))}
+        </div>
+        <Contact />
       </div>
     </>
   )

@@ -7,7 +7,7 @@ export default function ContactPage() {
   return (
     <>
       <h1 className="text-2xl font-semibold mb-12 mt-24">Contact Me</h1>
-      <Contact />
+      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {
           site.socials.map((s,i)=> (

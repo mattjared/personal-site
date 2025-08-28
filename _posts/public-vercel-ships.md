@@ -63,3 +63,7 @@ Hosted alongside the CISO at Vercel showcasing how Vercel secures the software d
 ### [Launch faster: Vercel essentials for startups](https://youtu.be/mayQ_yuwYns)
 
 Everything I know about how startups can use Vercel
+
+## [Ship 2025: Anatomy of FAST SITE](https://www.youtube.com/watch?v=cPLmB3PRMCY)
+
+Everything I know about making a fast site

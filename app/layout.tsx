@@ -39,7 +39,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={cn("min-h-screen font-mono antialiased", robotoMono.variable)}>
+      <body className={cn("min-h-screen font-mono antialiased tracking-tighter", robotoMono.variable)}>
         <Navbar />
         <main className="container">
           {children}

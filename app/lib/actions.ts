@@ -17,6 +17,7 @@ import fs from "fs";
 import { join } from "path";
 import graymatter from "gray-matter";
 const postsDirectory = join(process.cwd(), "_posts");
+
 export async function getBlogData(options: { allPosts: boolean; recentPost: boolean }) {
   const allSlugs = fs.readdirSync(postsDirectory);
   const slugs = allSlugs.filter(file => file !== '.DS_Store');
