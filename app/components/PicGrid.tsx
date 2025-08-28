@@ -29,7 +29,7 @@ const images = [
 
 export default function PicGrid() {
   return (
-    <div className="my-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-1">
+    <div className="my-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-1">
       {images.map((image, index) => {
         // Generate a random tilt angle between -5 and 5 degrees
         const randomTilt = Math.random() * 10 - 5;

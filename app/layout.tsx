@@ -40,11 +40,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={cn("min-h-screen font-mono antialiased tracking-tighter", robotoMono.variable)}>
-        <Navbar />
-        <main className="container">
+        <main className="container mx-auto px-4">
+          <Navbar />
           {children}
+          <Footer />
         </main>
-        <Footer />
         <AnalyticsWrapper />
       </body>
     </html>

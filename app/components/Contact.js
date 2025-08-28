@@ -27,7 +27,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="p-6 flex-col mb-10">
+    <div className="flex-col">
       <>
         { message ? (
           <p>{message}</p>
