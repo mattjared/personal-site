@@ -3,7 +3,7 @@ export const site = {
     heading: "I'm Matt Jared",
     subheading: "I'm Matt Jared, Sales Engineer based in Austin, Texas USA.",
     bio: "I'm a marketer turned self-taught developer turned sales engineer turned sales leader. I have worked at and alongside startups, a large public company and today I help enable fast teams to build fast sites at Vercel. I love building things - web sites, teams, projects, companies, whatever - and sharing what I’ve learned along the way",
-    howtowork: "This site is my attempt at sharing everything I know. I'm available an a project basis to help your startup or project get to market. Please contact me "
+    howtowork: "This site is my attempt at sharing everything I know. I'm available an a project basis to help your startup or project get to market. "
   },
   careerCards: [
     { title: 'Sales Engineer Manager', company: 'Vercel', date: 'January 2025 - Present' },

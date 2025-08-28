@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react';
 import { useFormStatus } from 'react-dom';
-import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { sendEmail } from '@/app/lib/actions';
@@ -28,8 +27,8 @@ export default function Contact() {
   }
 
   return (
-    <Card className="p-6 flex-col mb-10">
-      <CardContent>
+    <div className="p-6 flex-col mb-10">
+      <>
         { message ? (
           <p>{message}</p>
         ) : (
@@ -46,7 +45,7 @@ export default function Contact() {
           <SubmitButton />
           </form>
         )}
-      </CardContent>
-    </Card>
+      </>
+    </div>
   )
 }

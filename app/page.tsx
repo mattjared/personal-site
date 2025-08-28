@@ -1,8 +1,6 @@
 import { site } from "../siteData";
 import Link from "next/link"
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { getBlogData } from "./lib/actions";
-import { Pen, UserRound } from "lucide-react";
 import Contact from "./components/Contact";
 export default async function Home() {
   const allBlogs = await getBlogData({ allPosts: true, recentPost: false });
@@ -13,25 +11,12 @@ export default async function Home() {
         <h4 className="font-bold text-xl">{site.about.subheading}</h4>
       </div>
       <div>
-        <p className="text-sm my-6 tracking-tight">{site.about.bio}</p>
-        <p className="text-sm my-6 tracking-tight">{site.about.howtowork}</p>
-      </div>
-      <div className="my-12 grid grid-cols-1 md:grid-cols-3 gap-4">        
-        <Card>
-          <Link href="/contact">
-            <CardHeader className="mb-12">
-              <UserRound className="w-6 h-6 mr-auto" />
-            </CardHeader>
-            <CardContent>
-              <h4 className="text-md">Contact</h4>
-              <p className="text-slate-500 text-xs">Get in touch with me to chat about anything.</p>
-            </CardContent>
-          </Link>
-        </Card>
+        <p className="text-sm my-6">{site.about.bio}</p>
+        <p className="text-sm my-6">{site.about.howtowork}</p>
       </div>
       <div className="py-10">
         <h1 className="text-xl font-semibold mb-6 pb-3 border-b-blue-100 border-b-2">Blog Posts</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 tracking-tighter">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           {allBlogs.map((post, i) => (
             <div key={`${i}-project`} className="mb-2">
               <Link href={`/blog/${post.slug}`}>
@@ -44,7 +29,7 @@ export default async function Home() {
       </div>
       <div className="py-10">
         <h1 className="text-xl font-semibold mb-6 pb-3 border-b-blue-100 border-b-2">Projects</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 tracking-tighter">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2er">
           {site.projects.map((project, i) => (
             <div key={`${i}-project`} className="mb-2">
               <Link href={project.url}>
@@ -57,7 +42,7 @@ export default async function Home() {
       </div>
       <div className="py-10">
         <h1 className="text-xl font-semibold mb-6 pb-3 border-b-blue-100 border-b-2">Talks and Podcasts</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 tracking-tighter">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2er">
           {site.recentAppearances.map((project, i) => (
             <div key={`${i}-project`} className="mb-2">
               <Link href={project.url}>
@@ -70,7 +55,7 @@ export default async function Home() {
       </div>
       <div className="py-10">
         <h1 className="text-xl font-semibold mb-6 pb-3 border-b-blue-100 border-b-2">Career</h1>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 tracking-tighter">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-2er">
           {site.career.map((project, i) => (
             <div key={`${i}-project`} className="mb-2">
               <h4 className="text-sm font-semibold">{project.organization}</h4>
@@ -82,16 +67,17 @@ export default async function Home() {
       </div>
       <div className="py-10">
         <h1 className="text-xl font-semibold mb-6 pb-3 border-b-blue-100 border-b-2">Contact</h1>
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-2 tracking-tighter">
+        <Contact />
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-1er mt-4">
           {site.socials.map((social, i) => (
             <p key={`${i}-social`} className="mb-2">
               <Link href={social.url}>
-                <h4 className="text-sm font-semibold">{social.service}</h4>
+                <span className="text-sm font-semibold">{social.service}</span>
               </Link>
             </p>
           ))}
         </div>
-        <Contact />
+        
       </div>
     </>
   )
