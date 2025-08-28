@@ -24,7 +24,7 @@ export default async function BlogPost(props: { params: Promise<{ id: string}>})
     <>
       <h1 className="text-2xl font-semibold mb-4 mt-24">{title}</h1>
       <h4 className="text-slate-500 text-xs mb-12">{date}</h4>
-      <div className='prose prose-slate prose-img:max-w-full prose-pre:overflow-x-auto max-w-none w-full mx-auto px-4 md:px-0'>
+      <div className='prose tracking-tighter prose-img:max-w-full prose-pre:overflow-x-auto max-w-none w-full mx-auto px-4 md:px-0'>
         <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
       </div>
     </>

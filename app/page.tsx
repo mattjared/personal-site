@@ -11,12 +11,12 @@ export default async function Home() {
         <h4 className="font-bold text-xl">{site.about.subheading}</h4>
       </div>
       <div>
-        <p className="text-sm my-6">{site.about.bio}</p>
-        <p className="text-sm my-6">{site.about.howtowork}</p>
+        <p className="text-sm my-6 tracking-tight">{site.about.bio}</p>
+        <p className="text-sm my-6 tracking-tight">{site.about.howtowork}</p>
       </div>
       <div className="py-10">
         <h1 className="text-xl font-semibold mb-6 pb-3 border-b-blue-100 border-b-2">Blog Posts</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 tracking-tighter">
           {allBlogs.map((post, i) => (
             <div key={`${i}-project`} className="mb-2">
               <Link href={`/blog/${post.slug}`}>
@@ -29,7 +29,7 @@ export default async function Home() {
       </div>
       <div className="py-10">
         <h1 className="text-xl font-semibold mb-6 pb-3 border-b-blue-100 border-b-2">Projects</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2er">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 tracking-tighter">
           {site.projects.map((project, i) => (
             <div key={`${i}-project`} className="mb-2">
               <Link href={project.url}>
@@ -42,7 +42,7 @@ export default async function Home() {
       </div>
       <div className="py-10">
         <h1 className="text-xl font-semibold mb-6 pb-3 border-b-blue-100 border-b-2">Talks and Podcasts</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2er">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 tracking-tighter">
           {site.recentAppearances.map((project, i) => (
             <div key={`${i}-project`} className="mb-2">
               <Link href={project.url}>
@@ -55,7 +55,7 @@ export default async function Home() {
       </div>
       <div className="py-10">
         <h1 className="text-xl font-semibold mb-6 pb-3 border-b-blue-100 border-b-2">Career</h1>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-2er">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 tracking-tighter">
           {site.career.map((project, i) => (
             <div key={`${i}-project`} className="mb-2">
               <h4 className="text-sm font-semibold">{project.organization}</h4>
@@ -68,7 +68,7 @@ export default async function Home() {
       <div className="py-10">
         <h1 className="text-xl font-semibold mb-6 pb-3 border-b-blue-100 border-b-2">Contact</h1>
         <Contact />
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-1er mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-1 tracking-tighter mt-4">
           {site.socials.map((social, i) => (
             <p key={`${i}-social`} className="mb-2">
               <Link href={social.url}>
