@@ -2,6 +2,8 @@ import { site } from "../siteData";
 import Link from "next/link"
 import { getBlogData } from "./lib/actions";
 import Contact from "./components/Contact";
+import PicGrid from "./components/PicGrid";
+
 export default async function Home() {
   const allBlogs = await getBlogData({ allPosts: true, recentPost: false });
   return (
@@ -14,6 +16,7 @@ export default async function Home() {
         <p className="text-sm my-6 tracking-tight">{site.about.bio}</p>
         <p className="text-sm my-6 tracking-tight">{site.about.howtowork}</p>
       </div>
+      <PicGrid />
       <div className="py-10">
         <h1 className="text-xl font-semibold mb-6 pb-3 border-b-blue-100 border-b-2">Blog Posts</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 tracking-tighter">
@@ -68,16 +71,6 @@ export default async function Home() {
       <div className="py-10">
         <h1 className="text-xl font-semibold mb-6 pb-3 border-b-blue-100 border-b-2">Contact</h1>
         <Contact />
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-1 tracking-tighter mt-4">
-          {site.socials.map((social, i) => (
-            <p key={`${i}-social`} className="mb-2">
-              <Link href={social.url}>
-                <span className="text-sm font-semibold">{social.service}</span>
-              </Link>
-            </p>
-          ))}
-        </div>
-        
       </div>
     </>
   )

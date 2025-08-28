@@ -5,7 +5,7 @@ export async function sendEmail(formData: FormData) {
   const { email, name, message } = Object.fromEntries(formData);
   const resend = new Resend(process.env.RESEND_API_KEY);
   await resend.emails.send({
-        from: 'Acme <onboarding@resend.dev>',
+        from: 'Matt Jared Dot XYZ',
         to: 'mattjared9@gmail.com',
         subject: 'Contact Form Submission',
         html: `<div>Name: ${name} <br> Email: ${email} <br> Message: ${message}</div>`,
