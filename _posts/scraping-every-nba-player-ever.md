@@ -2,10 +2,15 @@
 title: Scraping Every NBA Player Ever
 published: true
 date: March 31, 2023
+updated: September 16, 2025
 icon: ⛹🏻‍♂️
 ---
 
-## Scraping Every NBA Player Ever
+## How to make an interesting commit message
+
+Updated: September 16th, 2025
+
+
 
 I recently stumbled upon a comprehensive list of every NBA player ever on Basketball Reference, and I couldn't resist the urge to scrape it.
 
