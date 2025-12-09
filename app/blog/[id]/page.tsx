@@ -16,15 +16,17 @@ export default async function BlogPost(props: { params: Promise<{ id: string}>})
   const matterResult = matter(fileContents);
   const title = matterResult.data.title;
   const date = matterResult.data.date;
+  const updated = matterResult.data.updated;
   const processedContent = await remark()
   .use(html)
   .process(matterResult.content);
   const contentHtml = processedContent.toString();
   return (
     <>
-      <h1 className="text-2xl font-semibold mb-4 mt-12">{title}</h1>
-      <h4 className="text-slate-500 text-xs mb-12">{date}</h4>
-      <div className='prose tracking-tighter prose-img:max-w-full prose-pre:overflow-x-auto max-w-none w-full mx-auto px-4 md:px-0'>
+      <h1 className="text-3xl font-semibold mb-4 mt-12">{title}</h1>
+      <h4 className="text-slate-500 text-sm">{date}</h4>
+      <h4 className="text-slate-500 text-sm">Updated: {updated}</h4>
+      <div className='prose text-md font-medium tracking-tighter prose-img:max-w-full prose-pre:overflow-x-auto max-w-none w-full mx-auto px-4 md:px-0'>
         <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
       </div>
     </>
