@@ -1,3 +1,9 @@
+---
+title: Relearning Rails as a Next.js Developer
+published: true
+date: December 9, 2025
+---
+
 ### Authors Note
 
 As of writing, I work for Vercel. I am actively invested in making the Next.js, React and larger JavaScript ecosystem successful. Nothing here is an official viewpoint from Next or Vercel, I'm just logging my thoughts as I go back to learning something new. 
