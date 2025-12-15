@@ -2,19 +2,22 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import './globals.css';
 import { AnalyticsWrapper } from './Analytics';
-import { Roboto_Mono } from "next/font/google";
+import { Geist_Mono, Karla } from "next/font/google";
 import { cn } from './lib/utils';
+import { ThemeProvider } from './components/ThemeProvider';
 
-// const font = FontSans({
-//   subsets: ["latin"],
-//   variable: "--font-sans",
-// });
-
-const robotoMono = Roboto_Mono({
+const geistMono = Geist_Mono({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "500", "600"],
   display: "swap",
   variable: "--font-mono",
+})
+
+const karla = Karla({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-karla",
 })
 
 export const metadata = {
@@ -38,14 +41,17 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={cn("min-h-screen font-mono antialiased tracking-tighter", robotoMono.variable)}>
-        <main className="container mx-auto px-4">
-          <Navbar />
-          {children}
-          <Footer />
-        </main>
-        <AnalyticsWrapper />
+    <html lang="en" suppressHydrationWarning>
+      <body className={cn("min-h-screen antialiased tracking-tighter bg-slate-50 dark:bg-slate-950 text-black dark:text-white", geistMono.variable, karla.variable)}>
+        <ThemeProvider>
+          {/* <main className="container mx-auto px-4"> */}
+          <main className="">
+            {/* <Navbar /> */}
+            {children}
+            <Footer />
+          </main>
+          <AnalyticsWrapper />
+        </ThemeProvider>
       </body>
     </html>
 );

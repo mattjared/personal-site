@@ -18,6 +18,10 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        headline: ["var(--font-karla)"],
+        mono: ["var(--font-mono)"],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

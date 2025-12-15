@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+.font-headline {
+  text-transform: uppercase;
+}
+
+/* Prose typography overrides */
+.prose h1,
+.prose h2, 
+.prose h3, 
+.prose h4, 
+.prose h5, 
+.prose h6 {
+  font-family: var(--font-karla);
+  text-transform: uppercase;
+} 
+
+.prose p,
+.prose li,
+.prose code,
+.prose pre {
+  font-family: var(--font-mono);
+}
+
+a {
+  transition: all .3s ease-in-out
+}
+a:hover {
+  color: #00bfff;
+  transition: all .3s ease-in-out;
+}
