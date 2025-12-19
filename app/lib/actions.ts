@@ -26,6 +26,10 @@ export async function getBlogData(options: { allPosts: boolean; recentPost: bool
   slugs.forEach((slug) => {
     const realSlug = slug.replace(/\.md$/, "");
     const fullPath = join(postsDirectory, `${realSlug}.md`);
+    // exclude the obsidian folder
+    if (fullPath.includes('obsidian')) {
+      return;
+    }
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const { data: frontMatter } = graymatter(fileContents);
     

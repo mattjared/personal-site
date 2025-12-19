@@ -48,7 +48,7 @@ export default async function Home() {
       </div>
       <div className="col-span-1 md:col-span-2 p-10 border border-slate-200 dark:border-slate-800">
         <h2 className="text-4xl font-semibold mb-6 pb-3 font-headline">Contact</h2>
-        <p className="text-sm my-6 tracking-tight">If you are interested in bringing a product to market, learning how to sell or want general advice feel free to contact me. I post relevant content to on this site and on <Link href="https://www.linkedin.com/in/mattjared9">LinkedIn</Link>.</p>
+        <p className="text-sm my-6 tracking-tight font-mono">Get in touch with me and I will get back to you as soon as possible.</p>
         <Contact />
       </div>
       <div className="col-span-1 md:col-span-2 p-10 border border-slate-200 dark:border-slate-800">
