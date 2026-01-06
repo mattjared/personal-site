@@ -53,3 +53,7 @@ Posts are fetched via `getPostData()` in `app/lib/actions.ts` and rendered with 
 - **Resend** - Email delivery for contact form
 - **Supabase** - Database
 - **Vercel Analytics** - Site analytics
+
+### Committing
+
+- when committing code run the alias `ggo`
