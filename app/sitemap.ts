@@ -1,6 +1,16 @@
 import type { MetadataRoute } from "next";
+import { getBlogData } from "./lib/actions";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const posts = await getBlogData({ allPosts: true, recentPost: false });
+
+  const blogUrls: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `https://mattjared.xyz/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
   return [
     {
       url: "https://mattjared.xyz",
@@ -26,5 +36,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.5,
     },
+    ...blogUrls,
   ];
 }

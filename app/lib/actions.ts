@@ -53,7 +53,7 @@ export async function getBlogData(options: { allPosts: boolean; recentPost: bool
   return options.recentPost ? posts.slice(0, 2) : (options.allPosts ? posts : []);
 }
 
-interface BlogPost {
+export interface BlogPost {
   title: string;
   slug: string;
   icon: string;
@@ -61,4 +61,18 @@ interface BlogPost {
   excerpt: string;
   tags: string[];
   published: boolean;
+}
+
+export async function getAdjacentPosts(currentSlug: string): Promise<{ prev: BlogPost | null; next: BlogPost | null }> {
+  const allPosts = await getBlogData({ allPosts: true, recentPost: false });
+  const currentIndex = allPosts.findIndex(post => post.slug === currentSlug);
+
+  if (currentIndex === -1) {
+    return { prev: null, next: null };
+  }
+
+  return {
+    prev: currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null,
+    next: currentIndex > 0 ? allPosts[currentIndex - 1] : null,
+  };
 }
