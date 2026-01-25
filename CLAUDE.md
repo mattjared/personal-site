@@ -54,6 +54,7 @@ Posts are fetched via `getPostData()` in `app/lib/actions.ts` and rendered with 
 - **Supabase** - Database
 - **Vercel Analytics** - Site analytics
 
-### Committing
+### Commands
 
 - when committing code run the alias `ggo`
+- when publishing blogs I will sometimes need to copy posts you will run `sync-posts` CLI command
