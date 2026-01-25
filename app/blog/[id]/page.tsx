@@ -71,10 +71,10 @@ export default async function BlogPost({ params }: Props) {
       <Navbar />
       <article className="max-w-prose mx-auto px-4 md:px-0 py-8">
         <Link
-          href="/blog"
+          href="/"
           className="font-mono text-sm text-slate-500 hover:text-[#00bfff] mb-6 inline-block transition-colors"
         >
-          &larr; Back to Blog
+          &larr; Back to Home
         </Link>
 
         <header className="mb-8">
