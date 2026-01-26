@@ -1,16 +1,48 @@
 'use server'
 
 import { Resend } from 'resend';
+
 export async function sendEmail(formData: FormData) {
-  const { email, name, message } = Object.fromEntries(formData);
-  const resend = new Resend(process.env.RESEND_API_KEY);
-  await resend.emails.send({
-        from: 'Matt Jared Dot XYZ',
-        to: 'mattjared9@gmail.com',
-        subject: 'Contact Form Submission',
-        html: `<div>Name: ${name} <br> Email: ${email} <br> Message: ${message}</div>`,
-      });
-  console.log(email, name, message);
+  try {
+    const { email, name, message } = Object.fromEntries(formData);
+    
+    if (!process.env.RESEND_API_KEY) {
+      throw new Error('RESEND_API_KEY is not configured');
+    }
+    
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    const date = new Date();
+    
+    const { data, error } = await resend.emails.send({
+      // For testing: use 'onboarding@resend.dev'
+      // For production: use your verified domain like 'contact@yourdomain.com'
+      from: 'onboarding@resend.dev',
+      to: 'mattjared9@gmail.com',
+      subject: `New ${date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} Contact Form Submission`,
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px;">
+          <h2>New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Message:</strong></p>
+          <p>${message}</p>
+        </div>
+      `,
+      // Optional: Add reply-to so you can reply directly to the sender
+      reply_to: email as string,
+    });
+
+    if (error) {
+      console.error('Resend error:', error);
+      throw new Error(error.message);
+    }
+
+    console.log('Email sent successfully:', data);
+    return { success: true, data };
+  } catch (error) {
+    console.error('Failed to send email:', error);
+    return { success: false, error: (error as Error).message };
+  }
 }
 
 import fs from "fs";
