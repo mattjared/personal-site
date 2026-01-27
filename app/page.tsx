@@ -1,11 +1,11 @@
-import { site } from "../siteData";
 import Link from "next/link"
-import { getBlogData } from "./lib/actions";
+import { getBlogData, getProjects } from "./lib/actions";
 import Contact from "./components/Contact";
 import PicGrid from "./components/PicGrid";
 
 export default async function Home() {
   const allBlogs = await getBlogData({ allPosts: true, recentPost: false });
+  const projects = await getProjects();
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       <div className="col-span-1 md:col-span-2 p-10 py-20 border border-slate-200 dark:border-slate-800">
@@ -36,14 +36,30 @@ export default async function Home() {
       <div className="col-span-1 md:col-span-2 lg:col-span-1 p-10 border border-slate-200 dark:border-slate-800">
         <h2 className="text-4xl font-semibold mb-6 pb-3 font-headline">Appearances</h2>
         <div className="grid grid-cols-1 gap-2 tracking-tighter">
-          {site.recentAppearances.map((project, i) => (
-            <div key={`${i}-project`} className="mb-2">
-              <Link href={project.url}>
-                <h4 className="font-semibold font-headline">{project.title}</h4>
-                <p className="font-mono text-sm text-slate-500 dark:text-slate-400">{project.description}</p>
-              </Link>
-            </div>
-          ))}
+          <div className="mb-2">
+            <Link href="https://www.youtube.com/watch?v=5ECzvKmOiMg">
+              <h4 className="font-semibold font-headline">The WordPress Edge</h4>
+              <p className="font-mono text-sm text-slate-500 dark:text-slate-400">A look at the future of Headless WordPress</p>
+            </Link>
+          </div>
+          <div className="mb-2">
+            <Link href="https://www.youtube.com/watch?v=9h_dFCNSiQ4">
+              <h4 className="font-semibold font-headline">How to scale your business with AI</h4>
+              <p className="font-mono text-sm text-slate-500 dark:text-slate-400">A look at how AI can help scale your business</p>
+            </Link>
+          </div>
+          <div className="mb-2">
+            <Link href="https://www.youtube.com/watch?v=cPLmB3PRMCY">
+              <h4 className="font-semibold font-headline">Ship 2025 Anatomy of a Fast Site</h4>
+              <p className="font-mono text-sm text-slate-500 dark:text-slate-400">What does a FAST site look like? How do you make one?</p>
+            </Link>
+          </div>
+          <div className="mb-2">
+            <Link href="/blog/public-vercel-ships">
+              <h4 className="font-semibold font-headline">Public Vercel Appearances</h4>
+              <p className="font-mono text-sm text-slate-500 dark:text-slate-400">Everything I&apos;ve done that&apos;s publicly available while at Vercel</p>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="col-span-1 md:col-span-2 p-10 border border-slate-200 dark:border-slate-800">
@@ -54,12 +70,13 @@ export default async function Home() {
       <div className="col-span-1 md:col-span-2 p-10 border border-slate-200 dark:border-slate-800">
         <h2 className="text-4xl font-semibold mb-6 pb-3 font-headline">Projects</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 tracking-tighter">
-          {site.projects.map((project, i) => (
+          {projects.map((project, i) => (
             <div key={`${i}-project`} className="mb-2">
-              <Link href={project.url}>
-                <h4 className="font-semibold font-headline">{project.title}</h4>
-                <p className="font-mono text-sm text-slate-500 dark:text-slate-400">{project.description}</p>
-              </Link>
+              <h4 className="font-semibold font-headline">{project.title}</h4>
+              <div
+                className="font-mono text-sm text-slate-500 dark:text-slate-400 [&_a]:text-[#00bfff] [&_a]:underline"
+                dangerouslySetInnerHTML={{ __html: project.descriptionHtml }}
+              />
             </div>
           ))}
         </div>

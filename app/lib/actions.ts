@@ -108,3 +108,34 @@ export async function getAdjacentPosts(currentSlug: string): Promise<{ prev: Blo
     next: currentIndex > 0 ? allPosts[currentIndex - 1] : null,
   };
 }
+
+export interface Project {
+  title: string;
+  descriptionHtml: string;
+}
+
+export async function getProjects(): Promise<Project[]> {
+  const { remark } = await import('remark');
+  const html = (await import('remark-html')).default;
+
+  const fullPath = join(postsDirectory, "projects.md");
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const { content } = graymatter(fileContents);
+
+  // Split by h2 headers (## )
+  const sections = content.split(/^## /m).filter(Boolean);
+
+  const projects = await Promise.all(sections.map(async (section) => {
+    const lines = section.trim().split('\n');
+    const title = lines[0];
+    const description = lines.slice(1).join('\n').trim();
+
+    // Convert markdown links to HTML
+    const processed = await remark().use(html).process(description);
+    const descriptionHtml = processed.toString();
+
+    return { title, descriptionHtml };
+  }));
+
+  return projects;
+}
