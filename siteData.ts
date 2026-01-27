@@ -1,16 +1,4 @@
 export const site = {
-  about: { 
-    heading: "I'm Matt Jared",
-    subheading: "Sales Leader & Developer based in Austin, Texas USA.",
-    bio: "I'm a marketer turned self-taught developer turned sales engineer turned sales leader. I have worked at and alongside startups, a large public company and today I help enable fast teams to build fast sites at Vercel. I love building things - web sites, teams, projects, companies, whatever - and sharing what I’ve learned along the way",
-    howtowork: "This site is my attempt at sharing everything I know. I'm available on a project basis to help your startup or project get to market. If you are interested in bringing a product to market, learning how to sell or want general advice feel free to contact me. I post relevant content to on this site and on LinkedIn."
-  },
-  careerCards: [
-    { title: 'Sales Engineer Manager', company: 'Vercel', date: 'January 2025 - Present' },
-    { title: 'Senior Sales Engineer', company: 'Vercel', date: 'January 2023 - December 2024' },
-    { title: 'Senior Developer', company: 'Atlassian', date: 'June 2018 - January 2023' },
-    { title: 'Frontend Developer', company: 'The Zebra', date: 'January 2015 - June 2018' },
-  ],
   recentAppearances: [
     { title: 'The WordPress Edge', description: 'A look at the future of Headless WordPress', cta: 'Watch the Video', url: 'https://www.youtube.com/watch?v=5ECzvKmOiMg' },
     { title: 'How to scale your business with AI', description: 'A look at how AI can help scale your business', cta: 'Watch the Video', url: 'https://www.youtube.com/watch?v=9h_dFCNSiQ4' },

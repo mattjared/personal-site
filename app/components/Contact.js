@@ -15,14 +15,11 @@ export default function Contact() {
   const [email, setEmail] = useState('');
 
   async function create(formData) {
-    const email = formData.get('email');
-    const name = formData.get('name');
-    const message = formData.get('message');
-    if (formData.error) {
-      setMessage(formData.error);
-    } else {
+    const result = await sendEmail(formData);
+    if (result.success) {
       setMessage('Message sent successfully. I will get back to you as soon as possible.\n\n 🏄🏻‍♂️🏄🏻‍♂️🏄🏻‍♂️ Thank you! 🏄🏻‍♂️🏄🏻‍♂️🏄🏻‍♂️');
-      sendEmail(formData);
+    } else {
+      setMessage(`Failed to send: ${result.error}`);
     }
   }
 

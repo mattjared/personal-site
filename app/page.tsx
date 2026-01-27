@@ -11,11 +11,11 @@ export default async function Home() {
       <div className="col-span-1 md:col-span-2 p-10 py-20 border border-slate-200 dark:border-slate-800">
         <div className="font-headline mb-12">
           <h1 className="text-8xl font-bold mb-2 tracking-tighter">Matt Jared </h1>
-          <h4 className="font-semibold text-xl tracking-tight">👋🏻 {site.about.subheading}</h4>
+          <h4 className="font-semibold text-xl tracking-tight">👋🏻 Sales Leader & Developer based in Austin, Texas USA.</h4>
         </div>
         <div className="font-mono">
-          <p className="text-sm my-6 tracking-tight">{site.about.bio}</p>
-          <p className="text-sm my-6 tracking-tight">{site.about.howtowork}</p>
+          <p className="text-sm my-6 tracking-tight">I&apos;m a marketer turned self-taught developer turned sales engineer turned sales leader. I have worked at and alongside startups, a large public company and today I help enable fast teams to build fast sites at Vercel. I love building things - web sites, teams, projects, companies, whatever - and sharing what I&apos;ve learned along the way</p>
+          <p className="text-sm my-6 tracking-tight">This site is my attempt at sharing everything I know. I&apos;m available on a project basis to help your startup or project get to market. If you are interested in bringing a product to market, learning how to sell or want general advice feel free to contact me. I post relevant content to on this site and on LinkedIn.</p>
         </div>
         <PicGrid />
       </div>
