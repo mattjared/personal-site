@@ -1,6 +1,6 @@
 ---
 title: Projects
-published: true
+published: false
 date: January 27, 2025
 updated: January 27, 2026
 icon: 🚀

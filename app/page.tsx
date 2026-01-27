@@ -1,10 +1,10 @@
 import Link from "next/link"
-import { getBlogData, getProjects } from "./lib/actions";
+import { getBlogData, getProjects } from "./lib/blog";
 import Contact from "./components/Contact";
 import PicGrid from "./components/PicGrid";
 
 export default async function Home() {
-  const allBlogs = await getBlogData({ allPosts: true, recentPost: false });
+  const allBlogs = getBlogData({ allPosts: true });
   const projects = await getProjects();
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">

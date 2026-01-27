@@ -27,29 +27,27 @@ const images = [
   },
 ]
 
+// Deterministic tilts to avoid hydration mismatch
+const tilts = [-3, 2, -4, 3, -2, 4];
+
 export default function PicGrid() {
   return (
     <div className="my-12 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-1">
-      {images.map((image, index) => {
-        // Generate a random tilt angle between -5 and 5 degrees
-        const randomTilt = Math.random() * 10 - 5;
-        return (
-          <Image
-            key={index}
-            alt={image.alt}
-            className="rounded-lg shadow-lg border-2 border-gray-300 hover:scale-105 transition-all duration-300"
-            height="200"
-            src={image.src}
-            style={{
-              aspectRatio: "200/200",
-              objectFit: "cover",
-              transform: `rotate(${randomTilt}deg)`, // Apply random tilt
-              transition: "transform 0.3s ease-in-out",
-            }}
-            width="200"
-          />
-        );
-      })}
+      {images.map((image, index) => (
+        <Image
+          key={index}
+          alt={image.alt}
+          className="rounded-lg shadow-lg border-2 border-gray-300 hover:scale-105 transition-all duration-300"
+          height={200}
+          width={200}
+          src={image.src}
+          style={{
+            aspectRatio: '1',
+            objectFit: 'cover',
+            transform: `rotate(${tilts[index % tilts.length]}deg)`,
+          }}
+        />
+      ))}
     </div>
   );
 }
