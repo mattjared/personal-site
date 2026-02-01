@@ -9,6 +9,10 @@ icon: 🚀
 ## Void
 A chrome extension for taking notes and focus. [Check it out](https://void-neon.vercel.app/)
 
+## Emoji Text
+A tiny site to write slack messages in slack emoji quickly. [Site here](https://emoji-text.vercel.app/) and [code here](https://github.com/mattjared/emoji-text). This is inspired by the 🐐 <https://cyanharlow.bitbucket.io/>
+
+
 ## Scorelord
 Full stack app to track daily scores and post to Slack. [GitHub](https://github.com/mattjared/scorelord)
 
