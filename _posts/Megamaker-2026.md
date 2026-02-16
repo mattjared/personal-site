@@ -1,9 +1,11 @@
 ---
-title: MegaMaker
+title: MegaMaker 2026
 published: true
 date: January 24, 2016
 icon: 🤖
 ---
+
+![MegaMaker badge](/images/badge.jpg)
 
 An honest to god list of sites and projects that I have shipped in 2026 and a huge list of stuff I want to do. I did this in 2014 and didn't get a lot of it done or nearly as much I'd have liked. Let's see how far we can get in the 2026 AI Driven landscape and over 12 years of career and life experience driving clarity. Can I get to 100 high quality ships? We'll break it out month-by-month.
 
