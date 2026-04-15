@@ -1,0 +1,349 @@
+# Matt Jared
+
+> Sales Leader & Web Developer in Austin, Texas
+
+Matt Jared is a marketer turned self-taught developer turned sales engineer turned sales leader. He has worked at and alongside startups and scale-ups including Cratejoy, Techstars, Atlassian, and Vercel, where he leads sales and field engineering efforts to help teams ship faster websites with happier teams. He is a builder at heart. On the code side that means Next.js, React, Postgres, and Supabase. More broadly, it means building products, teams, projects, and companies and sharing what he learns along the way.
+
+Matt is deeply interested in the intersection of engineering, business, and go-to-market. Especially sales, positioning, and distribution when technical credibility is what creates trust. He is available on a project basis to help startups bring products to market, improve how they sell, or think through strategy.
+
+## Career Background
+
+- Started as a front end developer at The Zebra in January 2015
+- Worked at Atlassian
+- Currently at Vercel leading sales and field engineering for startups
+- Self-taught developer who learned to code starting around 2011
+- Found product-market fit for himself combining frontend development with sales/solutions engineering at Vercel in 2023
+- Over 10 years of career experience in web development, startups, and sales
+
+## Appearances
+
+- The WordPress Edge: A look at the future of Headless WordPress (https://www.youtube.com/watch?v=5ECzvKmOiMg)
+- How to scale your business with AI (https://www.youtube.com/watch?v=9h_dFCNSiQ4)
+- Ship 2025 Anatomy of a Fast Site (https://www.youtube.com/watch?v=cPLmB3PRMCY)
+- Scaling Your Next.js Application on Vercel (https://www.youtube.com/watch?v=z9cg0bWsRrg)
+- Migrating to Next.js and Vercel for increased developer velocity (https://www.youtube.com/watch?v=w4fiW0yWgbA)
+- React Chicago: How to use v0 to deploy any website in 2024 (https://www.youtube.com/watch?v=dR2gFFmCHzo)
+- Deploy an AI app at enterprise scale with Vercel (https://www.youtube.com/watch?v=9h_dFCNSiQ4)
+- Building secure SaaS with Vercel and Auth0 (https://www.youtube.com/watch?v=uHFDBtQYmzk)
+- How PAIGE exceeded their Black Friday goals with Next.js, Vercel, and Shopify (https://youtu.be/A2IVCYTXsYU)
+- How Notion achieves high-performance experimentation with Statsig and Vercel (https://www.youtube.com/watch?v=x4-xXXJEDcY)
+- Getting Started with Vercel (https://youtu.be/Y3_uznYnQRs)
+- Beyond the Basics with Vercel (https://www.youtube.com/watch?v=FkveQpw-lyc)
+- Vercel Knowledge Session with This Dot Labs
+- Building protection into every phase of the SDLC (https://youtu.be/xPIGcwvtzO4)
+- Launch faster: Vercel essentials for startups (https://youtu.be/mayQ_yuwYns)
+- Ship 2025: Anatomy of FAST SITE (https://www.youtube.com/watch?v=cPLmB3PRMCY)
+
+## Projects
+
+- Void: A chrome extension for taking notes and focus. https://void-neon.vercel.app/
+- Emoji Text: A tiny site to write slack messages in slack emoji quickly. https://emoji-text.vercel.app/ Code: https://github.com/mattjared/emoji-text
+- Scorelord: Full stack app to track daily scores and post to Slack. https://github.com/mattjared/scorelord
+- How much is 10mb?: A site pushing the limits of what can go into 10mb. https://how-much-is-10mb.yay.boo/
+- Random Hooper: An API to generate random NBA player names. https://random-hooper.vercel.app/
+- Server Side Football Site: Using SSR to display English Soccer team data. https://server-side-football-site.vercel.app/
+- Client Side Football Site: Using CSR to display English Soccer team data. https://client-side-football-site.vercel.app/
+- Football Clubs API: Supabase + Next.js with all Wikipedia data showing English soccer teams. https://github.com/mattjared/football-clubs-api
+- Next in line: Hype site for pre launch startups and drops. https://next-in-line.vercel.app/
+- Next.js AI Lite: Minimal AI chatbot start built with Next.js. https://github.com/mattjared/nextjs-ai-lite
+- React Chicago Site: Rebuilt the React Chicago Meetup site with Next.js. https://github.com/mattjared/react-chicago
+- Annotated Hinkie Letter: Tracking how the process unfolded. https://github.com/mattjared/annotated-hinkie-letter
+- Book tracking site: Tracking books everyone likes. https://github.com/mattjared/vercel-books
+- Party Pad: Birthday party invitation site. https://github.com/mattjared/party-pad
+- Close Tabs: Chrome extension for closing tabs that automatically open for zoom and notion and others. https://github.com/mattjared/close-tabs
+- Homepage GPT: v0 but made by me and not very good. https://github.com/mattjared/homepageGPT
+- Bingeboard: Greatest quotes from the Binge Mode podcast on a soundboard. https://github.com/mattjared/binge-board
+- NBA Colors: Package with NBA colors. https://github.com/mattjared/nba-color
+
+---
+
+## Blog Posts (Full Content)
+
+---
+
+### 10 years later, the things that still stick with me
+
+Date: August 27, 2025
+
+Somehow sitting with 10 years of experience behind me since my first real-life engineering job. I started simply as a "front end developer" at The Zebra in January 2015. We're somehow over a decade from that point and I wanted to reflect on where I am today compared to then and share what's stuck with me this whole time.
+
+Getting into web development and startups I thought would make me a bajillionaire and I was absolutely wrong in every way but only in the financial sense. I've become rich in my career with a lot of great connections and experience I'm extremely proud of. I think it turned out to be more valuable than I could ever imagined. I'll take it! Where I am a bajillionaire now is in experience and a very rich and fruitful career in web development, startups and sales.
+
+#### Everything is so much easier (and harder) now
+
+At this writing (on a plane from SF to Austin with my real brain and fingers, no AI here!) I work at Vercel helping startups build the foundation of their companies. There are folks who are hot AI darlings and others who are just kinda sorting things out. The consistent note between all of them is how much closer to the code EVERYONE has become. I spent a lot of years building up to a point earning my way into the engineering world. Today, I'm a few prompts away from doing pretty much everything I was capable of 10 years ago. It's SO MUCH easier to get unstuck as a developer now. The whole reason I learned to code was to be able to build my own MVPs. That's all completely gone now. v0, Cursor, Claude Code and others zoom people through the 4 years from 2011 to 2015 it took me to learn how the hell all this worked. This access really makes learning, shipping and growing so much easier, it's astonishing. And I have been reaping the rewards as well being able to get over humps where I'd normally quit or give up in the past. But there's a catch...
+
+A big chunk of my projects at The Zebra were building marketing pages and making them absolutely crazy fast. It was our marketing strategy to rank on Google for a ton of different terms. This is still a common thing! But it's now shifted so drastically to LLM search that Google search sort of feels like an after thought. And since everyone can code now what you actually build has to be truly unique, integrate everywhere and work flawlessly. It's way harder to get in front of a customer than ever.
+
+Still, I am so thankful I took the long way and learned to code. I feel I can still do anything because I see the forest and the trees. Having access to a fast car does not make a great driver might be an analogy here. I still find great joy in writing front end code and when I get the chance to rip a feature or build something new I relish in the comfort of my editor and the incredible high of hitting refresh and the changing to be what you want it to be (even with a little robot magic to aide the process).
+
+#### High Leverage Activities
+
+What is the most high leverage thing you can do right now? I didn't fully appreciate this notion until our team read The Effective Engineer by Edmund Lau in 2016. In short, do only the absolute highest most impactful work. I've consistently turned back to this as a guide post for what to do when I'm facing a mountain of tasks. A weird thing that I've landed on that I took away from this was training people. To deploy the app when I first started we would HipChat each other that we were gonna deploy and make sure we had the right script to use. We'd then SSH into some AWS box and let it rip. Startups! A year or so into that we finally got a great DevOps guy and he graduated us into a Docker setup. It was time to get serious! We also had a slew of new hires who showed up right after that. I kept thinking about high leverage work and fell into helping folks setup their machine and get going on Docker. I was a lowly Front End Developer at the time and a lot of the backend work really intimidated me and even those guys were asking me how to get setup. Everyone went from having no clue, to ripping PRs in short order. Turned out to be super high leverage!
+
+This pattern just continued to repeat throughout my career and it's been a focal point in my success and satisfaction in work. Getting people unblocked and starting to unveil their superpowers on the organization is intoxicating. At Atlassian I overly documented everything on every project I did so people could drop in seamlessly. At Vercel I led an initiative to teach a small team to code at their offsite. That team went on to be the highest performing team at the company 10 quarters in a row. That work led to a mandatory certification for the entire company to learn to code basic pages and still continues today for new hires.
+
+I might be missing something but it's like the highest leverage work is training people how to do stuff and then getting the hell out of the way.
+
+#### Productivity Zones
+
+I still consistently chase short term dopamine in the form of Slack thread + notifs and a million other things. Despite all the tools and knowledge from the last decade telling us that we're actively harming our productivity FEELING active I haven't mastered it. In fact, it's gotten worse! One thing that's sticking out is finding productivity zones that are very easy to fall into and get something done quickly. I learned quickly to completely shut everything down and FOCUS on the one thing I needed to focus on and then get back to doomlooping. Still to this day that same structure of extreme focus on that one thing and then retreating back to other stuff is really really helpful.
+
+#### Fear Nothing
+
+I was really intimidated by the back end work at The Zebra. One of the few regrets I have is not fully getting further into the actual backend on The Zebra. What a waste! There was so much to learn and build on, even if I was imperfect I could have at least failed in a massively safe way. The antidote is to run TOWARDS the thing you are terrified of. Today, I'm intimidated by fundraising and cap tables and financials. I have no idea how to amortize cloud spend across multiple projects, but I need to know and I have learned to run TO pain. Great lesson I didn't actually learn until I had some space from the situation.
+
+#### Chase your skills
+
+I was afraid of the back end stuff maybe because I wasn't interested in it? And I didn't run to that fear because it wasn't something I got excited by. What really excited me? Learning about how to build custom UI elements for our partner customers. "What is this solution engineering thing" was a question I asked in 2017. I went on an entire side quest to further my career as an engineer when my real skills are in engineer AND sales...solutions engineering. I say that I didn't find product market fit for myself until I got to Vercel and doing solutions / sales engineering in 2023. If you aren't totally loving it, try other stuff. I totally love Frontend Development but my happiness and career didn't really feel like it was taking off until I combined Frontend dev work with sales and solutions. What's the combo job out there that I'm going to fall into next?
+
+---
+
+### Relearning Rails as a Next.js Developer
+
+Date: December 9, 2025
+
+Author's Note: As of writing, I work for Vercel. I am actively invested in making the Next.js, React and larger JavaScript ecosystem successful. Nothing here is an official viewpoint from Next or Vercel, I'm just logging my thoughts as I go back to learning something new.
+
+I started my "learn to code" journey during the absolute beginning and into the height of Codecademy, Teach Yourself to Code and the Bootcamp wave. The entire time I always just loved frontend more than anything backend. It came easier to me, was more tangible and fun. I built a few small things with Ruby. Through a few fits and starts I learned to shift to focus on just JavaScript and never ever looked back. I spent a considerable amount of time working WordPress and Django up until 2018 but mostly dialed in on JavaScript and its related tools. I'm not a great developer by any means but I can get around in JS-land and I'm familiar with the ecosystem. I've made a decent career of it as a dev for over 10 years. I then switched into sales (Sales Engineering at Vercel) at the largest and best front end deployment tool in the world helping brands large and small, start up and everything in between use the hell out of Next.js.
+
+There is nothing like the thrill of hitting refresh and seeing what you wrote on the page change to be what you want. Nothing. The current vibe coding tools have maybe softened some of that excitement but also heightened it as well.
+
+I want to build something in the few hours a week I'm relaxing watching TV before bed. Vibe coding tools make it so I can get really any Next.js app started instantly but I was hoping for a little bit of a challenge. I love to run through a good tutorial and learn something new.
+
+Rails is still alive and there's a lot of stuff you can do with it really easily. The Convention over Configuration paradigm means you need to know the convention, which takes learning. The deployment section is super dense talking about Ubuntu and VMs. For me, that's too much work! This is where Vercel is great, you just chuck a link to a github repo at it and it works.
+
+Key observation: setting up dev environments is something that really sucks as a developer that AI hasn't solved yet.
+
+---
+
+### Personalizing every new tab experience
+
+Date: August 20, 2025
+
+My favorite Chrome Extension, Papier is unmaintained and I was getting some warnings about it from the Chrome Web Store. At its core, Papier is super simple. On every new tab it persists as an open text field. Between new tabs your notes are stored in localStorage so no matter what you're doing anything you jot in Papier gets stored. I made a duplicate version while I was at Atlassian to send tasks to Trello.
+
+With v0 and Cursor I wanted to give it a fresh try to build it over again. v0 did a pretty great job on my early versions: https://void-neon.vercel.app/
+
+But that's half the battle, I want to be able to update it all the time and fiddle. v0 making an app that is cool is the easy part, making it so I am the human-in-the-loop alongside AI is where the challenges lie.
+
+One more thing: this is the future of software development. Not making stuff for the masses but reaching for tools and finding a groove that puts me in the heart of the work. Building for the web is going to change because we're going to need to know how to quickly modify what we've built and take it to the platforms where our work needs to live.
+
+---
+
+### The Changing Sports Landscape
+
+Date: January 25, 2026
+
+I've been going to college football and basketball games my whole life. The first ever was in 1994 when the Cincinnati Bearcats took on the Indiana Hoosiers. A year or two after that I went to Ohio State to see Illinois get run over by Heisman Trophy winner Eddie George. I went to Xavier games at the Cincinnati Garden with my Cub Scout troop.
+
+Sports are an entertainment product meant to generate revenue for team and league owners. Advertisers and brands invest in real estate at games or during commercial breaks for a chance to sell to fans tuning into the entertainment product. That's the business. It's not a civic enterprise to find out which city is better or worse, it's exclusively to bring people together to advertise to them.
+
+This hit me hard recently when I went to Chase Center in San Francisco to see the Golden State Warriors. Every single inch of the arena was littered with sponsored space. Every single second was scripted. It felt like being IN Idiocracy.
+
+And it's always been like this, I just didn't notice. I think that's the part that's jarring. Sports have now become so big and easy to commercialize that it's starting to tip past the point where I'm noticing it. I'm still going to go to games. I'm still going to cheer. But I can't unsee it now.
+
+---
+
+### MegaMaker 2026
+
+Date: January 24, 2026
+
+An honest to god list of sites and projects that I have shipped in 2026 and a huge list of stuff I want to do. I did this in 2014 and didn't get a lot of it done or nearly as much I'd have liked. Let's see how far we can get in the 2026 AI Driven landscape and over 12 years of career and life experience driving clarity. Can I get to 100 high quality ships?
+
+2026 Total so far: 6
+
+January ships:
+1. Changing Sports Landscape Post
+2. Updated emojitext.vercel.app
+3. Changed projects on site to draw from a markdown page
+4. Mega linkedin post about hiring for SE Startups
+5. Pushup Tracker
+6. New dotfiles https://github.com/mattjared/dotfiles
+
+---
+
+### The Four Tendencies
+
+Date: March 26, 2025
+
+Take the Four Tendency Quiz here to find out your tendency: https://gretchenrubin.com/quiz/
+
+---
+
+### Top 28 Taylor Songs
+
+Date: August 14, 2023
+
+Tier 1: chill / sad Vibe
+1. bon iver song
+2. Ivy
+3. invisible string
+4. willow
+5. lover
+6. the one
+
+Tier 2: Party Vibe
+1. bad blood (kendrick remix)
+2. Style
+3. Getaway car song
+4. are you ready for it
+5. the man
+6. Gorgeous
+7. cruel summer
+
+Tier 3: Generally great or popular + memories
+1. shake it off
+2. getting back together
+3. i forgot that you existed
+4. 22
+5. the last great american dynasty
+
+---
+
+### How to make an interesting commit message
+
+Date: March 31, 2023
+Updated: September 16, 2025
+
+I recently stumbled upon a comprehensive list of every NBA player ever on BasketballReference.com. I've had to commit code publicly a lot and writing all the steps out has been awkward and weird and I can never think of a useful commit message. Whenever there's a combination of new data + an extremely unimportant problem I always sprint to get a new project going.
+
+I used Puppeteer to scrape BasketballReference.com and stored all NBA players in a huge array (5101 items). Uploaded that to Upstash (serverless Redis), bootstrapped a Next.js project, and created a route that randomly selects a player name using Upstash's SRANDMEMBER function. Now every commit message can be a random NBA player name.
+
+Hit this url to get a random hooper: https://github.com/mattjared/random-hooper
+
+---
+
+### Public Vercel Ships
+
+Date: November 1, 2023
+Updated: September 16, 2024
+
+A list of public ships and collateral that Matt worked on at Vercel:
+
+- Scaling Performant Web Applications on Vercel (blog post)
+- Scaling Your Next.js Application on Vercel (live demo)
+- Migrating to Next.js and Vercel for increased developer velocity (talk)
+- React Chicago: How to use v0 to deploy any website in 2024
+- Deploy an AI app at enterprise scale with Vercel (online event)
+- Inspiration for isthiscsr.com - Site that uses AI to see if a site is using client side rendering
+- Building secure SaaS with Vercel and Auth0
+- How PAIGE exceeded their Black Friday goals with Next.js, Vercel, and Shopify
+- How Notion achieves high-performance experimentation with Statsig and Vercel
+- Getting Started with Vercel
+- Beyond the Basics with Vercel
+- Vercel Knowledge Session with This Dot Labs
+- Building protection into every phase of the SDLC
+- Launch faster: Vercel essentials for startups
+- Ship 2025: Anatomy of FAST SITE
+
+---
+
+### Principles
+
+Date: December 6, 2023
+
+A few very simple principles that guide how to think about work and life.
+
+Enthusiasm is a choice: Energy is often dictated by different factors often completely out of our control. Enthusiasm, however is something we can control.
+
+Pursue perfection in fundamentals: Not having an answer for every question is how life and work just are. Pursuing perfection of the fundamentals of your craft, current obsession, goals is really the aim.
+
+Pursuit > Perfection: Try. Give a shit. Take pride in your work. Have fun getting there.
+
+One day you'll be at a new job: All your current colleagues will quit or be fired. You'll go somewhere new. What can this day teach you? How can I have an outsized impact on today?
+
+---
+
+### High Note
+
+Date: March 29, 2022
+
+Always start and end the day on a high note. It sometimes feels impossible to get over the hump of projects that take forever but the slow incremental progress and chaining together high notes will most likely get the project over the hump.
+
+A high note doesn't have to be some Herculean all nighter. A high note to end the day, for me, would be to clear my desk, send a good evening message to my team on Slack and have four of my most pressing items written down for the next morning. Where I would, in a perfect world, pick off the first item and start the day on a high note.
+
+---
+
+### Front End Code Test
+
+Date: September 1, 2021
+
+A series of front end code tests published on Code Sandbox for interviewing front end candidates:
+
+Part 1 (10 mins): Import data, create a component, pass data as props, show only Tracks.
+Part 2 (20 mins): Adding interactivity and displaying dynamic data with state management.
+Part 3 (15 mins): Styling markup using CSS.
+
+---
+
+### Designs I like
+
+Date: July 26, 2024
+
+Design inspiration sources:
+- https://layers.to/explore/recent
+- https://recent.design/
+- https://www.darkmodedesign.com
+- https://oss.gallery/
+- https://spotlight.tailwindui.com/
+
+---
+
+### On Walking
+
+Date: July 26, 2024
+
+Solvitur Ambulando, 'It is solved by walking.'
+
+Theologian and philosopher Soren Kierkegaard on the power of walking: "Above all, do not lose your desire to walk: every day I walk myself into a state of well-being and walk away from every illness; I have walked myself into my best thoughts, and I know of no thought so burdensome that one cannot walk away from it."
+
+---
+
+### Daily Practice
+
+Date: May 1, 2014
+
+James Altucher wrote a book that changed my day to day living in 2013 titled Choose Yourself! The daily practice is dead simple: write down 10 things you are grateful for and 10 ideas about anything in your life. Every. Single. Day. This is just like Darren Hardy's book The Compound Effect where you have to take action every day to ultimately achieve a larger goal.
+
+Seeing James' new approach I immediately built The Daily Practice into my day-to-day and saw some very nice rewards. I felt better about my place in the web design and entrepreneurship scene. I felt energized and excited about where I was in my journey. I had better ideas.
+
+Even with a little success over the past few months, I still have a lot of work to do. The Daily Practice, just like learning new tools as a web designer, is a journey that continues on without a final stopping point.
+
+---
+
+### Following
+
+Date: May 27, 2014
+
+One of the pillars of learning web design is filtering who you follow through all mediums. As James Altucher explains, "You become what inspires you the most" meaning that every piece of content you imbibe is inspiring, defeating or distracting your work and life.
+
+Filter what you imbibe and only allow what you want to become in the stream.
+
+I'm going to cut all the bookmarks I've been saving. The only thing that's staying is one link from Bocoup about learning jQuery that has fundamental exercises to learn Javascript. For entrepreneurs, getting to your first customer is the only thing you should be focused on. For web designers and n00bs, don't start learning anything new until you finish that thing you've had in the back of your mind. Don't perfect it, just finish it and share it.
+
+---
+
+### Purple Cow
+
+Date: February 23, 2014
+
+Seth Godin has had a profound effect on the way I think as a person, a marketer and someone who gives a shit. Key takeaways from Purple Cow:
+
+- Stop advertising and start innovating.
+- The old rule: Create safe, ordinary products and combine them with great marketing. The new rule: Create remarkable products that right people seek out.
+- The way you break through to the mainstream is to target a niche instead of a huge market.
+- Don't try to make a product for everybody, because that is a product for nobody.
+- In a crowded marketplace, fitting in is failing.
+- You do not equal the project. Criticism of the project is NOT criticism of you.
+- What's missing isn't the ideas. It's the will to execute them.
+- Remarkable people with remarkable careers seem to switch jobs with far less effort. The path to a lifetime of job security is to be remarkable.
+- You have to go where the competition is NOT. The farther the better.
+
+---
+
+### MegaMaker
+
+Date: January 24, 2016
+
+A list of 100 things to make, inspired by Justin Jackson's Mega Maker Series. Includes everything from web apps and blog posts to sharpie art, a subscription box, a drone video, a halloween costume, a christmas carol, and a list of stuff. Represents Matt's builder mentality and desire to ship as many creative projects as possible.

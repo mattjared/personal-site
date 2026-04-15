@@ -5,7 +5,6 @@ date: January 27, 2025
 updated: January 27, 2026
 icon: 🚀
 ---
-
 ## Void
 A chrome extension for taking notes and focus. [Check it out](https://void-neon.vercel.app/)
 

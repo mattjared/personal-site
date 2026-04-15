@@ -42,6 +42,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="me" href="/llms.txt " type="text/plain" />
+        <link rel="me" href="/llms-full.txt" type="text/plain" />
+      </head>
       <body className={cn("min-h-screen antialiased tracking-tighter bg-slate-50 dark:bg-slate-950 text-black dark:text-white", geistMono.variable, karla.variable)}>
         <ThemeProvider>
           {/* <main className="container mx-auto px-4"> */}

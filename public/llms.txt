@@ -1,0 +1,69 @@
+# Matt Jared
+
+> Sales Leader & Web Developer in Austin, Texas
+
+Matt Jared is a marketer turned self-taught developer turned sales engineer turned sales leader. He has worked at and alongside startups and scale-ups including Cratejoy, Techstars, Atlassian, and Vercel, where he leads sales and field engineering efforts to help teams ship faster websites with happier teams.
+
+He is deeply interested in the intersection of engineering, business, and go-to-market — especially sales, positioning, and distribution when technical credibility is what creates trust.
+
+On the code side, Matt works with Next.js, React, Postgres, and Supabase. More broadly, he builds products, teams, projects, and companies and shares what he learns along the way.
+
+## Links
+
+- Blog: /blog
+- Contact: available via the contact form on the homepage
+- LinkedIn: linkedin.com/in/mattjared
+- GitHub: github.com/mattjared
+
+## Blog Posts
+
+- [10 years later, the things that still stick with me](/blog/10-years-later) - August 27, 2025
+- [Relearning Rails as a Next.js Developer](/blog/relearning-rails) - December 9, 2025
+- [Personalizing every new tab experience](/blog/new-tab-homepage) - August 20, 2025
+- [The Changing Sports Landscape](/blog/changing-sports-landscape) - January 25, 2026
+- [MegaMaker 2026](/blog/Megamaker-2026) - January 24, 2016
+- [The Four Tendencies](/blog/four) - March 26, 2025
+- [Top 28 Taylor Songs](/blog/top-27-taylor-songs) - August 14, 2023
+- [How to make an interesting commit message](/blog/how-to-make-an-interesting-commit-message) - March 31, 2023
+- [Public Vercel Ships](/blog/public-vercel-ships) - November 1, 2023
+- [Principles](/blog/principles) - December 6, 2023
+- [High Note](/blog/high-note) - March 29, 2022
+- [Front End Code Test](/blog/front-end-code-test) - September 1, 2021
+- [Designs I like](/blog/designs-i-like) - July 26, 2024
+- [On Walking](/blog/on-walking) - July 26, 2024
+- [Daily Practice](/blog/daily-practice) - May 1, 2014
+- [Following](/blog/following) - May 27, 2014
+- [Purple Cow](/blog/purple-cow) - February 23, 2014
+- [MegaMaker](/blog/megamaker) - January 24, 2016
+
+## Projects
+
+- Void: A chrome extension for taking notes and focus
+- Emoji Text: A tiny site to write slack messages in slack emoji quickly
+- Scorelord: Full stack app to track daily scores and post to Slack
+- Random Hooper: An API to generate random NBA player names
+- How much is 10mb?: A site pushing the limits of what can go into 10mb
+- Server Side Football Site: Using SSR to display English Soccer team data
+- Client Side Football Site: Using CSR to display English Soccer team data
+- Football Clubs API: Supabase + Next.js with all Wikipedia data showing English soccer teams
+- Next in line: Hype site for pre launch startups and drops
+- Next.js AI Lite: Minimal AI chatbot start built with Next.js
+- NBA Colors: Package with NBA colors
+- Homepage GPT: v0 but homemade
+- Bingeboard: Greatest quotes from the Binge Mode podcast on a soundboard
+
+## Appearances
+
+- The WordPress Edge: A look at the future of Headless WordPress
+- How to scale your business with AI
+- Ship 2025 Anatomy of a Fast Site
+- Scaling Your Next.js Application on Vercel
+- Migrating to Next.js and Vercel for increased developer velocity
+- React Chicago: How to use v0 to deploy any website in 2024
+- Deploy an AI app at enterprise scale with Vercel
+- Building secure SaaS with Vercel and Auth0
+- Launch faster: Vercel essentials for startups
+
+## Full Content
+
+For comprehensive content including all blog posts in full, see /llms-full.txt
