@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import './globals.css';
 import { AnalyticsWrapper } from './Analytics';
 import { Geist_Mono, Karla } from "next/font/google";
-import { cn } from './lib/utils';
 import { ThemeProvider } from './components/ThemeProvider';
 
 const geistMono = Geist_Mono({
@@ -46,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="me" href="/llms.txt " type="text/plain" />
         <link rel="me" href="/llms-full.txt" type="text/plain" />
       </head>
-      <body className={cn("min-h-screen antialiased tracking-tighter bg-slate-50 dark:bg-slate-950 text-black dark:text-white", geistMono.variable, karla.variable)}>
+      <body className={`min-h-screen antialiased tracking-tighter bg-slate-50 dark:bg-slate-950 text-black dark:text-white ${geistMono.variable} ${karla.variable}`}>
         <ThemeProvider>
           {/* <main className="container mx-auto px-4"> */}
           <main className="">
