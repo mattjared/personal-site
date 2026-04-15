@@ -2,6 +2,7 @@
 title: Personalizing every new tab experience
 published: true
 date: August 20, 2025
+author: Matt Jared
 icon: 🚙
 excerpt: Building a Papier Clone with v0
 ---

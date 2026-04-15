@@ -2,6 +2,7 @@
 title: Front End Code Test
 published: true
 date: September 1, 2021
+author: Matt Jared
 icon: 📝
 ---
 

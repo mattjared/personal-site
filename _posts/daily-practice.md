@@ -2,6 +2,7 @@
 title: Daily Practice
 published: true
 date: May 1, 2014
+author: Matt Jared
 icon: 📚
 ---
 

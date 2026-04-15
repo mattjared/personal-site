@@ -3,6 +3,7 @@ title: Public Vercel Ships
 published: true
 date: November 1, 2023
 update: September 16, 2024
+author: Matt Jared
 icon: 🚀
 ---
 

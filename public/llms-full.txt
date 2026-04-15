@@ -64,6 +64,7 @@ Matt is deeply interested in the intersection of engineering, business, and go-t
 ### 10 years later, the things that still stick with me
 
 Date: August 27, 2025
+Author: Matt Jared
 
 Somehow sitting with 10 years of experience behind me since my first real-life engineering job. I started simply as a "front end developer" at The Zebra in January 2015. We're somehow over a decade from that point and I wanted to reflect on where I am today compared to then and share what's stuck with me this whole time.
 
@@ -102,6 +103,7 @@ I was afraid of the back end stuff maybe because I wasn't interested in it? And 
 ### Relearning Rails as a Next.js Developer
 
 Date: December 9, 2025
+Author: Matt Jared
 
 Author's Note: As of writing, I work for Vercel. I am actively invested in making the Next.js, React and larger JavaScript ecosystem successful. Nothing here is an official viewpoint from Next or Vercel, I'm just logging my thoughts as I go back to learning something new.
 
@@ -120,6 +122,7 @@ Key observation: setting up dev environments is something that really sucks as a
 ### Personalizing every new tab experience
 
 Date: August 20, 2025
+Author: Matt Jared
 
 My favorite Chrome Extension, Papier is unmaintained and I was getting some warnings about it from the Chrome Web Store. At its core, Papier is super simple. On every new tab it persists as an open text field. Between new tabs your notes are stored in localStorage so no matter what you're doing anything you jot in Papier gets stored. I made a duplicate version while I was at Atlassian to send tasks to Trello.
 
@@ -134,6 +137,7 @@ One more thing: this is the future of software development. Not making stuff for
 ### The Changing Sports Landscape
 
 Date: January 25, 2026
+Author: Matt Jared
 
 I've been going to college football and basketball games my whole life. The first ever was in 1994 when the Cincinnati Bearcats took on the Indiana Hoosiers. A year or two after that I went to Ohio State to see Illinois get run over by Heisman Trophy winner Eddie George. I went to Xavier games at the Cincinnati Garden with my Cub Scout troop.
 
@@ -148,6 +152,7 @@ And it's always been like this, I just didn't notice. I think that's the part th
 ### MegaMaker 2026
 
 Date: January 24, 2026
+Author: Matt Jared
 
 An honest to god list of sites and projects that I have shipped in 2026 and a huge list of stuff I want to do. I did this in 2014 and didn't get a lot of it done or nearly as much I'd have liked. Let's see how far we can get in the 2026 AI Driven landscape and over 12 years of career and life experience driving clarity. Can I get to 100 high quality ships?
 
@@ -166,6 +171,7 @@ January ships:
 ### The Four Tendencies
 
 Date: March 26, 2025
+Author: Matt Jared
 
 Take the Four Tendency Quiz here to find out your tendency: https://gretchenrubin.com/quiz/
 
@@ -174,6 +180,7 @@ Take the Four Tendency Quiz here to find out your tendency: https://gretchenrubi
 ### Top 28 Taylor Songs
 
 Date: August 14, 2023
+Author: Matt Jared
 
 Tier 1: chill / sad Vibe
 1. bon iver song
@@ -205,6 +212,7 @@ Tier 3: Generally great or popular + memories
 
 Date: March 31, 2023
 Updated: September 16, 2025
+Author: Matt Jared
 
 I recently stumbled upon a comprehensive list of every NBA player ever on BasketballReference.com. I've had to commit code publicly a lot and writing all the steps out has been awkward and weird and I can never think of a useful commit message. Whenever there's a combination of new data + an extremely unimportant problem I always sprint to get a new project going.
 
@@ -218,6 +226,7 @@ Hit this url to get a random hooper: https://github.com/mattjared/random-hooper
 
 Date: November 1, 2023
 Updated: September 16, 2024
+Author: Matt Jared
 
 A list of public ships and collateral that Matt worked on at Vercel:
 
@@ -242,6 +251,7 @@ A list of public ships and collateral that Matt worked on at Vercel:
 ### Principles
 
 Date: December 6, 2023
+Author: Matt Jared
 
 A few very simple principles that guide how to think about work and life.
 
@@ -258,6 +268,7 @@ One day you'll be at a new job: All your current colleagues will quit or be fire
 ### High Note
 
 Date: March 29, 2022
+Author: Matt Jared
 
 Always start and end the day on a high note. It sometimes feels impossible to get over the hump of projects that take forever but the slow incremental progress and chaining together high notes will most likely get the project over the hump.
 
@@ -268,6 +279,7 @@ A high note doesn't have to be some Herculean all nighter. A high note to end th
 ### Front End Code Test
 
 Date: September 1, 2021
+Author: Matt Jared
 
 A series of front end code tests published on Code Sandbox for interviewing front end candidates:
 
@@ -280,6 +292,7 @@ Part 3 (15 mins): Styling markup using CSS.
 ### Designs I like
 
 Date: July 26, 2024
+Author: Matt Jared
 
 Design inspiration sources:
 - https://layers.to/explore/recent
@@ -293,6 +306,7 @@ Design inspiration sources:
 ### On Walking
 
 Date: July 26, 2024
+Author: Matt Jared
 
 Solvitur Ambulando, 'It is solved by walking.'
 
@@ -303,6 +317,7 @@ Theologian and philosopher Soren Kierkegaard on the power of walking: "Above all
 ### Daily Practice
 
 Date: May 1, 2014
+Author: Matt Jared
 
 James Altucher wrote a book that changed my day to day living in 2013 titled Choose Yourself! The daily practice is dead simple: write down 10 things you are grateful for and 10 ideas about anything in your life. Every. Single. Day. This is just like Darren Hardy's book The Compound Effect where you have to take action every day to ultimately achieve a larger goal.
 
@@ -315,6 +330,7 @@ Even with a little success over the past few months, I still have a lot of work 
 ### Following
 
 Date: May 27, 2014
+Author: Matt Jared
 
 One of the pillars of learning web design is filtering who you follow through all mediums. As James Altucher explains, "You become what inspires you the most" meaning that every piece of content you imbibe is inspiring, defeating or distracting your work and life.
 
@@ -327,6 +343,7 @@ I'm going to cut all the bookmarks I've been saving. The only thing that's stayi
 ### Purple Cow
 
 Date: February 23, 2014
+Author: Matt Jared
 
 Seth Godin has had a profound effect on the way I think as a person, a marketer and someone who gives a shit. Key takeaways from Purple Cow:
 
@@ -345,5 +362,6 @@ Seth Godin has had a profound effect on the way I think as a person, a marketer 
 ### MegaMaker
 
 Date: January 24, 2016
+Author: Matt Jared
 
 A list of 100 things to make, inspired by Justin Jackson's Mega Maker Series. Includes everything from web apps and blog posts to sharpie art, a subscription box, a drone video, a halloween costume, a christmas carol, and a list of stuff. Represents Matt's builder mentality and desire to ship as many creative projects as possible.

@@ -2,6 +2,7 @@
 title: Principles
 published: true
 date: December 6, 2023
+author: Matt Jared
 icon: 🌱
 ---
 

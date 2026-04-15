@@ -2,6 +2,7 @@
 title: Relearning Rails as a Next.js Developer
 published: true
 date: December 9, 2025
+author: Matt Jared
 ---
 
 ### Authors Note

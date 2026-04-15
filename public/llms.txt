@@ -17,24 +17,26 @@ On the code side, Matt works with Next.js, React, Postgres, and Supabase. More b
 
 ## Blog Posts
 
-- [10 years later, the things that still stick with me](/blog/10-years-later) - August 27, 2025
-- [Relearning Rails as a Next.js Developer](/blog/relearning-rails) - December 9, 2025
-- [Personalizing every new tab experience](/blog/new-tab-homepage) - August 20, 2025
-- [The Changing Sports Landscape](/blog/changing-sports-landscape) - January 25, 2026
-- [MegaMaker 2026](/blog/Megamaker-2026) - January 24, 2016
-- [The Four Tendencies](/blog/four) - March 26, 2025
-- [Top 28 Taylor Songs](/blog/top-27-taylor-songs) - August 14, 2023
-- [How to make an interesting commit message](/blog/how-to-make-an-interesting-commit-message) - March 31, 2023
-- [Public Vercel Ships](/blog/public-vercel-ships) - November 1, 2023
-- [Principles](/blog/principles) - December 6, 2023
-- [High Note](/blog/high-note) - March 29, 2022
-- [Front End Code Test](/blog/front-end-code-test) - September 1, 2021
-- [Designs I like](/blog/designs-i-like) - July 26, 2024
-- [On Walking](/blog/on-walking) - July 26, 2024
-- [Daily Practice](/blog/daily-practice) - May 1, 2014
-- [Following](/blog/following) - May 27, 2014
-- [Purple Cow](/blog/purple-cow) - February 23, 2014
-- [MegaMaker](/blog/megamaker) - January 24, 2016
+All blog posts are by Matt Jared. Markdown versions are available at `/blog/{slug}.md`.
+
+- [10 years later, the things that still stick with me](/blog/10-years-later) - Author: Matt Jared, August 27, 2025
+- [Relearning Rails as a Next.js Developer](/blog/relearning-rails) - Author: Matt Jared, December 9, 2025
+- [Personalizing every new tab experience](/blog/new-tab-homepage) - Author: Matt Jared, August 20, 2025
+- [The Changing Sports Landscape](/blog/changing-sports-landscape) - Author: Matt Jared, January 25, 2026
+- [MegaMaker 2026](/blog/Megamaker-2026) - Author: Matt Jared, January 24, 2016
+- [The Four Tendencies](/blog/four) - Author: Matt Jared, March 26, 2025
+- [Top 28 Taylor Songs](/blog/top-27-taylor-songs) - Author: Matt Jared, August 14, 2023
+- [How to make an interesting commit message](/blog/how-to-make-an-interesting-commit-message) - Author: Matt Jared, March 31, 2023
+- [Public Vercel Ships](/blog/public-vercel-ships) - Author: Matt Jared, November 1, 2023
+- [Principles](/blog/principles) - Author: Matt Jared, December 6, 2023
+- [High Note](/blog/high-note) - Author: Matt Jared, March 29, 2022
+- [Front End Code Test](/blog/front-end-code-test) - Author: Matt Jared, September 1, 2021
+- [Designs I like](/blog/designs-i-like) - Author: Matt Jared, July 26, 2024
+- [On Walking](/blog/on-walking) - Author: Matt Jared, July 26, 2024
+- [Daily Practice](/blog/daily-practice) - Author: Matt Jared, May 1, 2014
+- [Following](/blog/following) - Author: Matt Jared, May 27, 2014
+- [Purple Cow](/blog/purple-cow) - Author: Matt Jared, February 23, 2014
+- [MegaMaker](/blog/megamaker) - Author: Matt Jared, January 24, 2016
 
 ## Projects
 

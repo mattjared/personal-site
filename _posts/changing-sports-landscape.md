@@ -2,6 +2,7 @@
 title: The Changing Sports Landscape
 published: true
 date: January 25, 2026
+author: Matt Jared
 icon: 🏟️
 ---
 

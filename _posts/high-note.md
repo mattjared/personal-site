@@ -2,6 +2,7 @@
 title: High Note
 published: true
 date: March 29, 2022
+author: Matt Jared
 icon: 💼
 ---
 

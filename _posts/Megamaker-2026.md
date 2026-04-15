@@ -2,6 +2,7 @@
 title: MegaMaker 2026
 published: true
 date: January 24, 2016
+author: Matt Jared
 icon: 🤖
 ---
 

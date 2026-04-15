@@ -2,6 +2,7 @@
 title: Following
 published: true
 date: May 27, 2014
+author: Matt Jared
 icon: 🤔
 ---
 

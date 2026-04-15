@@ -2,6 +2,7 @@
 title: The Four Tendencies
 published: true
 date: March 26, 2025
+author: Matt Jared
 icon: 4️⃣
 ---
 

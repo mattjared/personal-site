@@ -3,6 +3,7 @@ title: How to make an interesting commit message
 published: true
 date: March 31, 2023
 updated: September 16, 2025
+author: Matt Jared
 icon: ⛹🏻‍♂️
 ---
 

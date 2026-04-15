@@ -2,6 +2,7 @@
 title: Designs I like
 published: true
 date: July 26, 2024
+author: Matt Jared
 icon: 🎨
 ---
 

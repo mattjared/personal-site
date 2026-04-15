@@ -2,6 +2,7 @@
 title: 10 years later, the things that still stick with me
 published: true
 date: August 27, 2025
+author: Matt Jared
 ---
 
 Somehow sitting with 10 years of experience behind me since my first real-life engineering job. I started smiply as a "front end developer" at [The Zebra](https://thezebra.com) in January 2015. We're somehow over a decade from that point and I wanted to reflect on where I am today compared to then and share what's stuck with me this whole time. 

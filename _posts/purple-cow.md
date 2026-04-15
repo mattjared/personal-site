@@ -2,6 +2,7 @@
 title: Purple Cow
 published: true
 date: February 23, 2014
+author: Matt Jared
 icon: 🐄
 ---
 
