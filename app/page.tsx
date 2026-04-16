@@ -113,7 +113,7 @@ export default async function Home() {
               <div key={`${i}-project`} className="mb-2">
                 <h4 className="font-semibold font-headline">{project.title}</h4>
                 <div
-                  className="font-mono text-sm text-slate-500 dark:text-slate-400 [&_a]:text-[#00bfff] [&_a]:underline"
+                  className="font-mono text-sm text-slate-500 dark:text-slate-400 [&_a]:text-blue-500 [&_a]:underline"
                   dangerouslySetInnerHTML={{ __html: project.descriptionHtml }}
                 />
               </div>

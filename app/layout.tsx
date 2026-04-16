@@ -47,12 +47,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`min-h-screen antialiased tracking-tighter bg-slate-50 dark:bg-slate-950 text-black dark:text-white ${geistMono.variable} ${karla.variable}`}>
         <ThemeProvider>
-          {/* <main className="container mx-auto px-4"> */}
-          <main className="">
-            {/* <Navbar /> */}
+          <main>
             {children}
-            <Footer />
           </main>
+          <Footer />
           <AnalyticsWrapper />
         </ThemeProvider>
       </body>
