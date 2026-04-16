@@ -9,7 +9,7 @@ icon: 🚀
 A chrome extension for taking notes and focus. [Check it out](https://void-neon.vercel.app/)
 
 ## Emoji Text
-A tiny site to write slack messages in slack emoji quickly. [Site here](https://emoji-text.vercel.app/) and [code here](https://github.com/mattjared/emoji-text). Inspured by the GOAT emoji site: <https://cyanharlow.bitbucket.io/>
+A tiny site to write slack messages in slack emoji quickly. [Site here](https://emoji-text.vercel.app/) and [code here](https://github.com/mattjared/emoji-text).
 
 
 ## Scorelord

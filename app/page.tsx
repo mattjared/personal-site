@@ -12,12 +12,12 @@ export default async function Home() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <div className="col-span-1 md:col-span-3 p-10 py-20 border border-slate-200 dark:border-slate-800">
           <div className="font-headline mb-12">
-            <h1 className="text-8xl font-bold mb-2 tracking-tighter">Matt Jared</h1>
-            <h3 className="font-semibold text-xl tracking-tight">👋🏻 Sales Leader & Web Developer in Austin, Texas USA.</h3>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-2 tracking-tighter">Matt Jared</h1>
+            <h2 className="font-semibold text-xl md:text-2xl tracking-tight">👋🏻 Sales Leader & Web Developer in Austin, Texas USA.</h2>
           </div>
-          <div className="font-mono">
-            <p className="text-sm my-6 tracking-tight"><span className="font-bold">About me:</span> I&apos;m a marketer turned self-taught developer turned sales engineer turned sales leader. I’ve worked at and alongside startups and scale-ups including Cratejoy, Techstars, Atlassian, and now Vercel, where I lead sales and field engineering efforts to help teams ship faster websites with happier teams. I’m a builder at heart. On the code side that means Next.js, React, Postgres, and Supabase. More broadly, it means building products, teams, projects, and companies and sharing what I learn along the way.</p>
-            <p className="text-sm my-6 tracking-tight"><span>What I&apos;m focused on:</span> I&apos;m deeply interested in the intersection of engineering, business, and go-to-market. Especially sales, positioning, and distribution when technical credibility is what creates trust. This site is my attempt to share everything I know. I&apos;m available on a project basis to help startups bring products to market, improve how they sell, or think through strategy. I post here and on LinkedIn. Long term goal: learn, build, and have fun.</p>
+          <div className="text-base md:text-lg leading-relaxed">
+            <p className="my-6 font-mono tracking-tighter"><span className="font-bold">About me:</span> I&apos;m a marketer turned self-taught developer turned sales engineer turned sales leader. I’ve worked at and alongside startups and scale-ups including Cratejoy, Techstars, Atlassian, and now Vercel, where I lead sales and field engineering efforts to help teams ship faster websites, reliable agents, and more with happier teams.</p>
+            <p className="my-6 font-mono tracking-tighter">I&apos;m always sharing what I learn about sales, building with AI, web development, and having fun.</p>
           </div>
           <PicGrid />
         </div>
@@ -35,13 +35,14 @@ export default async function Home() {
       {/* blog section */}
       <div className="grid grid-cols-1 lg:grid-cols-4">
         <div className="lg:col-span-1 hidden lg:block border border-slate-200 dark:border-slate-800">&nbsp;</div>
+        {/* <div className="lg:col-span-1 hidden lg:block border border-slate-200 dark:border-slate-800">&nbsp;</div> */}
         <div className="col-span-1 lg:col-span-3 p-10 border border-slate-200 dark:border-slate-800">
-          <h2 className="text-4xl font-semibold mb-6 pb-3 font-headline">Blog Posts</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 tracking-tighter">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 pb-3 font-headline">Blog Posts</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 tracking-tighter">
             {allBlogs.map((post, i) => (
-              <div key={`${i}-project`} className="mb-2">
+              <div key={`${i}-project`} className="pb-6">
                 <Link href={`/blog/${post.slug}`}>
-                  <h4 className="font-semibold font-headline">{post.title}</h4>
+                  <h4 className="font-semibold font-headline tracking-tighter">{post.title}</h4>
                   <p className="font-mono text-sm text-slate-500 dark:text-slate-400">{post.date}</p>
                 </Link>
               </div>
@@ -61,13 +62,13 @@ export default async function Home() {
       {/* contact / appearances */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <div className="col-span-1 lg:col-span-2 border border-slate-200 dark:border-slate-800 p-10">
-          <h2 className="text-4xl font-semibold mb-6 pb-3 font-headline">Contact</h2>
-          <p className="text-sm my-6 tracking-tight font-mono">Get in touch with me and I will get back to you as soon as possible.</p>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 pb-3 font-headline">Contact</h2>
+          <p className="text-sm md:text-base my-6 tracking-tighter font-mono">Get in touch with me and I will get back to you as soon as possible.</p>
           <Contact />
         </div>
         <div className="hidden lg:block col-span-1 border border-slate-200 dark:border-slate-800">&nbsp;</div>
         <div className="col-span-1 border border-slate-200 dark:border-slate-800 p-10">
-          <h2 className="text-4xl font-semibold mb-6 pb-3 font-headline">Appearances</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 pb-3 font-headline">Appearances</h2>
           <div className="grid grid-cols-1 gap-2 tracking-tighter">
             <div className="mb-2">
               <Link href="https://www.youtube.com/watch?v=5ECzvKmOiMg">
@@ -107,13 +108,13 @@ export default async function Home() {
 
       <div className="grid grid-cols-1 lg:grid-cols-4">
         <div className="col-span-1 lg:col-span-2 p-10 border border-slate-200 dark:border-slate-800">
-          <h2 className="text-4xl font-semibold mb-6 pb-3 font-headline">Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 pb-3 font-headline">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 tracking-tighter">
             {projects.map((project, i) => (
               <div key={`${i}-project`} className="mb-2">
                 <h4 className="font-semibold font-headline">{project.title}</h4>
                 <div
-                  className="font-mono text-sm text-slate-500 dark:text-slate-400 [&_a]:text-blue-500 [&_a]:underline"
+                  className="font-mono text-sm"
                   dangerouslySetInnerHTML={{ __html: project.descriptionHtml }}
                 />
               </div>
