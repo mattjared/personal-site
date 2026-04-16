@@ -13,7 +13,7 @@ export default async function Home() {
         <div className="col-span-1 md:col-span-3 p-10 py-20 border border-slate-200 dark:border-slate-800">
           <div className="font-headline mb-12">
             <h1 className="text-8xl font-bold mb-2 tracking-tighter">Matt Jared</h1>
-            <h4 className="font-semibold text-xl tracking-tight">👋🏻 Sales Leader & Web Developer in Austin, Texas USA.</h4>
+            <h3 className="font-semibold text-xl tracking-tight">👋🏻 Sales Leader & Web Developer in Austin, Texas USA.</h3>
           </div>
           <div className="font-mono">
             <p className="text-sm my-6 tracking-tight"><span className="font-bold">About me:</span> I&apos;m a marketer turned self-taught developer turned sales engineer turned sales leader. I’ve worked at and alongside startups and scale-ups including Cratejoy, Techstars, Atlassian, and now Vercel, where I lead sales and field engineering efforts to help teams ship faster websites with happier teams. I’m a builder at heart. On the code side that means Next.js, React, Postgres, and Supabase. More broadly, it means building products, teams, projects, and companies and sharing what I learn along the way.</p>
