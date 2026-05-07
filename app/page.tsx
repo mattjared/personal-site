@@ -13,7 +13,7 @@ export default async function Home() {
         <div className="col-span-1 md:col-span-3 p-10 py-20 border border-slate-200 dark:border-slate-800">
           <div className="font-headline mb-12">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-2 tracking-tighter">Matt Jared</h1>
-            <h2 className="font-semibold text-xl md:text-2xl tracking-tight">👋🏻 Sales Leader & Web Dev in Austin, Texas USA.</h2>
+            <h2 className="font-semibold text-xl md:text-2xl tracking-tight">👋🏻 Sales Leader & Developer in Austin, Texas, USA</h2>
           </div>
           <div className="text-base md:text-lg leading-relaxed">
             <p className="my-6 font-mono tracking-tighter"><span className="font-bold">About me:</span> I&apos;m a marketer turned self-taught developer turned sales engineer turned sales leader. I’ve worked at and alongside startups and scale-ups including Cratejoy, Techstars, Atlassian, and now Vercel, where I lead sales and field engineering efforts to help teams ship faster websites, reliable agents, and more with happier teams.</p>
