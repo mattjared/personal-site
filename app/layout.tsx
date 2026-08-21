@@ -4,6 +4,7 @@ import './globals.css';
 import { AnalyticsWrapper } from './Analytics';
 import { Geist_Mono, Karla } from "next/font/google";
 import { ThemeProvider } from './components/ThemeProvider';
+import { SITE, personJsonLd, organizationJsonLd } from './lib/site';
 
 const geistMono = Geist_Mono({
   subsets: ["latin"],
@@ -20,20 +21,34 @@ const karla = Karla({
 })
 
 export const metadata = {
-  metadataBase: new URL('https://mattjared.xyz'),
-  title: 'Matt Jared',
-  description: "Matt Jared",
+  metadataBase: new URL(SITE.url),
+  title: {
+    default: SITE.name,
+    template: `%s | ${SITE.name}`,
+  },
+  description: SITE.description,
+  alternates: {
+    canonical: SITE.url,
+  },
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
-    title: 'Matt Jared',
-    description: "Matt Jared",
-    url: 'https://mattjared.xyz',
-    siteName: 'Matt Jared',
+    title: SITE.name,
+    description: SITE.description,
+    url: SITE.url,
+    siteName: SITE.name,
+    type: 'website',
+    locale: 'en_US',
     images: [
       { url: '/images/profilepic.png' },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE.name,
+    description: SITE.description,
+    images: ['/images/profilepic.png'],
   },
   keywords: ['Matt Jared', 'Matthew Jared', 'Matt Jared Austin', 'Matt Jared Vercel', 'Matt Jared Developer', 'Matt Jared Software Engineer', 'Matt Jared Developer Austin', 'Matt Jared Developer Vercel', 'Matt Jared Sales Engineer', 'Matt Jared Sales Engineer Austin', 'Matt Jared Sales Engineer Vercel'],
 };
@@ -44,6 +59,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="me" href="/llms.txt " type="text/plain" />
         <link rel="me" href="/llms-full.txt" type="text/plain" />
+        {/* JSON-LD structured data: Person (identity) + Organization (contact/legitimacy) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
       </head>
       <body className={`min-h-screen antialiased tracking-tighter bg-slate-50 dark:bg-slate-950 text-black dark:text-white ${geistMono.variable} ${karla.variable}`}>
         <ThemeProvider>
@@ -55,5 +79,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </ThemeProvider>
       </body>
     </html>
-);
+  );
 }

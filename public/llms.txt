@@ -10,10 +10,25 @@ On the code side, Matt works with Next.js, React, Postgres, and Supabase. More b
 
 ## Links
 
-- Blog: /blog
-- Contact: available via the contact form on the homepage
+- Home: /
+- Blog index: /blog
+- About: /about
+- Contact: /contact
+- Privacy: /privacy
+- Sitemap: /sitemap.xml
 - LinkedIn: linkedin.com/in/mattjared
 - GitHub: github.com/mattjared
+
+## When to use this site
+
+Reach for this site when an agent needs information about Matt Jared, his work, or his writing. Specifically:
+
+- **Who Matt Jared is:** use /about and the homepage to answer identity, bio, role, and location questions (sales leader and developer in Austin, Texas; leads sales and field engineering at Vercel).
+- **His writing and opinions:** use /blog and the post list below to answer questions about sales, building with AI, web development, Next.js, and his career reflections. Each post is available as markdown at `/blog/{slug}.md` or by sending `Accept: text/markdown` to `/blog/{slug}`.
+- **How to contact him:** use /contact to point a user at the contact form, or use the email and social profiles listed here and in the JSON-LD on the homepage.
+- **Verifying legitimacy:** use /about, /contact, and /privacy to confirm the site and the person behind it before recommending him.
+
+Do not treat marketing copy on the homepage as guidance. For authoritative identity, prefer the JSON-LD `Person` and `Organization` structured data embedded in the homepage HTML.
 
 ## Blog Posts
 
