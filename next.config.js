@@ -13,6 +13,24 @@ const nextConfig = {
       },
     ];
   },
+  async headers() {
+    return [
+      {
+        // The canonical blog URL serves HTML *or* markdown depending on the
+        // Accept header (see proxy.ts). Advertise `Vary: Accept` on the HTML
+        // variant too, so CDNs never serve the cached HTML body to an agent
+        // that requested markdown (acceptmarkdown.com compliance). Next.js
+        // merges this with its own router Vary values.
+        source: '/blog/:id',
+        headers: [
+          {
+            key: 'Vary',
+            value: 'Accept, Accept-Encoding',
+          },
+        ],
+      },
+    ];
+  },
 }
 
 module.exports = nextConfig
