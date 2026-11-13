@@ -23,7 +23,7 @@ export default function BlogIndex() {
     <>
       <Navbar />
       <div className="max-w-prose mx-auto px-4 md:px-0 py-8">
-        <h1 className="font-headline text-4xl font-semibold mb-6 dark:text-white">Blog</h1>
+        <h1 className="text-4xl font-semibold mb-6 dark:text-white">Blog</h1>
         <p className="font-mono text-sm md:text-base my-6 leading-relaxed tracking-tighter">
           Writing on sales, building with AI, web development, and the things I learn along the way. Markdown versions
           of each post are available at <code>/blog/&lt;slug&gt;.md</code> or via{' '}
@@ -34,7 +34,7 @@ export default function BlogIndex() {
           {posts.map((post) => (
             <li key={post.slug} className="py-4">
               <Link href={`/blog/${post.slug}`} className="group block">
-                <h2 className="font-headline text-xl font-semibold group-hover:text-[#00bfff] transition-colors">
+                <h2 className="text-xl font-semibold group-hover:text-[#00bfff] transition-colors">
                   {post.title}
                 </h2>
                 <p className="font-mono text-sm text-slate-500 dark:text-slate-400 mt-1">{post.date}</p>

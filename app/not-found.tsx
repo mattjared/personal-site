@@ -26,7 +26,7 @@ The page you requested does not exist.
   return (
     <div className="min-h-[60vh] flex items-center justify-center px-4 py-16">
       <div className="max-w-prose w-full border border-slate-200 dark:border-slate-800 p-10">
-        <h1 className="font-headline text-4xl font-semibold mb-4 dark:text-white">404 — Not Found</h1>
+        <h1 className="text-4xl font-semibold mb-4 dark:text-white">404 — Not Found</h1>
         <p className="font-mono text-sm md:text-base my-4 tracking-tighter">
           The page you requested does not exist. Here are some places to look next:
         </p>

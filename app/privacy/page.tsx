@@ -19,7 +19,7 @@ export default function PrivacyPage() {
     <>
       <Navbar />
       <article className="max-w-prose mx-auto px-4 md:px-0 py-8">
-        <h1 className="font-headline text-4xl font-semibold mb-6 dark:text-white">Privacy</h1>
+        <h1 className="text-4xl font-semibold mb-6 dark:text-white">Privacy</h1>
 
         <p className="font-mono text-sm md:text-base my-4 leading-relaxed tracking-tighter">
           This is the personal website of Matt Jared, an individual based in Austin, Texas, USA. This page explains what
@@ -27,7 +27,7 @@ export default function PrivacyPage() {
           people and AI agents can read it.
         </p>
 
-        <h2 className="font-headline text-2xl font-semibold mt-8 mb-4 dark:text-white">What is collected</h2>
+        <h2 className="text-2xl font-semibold mt-8 mb-4 dark:text-white">What is collected</h2>
         <p className="font-mono text-sm md:text-base my-4 leading-relaxed tracking-tighter">
           The site collects anonymous traffic analytics through Vercel Analytics and Vercel Speed Insights. These tools
           record aggregate, privacy-preserving metrics such as page views, country, and performance timings. They do
@@ -39,30 +39,30 @@ export default function PrivacyPage() {
           stored in a database on this site.
         </p>
 
-        <h2 className="font-headline text-2xl font-semibold mt-8 mb-4 dark:text-white">Cookies and local storage</h2>
+        <h2 className="text-2xl font-semibold mt-8 mb-4 dark:text-white">Cookies and local storage</h2>
         <p className="font-mono text-sm md:text-base my-4 leading-relaxed tracking-tighter">
           The site uses a single local-storage value to remember your light or dark theme preference. No advertising or
           tracking cookies are set by this site.
         </p>
 
-        <h2 className="font-headline text-2xl font-semibold mt-8 mb-4 dark:text-white">Third-party services</h2>
+        <h2 className="text-2xl font-semibold mt-8 mb-4 dark:text-white">Third-party services</h2>
         <ul className="font-mono text-sm md:text-base my-4 leading-relaxed tracking-tighter list-disc pl-6 space-y-2">
           <li>Vercel — hosting, analytics, and speed insights.</li>
           <li>Resend — email delivery for the contact form.</li>
-          <li>Google Fonts — web fonts loaded via next/font.</li>
+          <li>Google Fonts — monospace web font loaded via next/font.</li>
         </ul>
         <p className="font-mono text-sm md:text-base my-4 leading-relaxed tracking-tighter">
           Each of these services processes data according to its own privacy policy.
         </p>
 
-        <h2 className="font-headline text-2xl font-semibold mt-8 mb-4 dark:text-white">Your choices</h2>
+        <h2 className="text-2xl font-semibold mt-8 mb-4 dark:text-white">Your choices</h2>
         <p className="font-mono text-sm md:text-base my-4 leading-relaxed tracking-tighter">
           You can block analytics scripts with a content blocker or your browser settings, and you can clear the theme
           preference by clearing local storage for this domain. If you want a message you previously sent through the
           contact form deleted from the inbox it was delivered to, email {SITE.email} and I will remove it.
         </p>
 
-        <h2 className="font-headline text-2xl font-semibold mt-8 mb-4 dark:text-white">Contact about privacy</h2>
+        <h2 className="text-2xl font-semibold mt-8 mb-4 dark:text-white">Contact about privacy</h2>
         <p className="font-mono text-sm md:text-base my-4 leading-relaxed tracking-tighter">
           Questions about this policy can be sent through the <a href="/contact" className="text-[#00bfff] hover:underline">contact page</a> or
           emailed to {SITE.email}.

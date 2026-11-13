@@ -46,7 +46,7 @@ Posts are fetched via `getPostData()` in `app/lib/actions.ts` and rendered with 
 - Tailwind CSS with custom typography plugin for blog prose
 - Dark mode via next-themes (class-based switching)
 - `cn()` utility from `app/lib/utils.ts` for conditional class merging
-- Custom font variables: `--font-karla` (headlines), `--font-geist-mono` (code)
+- Custom font variable: `--font-mono` (Geist Mono, monospace throughout)
 
 ### External Services
 

@@ -2,7 +2,7 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import './globals.css';
 import { AnalyticsWrapper } from './Analytics';
-import { Geist_Mono, Karla } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import { ThemeProvider } from './components/ThemeProvider';
 import { SITE, personJsonLd, organizationJsonLd } from './lib/site';
 
@@ -11,13 +11,6 @@ const geistMono = Geist_Mono({
   weight: ["400", "500", "600"],
   display: "swap",
   variable: "--font-mono",
-})
-
-const karla = Karla({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  display: "swap",
-  variable: "--font-karla",
 })
 
 export const metadata = {
@@ -69,7 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
       </head>
-      <body className={`min-h-screen antialiased tracking-tighter bg-slate-50 dark:bg-slate-900 text-black dark:text-white ${geistMono.variable} ${karla.variable}`}>
+      <body className={`min-h-screen antialiased tracking-tighter bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-amber-50 font-mono ${geistMono.variable}`}>
         <ThemeProvider>
           <main>
             {children}

@@ -11,7 +11,7 @@ export default async function Home() {
       {/* hero section */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <div className="col-span-1 md:col-span-3 p-10 py-20 border border-slate-200 dark:border-slate-800">
-          <div className="font-headline mb-12">
+          <div className="mb-12">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-2 tracking-tighter">Matt Jared</h1>
             <p className="font-semibold text-xl md:text-2xl tracking-tight">👋🏻 Sales Leader & Developer in Austin, Texas, USA!</p>
           </div>
@@ -37,7 +37,7 @@ export default async function Home() {
         <div className="lg:col-span-1 hidden lg:block border border-slate-200 dark:border-slate-800">&nbsp;</div>
         {/* <div className="lg:col-span-1 hidden lg:block border border-slate-200 dark:border-slate-800">&nbsp;</div> */}
         <div className="col-span-1 lg:col-span-3 p-10 border border-slate-200 dark:border-slate-800">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 pb-3 font-headline">Blog Posts</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 pb-3">Blog Posts</h2>
           <p className="font-mono text-sm md:text-base my-4 leading-relaxed tracking-tighter">
             Writing on sales, building with AI, web development, and the things I learn along the way. Each post is
             also available as markdown at <code>/blog/&lt;slug&gt;.md</code> or by sending{' '}
@@ -47,7 +47,7 @@ export default async function Home() {
             {allBlogs.map((post, i) => (
               <div key={`${i}-project`} className="pb-6">
                 <Link href={`/blog/${post.slug}`}>
-                  <h3 className="font-semibold font-headline tracking-tighter">{post.title}</h3>
+                  <h3 className="font-semibold tracking-tighter">{post.title}</h3>
                   <p className="font-mono text-sm text-slate-500 dark:text-slate-400">{post.date}</p>
                 </Link>
                 {post.excerpt && (
@@ -70,13 +70,13 @@ export default async function Home() {
       {/* contact / appearances */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <div className="col-span-1 lg:col-span-2 border border-slate-200 dark:border-slate-800 p-10">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 pb-3 font-headline">Contact</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 pb-3">Contact</h2>
           <p className="text-sm md:text-base my-6 tracking-tighter font-mono">Get in touch about projects, sales, web development, or just to say hi. Fill out the form below and it sends straight to my inbox — I read everything and will get back to you as soon as possible.</p>
           <Contact />
         </div>
         <div className="hidden lg:block col-span-1 border border-slate-200 dark:border-slate-800">&nbsp;</div>
         <div className="col-span-1 border border-slate-200 dark:border-slate-800 p-10">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 pb-3 font-headline">Appearances</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 pb-3">Appearances</h2>
           <p className="font-mono text-sm md:text-base my-4 leading-relaxed tracking-tighter">
             Talks, webinars, and videos where I&apos;ve shared what I know about the web platform, selling, and
             building with AI.
@@ -84,25 +84,25 @@ export default async function Home() {
           <div className="grid grid-cols-1 gap-2 tracking-tighter">
             <div className="mb-2">
               <Link href="https://www.youtube.com/watch?v=5ECzvKmOiMg">
-                <h3 className="font-semibold font-headline">The WordPress Edge</h3>
+                <h3 className="font-semibold">The WordPress Edge</h3>
                 <p className="font-mono text-sm text-slate-500 dark:text-slate-400">A look at the future of Headless WordPress</p>
               </Link>
             </div>
             <div className="mb-2">
               <Link href="https://www.youtube.com/watch?v=9h_dFCNSiQ4">
-                <h3 className="font-semibold font-headline">How to scale your business with AI</h3>
+                <h3 className="font-semibold">How to scale your business with AI</h3>
                 <p className="font-mono text-sm text-slate-500 dark:text-slate-400">A look at how AI can help scale your business</p>
               </Link>
             </div>
             <div className="mb-2">
               <Link href="https://www.youtube.com/watch?v=cPLmB3PRMCY">
-                <h3 className="font-semibold font-headline">Ship 2025 Anatomy of a Fast Site</h3>
+                <h3 className="font-semibold">Ship 2025 Anatomy of a Fast Site</h3>
                 <p className="font-mono text-sm text-slate-500 dark:text-slate-400">What does a FAST site look like? How do you make one?</p>
               </Link>
             </div>
             <div className="mb-2">
               <Link href="/blog/public-vercel-ships">
-                <h3 className="font-semibold font-headline">Public Vercel Appearances</h3>
+                <h3 className="font-semibold">Public Vercel Appearances</h3>
                 <p className="font-mono text-sm text-slate-500 dark:text-slate-400">Everything I&apos;ve done that&apos;s publicly available while at Vercel</p>
               </Link>
             </div>
@@ -120,7 +120,7 @@ export default async function Home() {
 
       <div className="grid grid-cols-1 lg:grid-cols-4">
         <div className="col-span-1 lg:col-span-2 p-10 border border-slate-200 dark:border-slate-800">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 pb-3 font-headline">Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 pb-3">Projects</h2>
           <p className="font-mono text-sm md:text-base my-4 leading-relaxed tracking-tighter">
             Side projects and experiments built with Next.js, React, Supabase, and whatever else seemed fun at the
             time. Most are open source on GitHub.
@@ -128,7 +128,7 @@ export default async function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 tracking-tighter">
             {projects.map((project, i) => (
               <div key={`${i}-project`} className="mb-2">
-                <h3 className="font-semibold font-headline">{project.title}</h3>
+                <h3 className="font-semibold">{project.title}</h3>
                 <div
                   className="font-mono text-sm"
                   dangerouslySetInnerHTML={{ __html: project.descriptionHtml }}

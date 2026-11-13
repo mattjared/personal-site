@@ -5,7 +5,6 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-headline: var(--font-karla);
   --font-mono: var(--font-mono);
 
   --container-center: true;
@@ -19,32 +18,10 @@
   }
 }
 
-.font-headline {
-  text-transform: uppercase;
-}
-
-/* Prose typography overrides */
-.prose h1,
-.prose h2,
-.prose h3,
-.prose h4,
-.prose h5,
-.prose h6 {
-  font-family: var(--font-karla);
-  text-transform: uppercase;
-}
-
-.prose p,
-.prose li,
-.prose code,
-.prose pre {
-  font-family: var(--font-mono);
-}
-
 a {
   transition: all .3s ease-in-out
 }
 a:hover {
-  color: #00bfff;
+  color: var(--color-amber-500);
   transition: all .3s ease-in-out;
 }

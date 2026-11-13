@@ -66,7 +66,7 @@ export default async function BlogPost({ params }: Props) {
 
         <header className="mb-8">
           {post.icon && <span className="text-4xl mb-4 block">{post.icon}</span>}
-          <h1 className="font-headline text-4xl font-semibold mb-4 dark:text-white">{post.title}</h1>
+          <h1 className="text-4xl font-semibold mb-4 dark:text-white">{post.title}</h1>
           <div className="font-mono text-sm text-slate-500 dark:text-slate-400">
             <span>Published: {post.date}</span>
             {post.updated && <span className="ml-4">Updated: {post.updated}</span>}
@@ -94,7 +94,7 @@ export default async function BlogPost({ params }: Props) {
             {prev ? (
               <Link href={`/blog/${prev.slug}`} className="group max-w-[45%]">
                 <span className="font-mono text-sm text-slate-500">&larr; Previous</span>
-                <p className="font-headline font-semibold group-hover:text-[#00bfff] transition-colors truncate">
+                <p className="font-semibold group-hover:text-[#00bfff] transition-colors truncate">
                   {prev.title}
                 </p>
               </Link>
@@ -102,7 +102,7 @@ export default async function BlogPost({ params }: Props) {
             {next ? (
               <Link href={`/blog/${next.slug}`} className="group text-right max-w-[45%]">
                 <span className="font-mono text-sm text-slate-500">Next &rarr;</span>
-                <p className="font-headline font-semibold group-hover:text-[#00bfff] transition-colors truncate">
+                <p className="font-semibold group-hover:text-[#00bfff] transition-colors truncate">
                   {next.title}
                 </p>
               </Link>

@@ -19,7 +19,7 @@ export default function AboutPage() {
     <>
       <Navbar />
       <article className="max-w-prose mx-auto px-4 md:px-0 py-8">
-        <h1 className="font-headline text-4xl font-semibold mb-6 dark:text-white">About Matt Jared</h1>
+        <h1 className="text-4xl font-semibold mb-6 dark:text-white">About Matt Jared</h1>
 
         <p className="font-mono text-sm md:text-base my-4 leading-relaxed tracking-tighter">
           Matt Jared is a marketer turned self-taught developer turned sales engineer turned sales leader based in
@@ -48,7 +48,7 @@ export default function AboutPage() {
           <a href="https://linkedin.com/in/mattjared" className="text-[#00bfff] hover:underline">LinkedIn</a>.
         </p>
 
-        <h2 className="font-headline text-2xl font-semibold mt-10 mb-4 dark:text-white">What this site is for</h2>
+        <h2 className="text-2xl font-semibold mt-10 mb-4 dark:text-white">What this site is for</h2>
         <p className="font-mono text-sm md:text-base my-4 leading-relaxed tracking-tighter">
           This is Matt&apos;s personal site. It holds his blog, a record of projects and public appearances, and a way to
           get in touch. It is also built to be friendly to AI agents and crawlers: it publishes an{' '}

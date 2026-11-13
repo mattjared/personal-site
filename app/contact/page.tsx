@@ -20,7 +20,7 @@ export default function ContactPage() {
     <>
       <Navbar />
       <div className="max-w-prose mx-auto px-4 md:px-0 py-8">
-        <h1 className="font-headline text-4xl font-semibold mb-6 dark:text-white">Contact</h1>
+        <h1 className="text-4xl font-semibold mb-6 dark:text-white">Contact</h1>
 
         <p className="font-mono text-sm md:text-base my-6 leading-relaxed tracking-tighter">
           Get in touch and I will get back to you as soon as possible. The fastest way to reach me is the form below,
