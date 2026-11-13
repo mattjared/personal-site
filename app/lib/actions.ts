@@ -25,7 +25,7 @@ export async function sendEmail(formData: FormData) {
           <p>${message}</p>
         </div>
       `,
-      reply_to: email as string,
+      replyTo: email as string,
     });
 
     if (error) {

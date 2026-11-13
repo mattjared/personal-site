@@ -1,6 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Class-based dark mode (next-themes sets `class="dark"` on <html>) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-headline: var(--font-karla);
+  --font-mono: var(--font-mono);
+
+  --container-center: true;
+  --container-padding: 2rem;
+  --container-2xl: 840px;
+}
 
 @layer base {
   body {
@@ -14,14 +25,14 @@
 
 /* Prose typography overrides */
 .prose h1,
-.prose h2, 
-.prose h3, 
-.prose h4, 
-.prose h5, 
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
 .prose h6 {
   font-family: var(--font-karla);
   text-transform: uppercase;
-} 
+}
 
 .prose p,
 .prose li,
