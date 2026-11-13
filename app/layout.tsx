@@ -69,7 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
       </head>
-      <body className={`min-h-screen antialiased tracking-tighter bg-slate-50 dark:bg-slate-950 text-black dark:text-white ${geistMono.variable} ${karla.variable}`}>
+      <body className={`min-h-screen antialiased tracking-tighter bg-slate-50 dark:bg--900 text-black dark:text-white ${geistMono.variable} ${karla.variable}`}>
         <ThemeProvider>
           <main>
             {children}

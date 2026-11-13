@@ -1,5 +1,16 @@
 {
   "redirects": [
     { "source": "/me", "destination": "/profile" }
+  ],
+  "headers": [
+    {
+      "source": "/blog/:id",
+      "headers": [
+        {
+          "key": "Vary",
+          "value": "Accept, Accept-Encoding"
+        }
+      ]
+    }
   ]
 }
