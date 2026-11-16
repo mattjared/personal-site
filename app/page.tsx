@@ -103,6 +103,12 @@ export default async function Home() {
         </div>
       </div>
 
+      <div className="grid grid-cols-3 py-4 mb-5">
+        <div className="col-span-2">
+          <PicGrid />
+        </div>
+      </div>
+
       <div className="grid grid-cols-2 py-4 mb-2 text-sm">
         <div className="col-span-1">
         <p className="text-sm mb-2 font-bold">[projects]</p>
