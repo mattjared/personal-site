@@ -1,11 +1,12 @@
 import Link from "next/link"
-import { getBlogData, getProjects } from "./lib/blog";
+import { getBlogData, getProjects, getAppearances } from "./lib/blog";
 import Contact from "./components/Contact";
 import PicGrid from "./components/PicGrid";
 
 export default async function Home() {
   const allBlogs = getBlogData({ allPosts: true });
   const projects = await getProjects();
+  const appearances = await getAppearances();
   const logos = [
     {
       src: "/images/logo_vercel.svg",
@@ -38,6 +39,38 @@ export default async function Home() {
       height: 300,
     },
   ];
+  const speaking = [
+    {
+      src: "/images/speaking_ship.jpg",
+      alt: "Speaking at Ship",
+      width: 300,
+      height: 300,
+    },
+    {
+      src: "/images/speaking_next_conf.jpg",
+      alt: "Speaking at Next.js Conf",
+      width: 300,
+      height: 300,
+    },
+    {
+      src: "/images/speaking_ship_2.jpg",
+      alt: "Speaking at Ship",
+      width: 300,
+      height: 300,
+    },
+    {
+      src: "/images/speaking_runtime.jpg",
+      alt: "Speaking at Runtime",
+      width: 300,
+      height: 300,
+    },
+    {
+      src: "/images/speaking_ship_crowd.jpg",
+      alt: "Speaking at Ship",
+      width: 300,
+      height: 300,
+    },
+  ];
   return (
     <div>
       <div className="grid grid-cols-2 py-4 mb-2">
@@ -58,13 +91,61 @@ export default async function Home() {
         <div className="col-span-1">
         <p className="text-sm mb-2 font-bold">[blogs]</p>
           {allBlogs.map((post, i) => (
-            <div key={`${i}-project`} className="mb-2">
-              <Link href={`/blog/${post.slug}`} className="flex items-center gap-2">
-                <h3 className="font-semibold tracking-tighter">{post.title}</h3>
-                <p className="font-mono text-sm text-amber-600 dark:text-amber-200">{post.date}</p>
+            <div key={`${i}-blog`} className="mb-2">
+              <Link href={`/blog/${post.slug}`} className="">
+                <h3 className="font-semibold tracking-tighter">
+                  {post.title} -  
+                  <span className="font-normal text-sm text-amber-600 dark:text-amber-200"> {post.date}</span>
+                </h3>
               </Link>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="grid grid-cols-2 py-4 mb-2 text-sm">
+        <div className="col-span-1">
+        <p className="text-sm mb-2 font-bold">[projects]</p>
+          {projects.map((project, i) => (
+            <div key={`${i}-project`} className="mb-2">
+              <Link href={project.url} target="_blank" className="">
+                <h3 className="font-semibold tracking-tighter">
+                  {project.title} -  
+                  <span className="font-normal text-sm text-amber-600 dark:text-amber-200"> {project.description}</span>
+                </h3>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="grid grid-cols-3 py-4 mb-5">
+        <div className="col-span-2">
+          <PicGrid images={speaking} />
+        </div>
+      </div>
+
+      <div className="grid grid-cols-3 py-4 mb-2 text-sm">
+        <div className="col-span-3">
+        <p className="text-sm mb-2 font-bold">[appearances]</p>
+          {appearances.map((appearance, i) => (
+            <div key={`${i}-appearance`} className="mb-2">
+              <Link href={appearance.url} target="_blank" className="">
+                <h3 className="font-semibold tracking-tighter">
+                    {appearance.title} -  
+                    <span className="font-normal text-sm text-amber-600 dark:text-amber-200"> {appearance.description}</span>
+                </h3>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      
+      <div className="grid grid-cols-3 py-4 mb-5">
+        <div className="col-span-1">
+          <p className="text-sm mb-2 font-bold">[get in touch]</p>
+          <Contact />
         </div>
       </div>
 

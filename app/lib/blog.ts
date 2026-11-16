@@ -23,7 +23,8 @@ export interface BlogPostFull extends BlogPost {
 
 export interface Project {
   title: string;
-  descriptionHtml: string;
+  description: string;
+  url: string;
 }
 
 // Cache for posts to avoid re-reading files
@@ -111,13 +112,30 @@ export async function getProjects(): Promise<Project[]> {
 
   const sections = content.split(/^## /m).filter(Boolean);
 
-  return Promise.all(sections.map(async section => {
+  return sections.map(section => {
     const lines = section.trim().split('\n');
-    const title = lines[0];
+    const title = lines[0].trim();
     const description = lines.slice(1).join('\n').trim();
+    const url = description.split('\n').pop()?.trim() || '';
+    const cleanDescription = description.split('\n').slice(0, -1).join('\n').trim();
 
-    const processed = await remark().use(html).process(description);
+    return { title, description: cleanDescription, url };
+  });
+}
+  
+export async function getAppearances(): Promise<Project[]> {
+  const fullPath = join(postsDirectory, 'appearances.md');
+  const { content } = matter(fs.readFileSync(fullPath, 'utf8'));
 
-    return { title, descriptionHtml: processed.toString() };
-  }));
+  const sections = content.split(/^## /m).filter(Boolean);
+
+  return sections.map(section => {
+    const lines = section.trim().split('\n');
+    const title = lines[0].trim();
+    const description = lines.slice(1).join('\n').trim();
+    const url = description.split('\n').pop()?.trim() || '';
+    const cleanDescription = description.split('\n').slice(0, -1).join('\n').trim();
+
+    return { title, description: cleanDescription, url };
+  });
 }
