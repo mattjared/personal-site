@@ -17,7 +17,7 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <button className="w-9 h-9 flex items-center justify-center rounded-md border border-slate-200 dark:border-slate-700">
+      <button className="w-9 h-9 flex items-center justify-center rounded-md border border-amber-200 dark:border-amber-700">
         <div className="w-4 h-4" />
       </button>
     )
@@ -30,7 +30,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="w-9 h-9 flex items-center justify-center rounded-md border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+      className="w-9 h-9 flex items-center justify-center rounded-md border border-amber-200 dark:border-amber-700 hover:bg-amber-100 dark:hover:bg-amber-800 transition-colors"
       aria-label="Toggle theme"
       title={`Switch to ${resolvedTheme === 'dark' ? 'light' : 'dark'} mode`}
     >

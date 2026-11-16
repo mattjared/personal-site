@@ -1,6 +1,13 @@
 import Image from "next/image"
 
-const images = [
+export type PicGridImage = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+};
+
+const defaultImages: PicGridImage[] = [
   {
     src: "/images/mug.jpeg",
     alt: "Mug Image",
@@ -42,20 +49,30 @@ const images = [
 // Deterministic tilts to avoid hydration mismatch
 const tilts = [-3, 2, -4, 3, -2, 4];
 
-export default function PicGrid() {
+export default function PicGrid({
+  images = defaultImages,
+  variant = "photos",
+}: {
+  images?: PicGridImage[];
+  variant?: "photos" | "logos";
+}) {
+  const isLogo = variant === "logos";
   return (
-    <div className="my-12 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-1">
+    <div className={isLogo ? "grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 items-center" : "grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-1"}>
       {images.map((image, index) => (
         <Image
           key={index}
           alt={image.alt}
-          className="rounded-lg shadow-lg border-2 border-gray-300 hover:scale-105 transition-all duration-300 aspect-square object-cover"
+          className={isLogo
+            ? "object-contain p-2 hover:scale-105 transition-all duration-300 aspect-square dark:brightness-0 dark:invert"
+            : "rounded-lg shadow-lg border-2 border-gray-300 hover:scale-105 transition-all duration-300 aspect-square object-cover"
+          }
           width={image.width}
           height={image.height}
           src={image.src}
           sizes="(min-width: 1024px) 16vw, (min-width: 768px) 25vw, 33vw"
           quality={75}
-          style={{
+          style={isLogo ? undefined : {
             transform: `rotate(${tilts[index % tilts.length]}deg)`,
           }}
         />

@@ -65,7 +65,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`min-h-screen antialiased tracking-tighter bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-amber-50 font-mono ${geistMono.variable}`}>
         <ThemeProvider>
           <main>
-            {children}
+            <Navbar />
+            <div className="p-10">
+              {children}
+            </div>
           </main>
           <Footer />
           <AnalyticsWrapper />
